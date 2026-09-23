@@ -1,6 +1,6 @@
 # 2026 Toyota Corolla (U.S.) - Trim & Feature Comparison
 
-> **Scope:** Corolla sedan for the U.S. market, model year 2026. This is a shopper-friendly comparison of standard equipment and major trim differences. **S** = standard; **A** = available as an option/package; **-** = not offered on that trim. Pricing, packages, colors, and availability can vary by region and change during the model year.
+> **Scope:** Corolla sedan for the U.S. market, model year 2026. This is a shopper-friendly comparison of standard equipment and major trim differences. **S** = standard; **A** = available as an option/package; **-** = not offered on that trim; **?** = unconfirmed (checked but not documented in any source available as of the cross-model update below). Pricing, packages, colors, and availability can vary by region and change during the model year.
 
 ## At a glance
 
@@ -54,6 +54,15 @@ Every listed Corolla sedan trim includes:
 | SofTex-trimmed heated front seats | - | - | - | - | - | S |
 | Power tilt/slide moonroof | A | A | A | A | S | S |
 | JBL premium audio (9 speakers, subwoofer, amplifier) | - | - | - | - | A | A |
+| Blind Spot Monitor / Rear Cross-Traffic Alert | S | S | S | S | S | S |
+| Qi wireless charging | ? | ? | ? | ? | ? | ? |
+| Rain-sensing wipers | ? | ? | ? | ? | ? | ? |
+| Heated rear seats | ? | ? | ? | ? | ? | ? |
+| Driver-seat memory | ? | ? | ? | ? | ? | ? |
+| Head-up display | ? | ? | ? | ? | ? | ? |
+| Front/rear parking sonar or parking assist | ? | ? | ? | ? | ? | ? |
+
+*Rows below "JBL premium audio" were added in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder. Toyota's own site and brochure PDFs block automated fetching, and Kelley Blue Book's comparison pages for this specific model didn't document most of these features either way, so most are marked **?** (checked, not confirmed) rather than guessed — verify with a dealer, don't read "?" as "not offered."*
 
 ## What changes as you move up
 

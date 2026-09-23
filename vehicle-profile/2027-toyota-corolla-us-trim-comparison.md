@@ -1,6 +1,6 @@
 # 2027 Toyota Corolla (U.S.) - Trim Comparison
 
-> U.S. Corolla sedan. S = standard; A = available; - = not offered.
+> U.S. Corolla sedan. S = standard; A = available; - = not offered; ? = unconfirmed (checked but not documented in any source available as of the cross-model update below).
 
 ## Trims
 
@@ -44,8 +44,18 @@ AWD Hybrid LE is $26,575 (51 / 44 MPG); AWD Hybrid SE is $29,015 (47 / 41 MPG).
 | 10.5-in multimedia touchscreen | - | - | A | A | S | S |
 | Heated SofTex front seats | - | - | - | - | S | S |
 | 8-way power driver seat | - | - | - | - | S | S |
-| Power moonroof and Qi wireless charger | A | A | A | A | S | S |
 | JBL Premium Audio | - | - | - | - | A | A |
+| Qi wireless charging (bundled with moonroof below this tier) | A | A | A | A | S | S |
+| Moonroof / glass roof (bundled with Qi charging above this tier) | A | A | A | A | S | S |
+| Blind Spot Monitor / Rear Cross-Traffic Alert | S | S | S | S | S | S |
+| Proximity Sensing Keyless Entry (Smart Key) | ? | ? | ? | ? | ? | ? |
+| Rain-sensing wipers | ? | ? | ? | ? | ? | ? |
+| Heated rear seats | ? | ? | ? | ? | ? | ? |
+| Driver-seat memory | ? | ? | ? | ? | ? | ? |
+| Head-up display | ? | ? | ? | ? | ? | ? |
+| Front/rear parking sonar or parking assist | ? | ? | ? | ? | ? | ? |
+
+*Rows below "JBL Premium Audio" were added or split out in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder. A direct fetch of this trim's KBB page returned no equipment content, so most rows are marked **?** (checked, not confirmed) rather than guessed — verify with a dealer, don't read "?" as "not offered."*
 
 ## 60th Anniversary Special Edition
 

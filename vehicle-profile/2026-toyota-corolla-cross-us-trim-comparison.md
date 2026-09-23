@@ -1,6 +1,6 @@
 # 2026 Toyota Corolla Cross (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 Corolla Cross gas and hybrid models. **S** = standard; **A** = available; **-** = not offered. MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
+> **Scope:** 2026 Corolla Cross gas and hybrid models. **S** = standard; **A** = available; **-** = not offered; **?** = unconfirmed (checked but not documented in any source available as of the cross-model update below). MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
 
 ## All six trims
 
@@ -52,6 +52,16 @@ Every 2026 Corolla Cross includes:
 | 10-way power driver seat | - | - | A | - | A | S |
 | Dual-zone automatic climate control | - | - | A | - | - | S |
 | JBL 9-speaker premium audio | - | - | A | - | - | A |
+| Heated front seats | - | A | S | ? | ? | ? |
+| Proximity Sensing Keyless Entry / push-button start | - | S | S | S | S | S |
+| Moonroof / glass roof | ? | ? | ? | ? | ? | ? |
+| Rain-sensing wipers | ? | ? | ? | ? | ? | ? |
+| Heated rear seats | ? | ? | ? | ? | ? | ? |
+| Driver-seat memory | ? | ? | ? | ? | ? | ? |
+| Head-up display | ? | ? | ? | ? | ? | ? |
+| Front/rear parking sonar or parking assist | ? | ? | ? | ? | ? | ? |
+
+*Rows below "JBL 9-speaker premium audio" were added in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder, sourced from Kelley Blue Book's gas and hybrid trim comparison pages for this model. **?** means the feature was checked for but not confirmed either way — treat it as "verify with a dealer," not "not offered."*
 
 ## Grade-specific highlights
 

@@ -1,6 +1,6 @@
 # 2026 Toyota Camry (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 U.S. Camry sedan. All Camry trims use Toyota's fifth-generation hybrid system. **S** = standard; **A** = available; **-** = not offered. MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
+> **Scope:** 2026 U.S. Camry sedan. All Camry trims use Toyota's fifth-generation hybrid system. **S** = standard; **A** = available; **-** = not offered; **?** = unconfirmed (checked but not documented in any source available as of the cross-model update below). MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
 
 ## Lineup, price, and efficiency
 
@@ -68,6 +68,15 @@ Every 2026 Camry includes:
 | JBL 9-speaker premium audio | - | - | - | A | A |
 | 10-in head-up display | - | - | - | A | A |
 | Premium Plus driver-assistance package | - | - | - | A | A |
+| Blind Spot Monitor / Rear Cross-Traffic Alert | S | S | S | S | S |
+| Qi wireless charging | S | S | S | S | S |
+| Proximity Sensing Keyless Entry (Smart Key) | A | A | A | S | S |
+| Rain-sensing wipers | - | - | - | A | A |
+| Front/rear parking sonar with automatic braking | - | - | - | A (via Premium Plus) | A (via Premium Plus) |
+| Heated rear seats | - | - | - | - | - |
+| Driver-seat memory | - | - | - | ? | ? |
+
+*Rows below "Premium Plus driver-assistance package" were added in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder, sourced from Kelley Blue Book per-trim spec pages since Toyota's own site and brochure PDFs block automated fetching. **?** means the feature was checked for but not confirmed either way — treat it as "verify with a dealer," not "not offered."*
 
 ## Premium Plus Package (XLE / XSE only)
 

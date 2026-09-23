@@ -1,6 +1,6 @@
 # 2027 Toyota Prius (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2027 U.S. Prius hybrid (not Prius Plug-in Hybrid). **S** = standard; **A** = available; **-** = not offered. MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
+> **Scope:** 2027 U.S. Prius hybrid (not Prius Plug-in Hybrid). **S** = standard; **A** = available; **-** = not offered; **?** = unconfirmed (checked but not documented in any source available as of the cross-model update below). MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
 
 ## All eight configurations
 
@@ -57,6 +57,12 @@ Every 2027 Prius includes:
 | Fixed glass roof | - | - | - | S |
 | 12.3-in multimedia touchscreen | - | - | - | S |
 | JBL 8-speaker premium audio | - | - | - | S |
+| Blind Spot Monitor / Rear Cross-Traffic Alert | S | S | S | S |
+| Front/rear parking sonar or parking assist | ? | ? | ? | A |
+| Head-up display | - | - | - | - |
+| Proximity Sensing Keyless Entry / push-button start | ? | ? | ? | S |
+
+*Rows below "JBL 8-speaker premium audio" were added in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder, sourced from a Kelley Blue Book Limited-trim spec page. Note: that same KBB page claimed "Heated rear seats: Standard" for Limited, conflicting with this file's original "A" (Available) — the original research is kept as-is here since there's no reliable way to adjudicate which is correct; worth verifying directly with a dealer.*
 
 ## Quick buying guide
 

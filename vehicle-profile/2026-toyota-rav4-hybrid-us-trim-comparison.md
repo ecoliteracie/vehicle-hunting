@@ -1,6 +1,6 @@
 # 2026 Toyota RAV4 Hybrid (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 RAV4 Hybrid Electric Vehicle (HEV), not the separately sold RAV4 Plug-in Hybrid. **S** = standard; **A** = available; **-** = not offered. MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
+> **Scope:** 2026 RAV4 Hybrid Electric Vehicle (HEV), not the separately sold RAV4 Plug-in Hybrid. **S** = standard; **A** = available; **-** = not offered; **?** = unconfirmed (checked but not documented in any source available as of the cross-model update below). MSRP excludes delivery, taxes, fees, dealer-installed accessories, and dealer markup.
 
 ## Lineup, drivetrain, and efficiency
 
@@ -54,6 +54,14 @@ Every 2026 RAV4 Hybrid includes:
 | Panoramic glass roof | - | - | - | - | - | S |
 | JBL 9-speaker premium audio | - | - | - | - | - | S |
 | Dual Qi wireless charging | - | - | - | - | - | S |
+| Blind Spot Monitor / Rear Cross-Traffic Alert | S | S | S | S | S | S |
+| Smart Key / push-button start | S | S | S | S | S | S |
+| Rain-sensing wipers | ? | ? | ? | ? | ? | S |
+| Heated rear seats | ? | ? | ? | ? | ? | ? |
+| Driver-seat memory | ? | ? | ? | ? | ? | ? |
+| Head-up display | ? | ? | ? | ? | ? | ? |
+
+*Rows below "Dual Qi wireless charging" were added in a later cross-model pass (see `data/vehicles.json` in the vehicle-hunting site repo) to make this table comparable against the other Toyota profiles in this folder. A direct fetch of this model's KBB pages returned stale/mismatched data (wrong model year, inconsistent trim count), so most rows are marked **?** (checked, not confirmed) rather than trusted from an unreliable source — verify with a dealer, don't read "?" as "not offered." Limited's rain-sensing wipers (**S**) comes from this file's own original research (the Limited highlight below), not the failed KBB lookup.*
 
 ## Grade-specific highlights
 
