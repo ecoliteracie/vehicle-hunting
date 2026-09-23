@@ -1,0 +1,509 @@
+const DATA_URL = 'data/vehicles.json';
+let DATA = null;
+const chartInstances = {};
+const app = document.getElementById('app');
+
+const fmtUSD = n => (n == null ? '—' : `$${n.toLocaleString('en-US')}`);
+const avgMpg = t => (t.mpgCombined ?? (t.mpgCity != null && t.mpgHwy != null ? Math.round((t.mpgCity + t.mpgHwy) / 2) : null));
+
+function cssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function groupVehicles(vehicles) {
+  const map = new Map();
+  vehicles.forEach(v => {
+    if (!map.has(v.modelSlug)) map.set(v.modelSlug, { modelSlug: v.modelSlug, model: v.model, bodyType: v.bodyType, profiles: [] });
+    map.get(v.modelSlug).profiles.push(v);
+  });
+  map.forEach(g => g.profiles.sort((a, b) => a.year - b.year));
+  return Array.from(map.values()).sort((a, b) => a.model.localeCompare(b.model));
+}
+
+function trimStats(vehicle) {
+  const prices = vehicle.trims.map(t => t.msrp).filter(v => v != null);
+  const mpgs = vehicle.trims.map(avgMpg).filter(v => v != null);
+  const drivetrains = Array.from(new Set(vehicle.trims.map(t => t.drivetrain)));
+  return {
+    priceMin: prices.length ? Math.min(...prices) : null,
+    priceMax: prices.length ? Math.max(...prices) : null,
+    mpgMax: mpgs.length ? Math.max(...mpgs) : null,
+    gradeCount: vehicle.featureMatrix.grades.length,
+    drivetrains,
+  };
+}
+
+/* ---------- Router ---------- */
+
+function router() {
+  Object.values(chartInstances).forEach(c => c.destroy());
+  Object.keys(chartInstances).forEach(k => delete chartInstances[k]);
+
+  const hash = location.hash.replace(/^#\/?/, '');
+  const parts = hash.split('/').filter(Boolean);
+  if (parts[0] === 'model' && parts[1]) {
+    renderModelPage(parts[1], parts[2] ? Number(parts[2]) : null);
+  } else {
+    renderHome();
+  }
+  window.scrollTo({ top: 0 });
+}
+
+/* ---------- Home ---------- */
+
+function renderHome() {
+  const groups = groupVehicles(DATA.vehicles);
+  app.innerHTML = `
+    <section class="hero">
+      <p class="eyebrow">Car / Toyota</p>
+      <h1>Every Toyota trim, compared at a glance</h1>
+      <p class="hero-sub">Pick a model to see every trim's price, efficiency, and full feature matrix on one page.</p>
+    </section>
+    <section class="model-grid">
+      ${groups.map(modelCard).join('')}
+    </section>
+  `;
+}
+
+function modelCard(g) {
+  const stats = g.profiles.map(trimStats);
+  const priceMin = Math.min(...stats.map(s => s.priceMin).filter(v => v != null));
+  const priceMax = Math.max(...stats.map(s => s.priceMax).filter(v => v != null));
+  const mpgMax = Math.max(...stats.map(s => s.mpgMax).filter(v => v != null));
+  const years = g.profiles.map(p => p.year).join(' · ');
+  const gradeCount = g.profiles[0].featureMatrix.grades.length;
+  return `
+  <a class="model-card" href="#/model/${g.modelSlug}">
+    <div class="model-card__top">
+      <span class="badge badge--body">${g.bodyType}</span>
+      <span class="badge">${years}</span>
+    </div>
+    <h2>${g.model}</h2>
+    <dl class="model-card__stats">
+      <div><dt>From</dt><dd>${fmtUSD(priceMin)}</dd></div>
+      <div><dt>To</dt><dd>${fmtUSD(priceMax)}</dd></div>
+      <div><dt>Best MPG</dt><dd>${mpgMax}</dd></div>
+      <div><dt>Grades</dt><dd>${gradeCount}</dd></div>
+    </dl>
+  </a>`;
+}
+
+/* ---------- Model page ---------- */
+
+function renderModelPage(modelSlug, year) {
+  const profiles = DATA.vehicles.filter(v => v.modelSlug === modelSlug).sort((a, b) => a.year - b.year);
+  if (!profiles.length) {
+    app.innerHTML = `<p class="error">Model not found. <a href="#/">Back to models</a></p>`;
+    return;
+  }
+  const vehicle = profiles.find(p => p.year === year) || profiles[0];
+
+  app.innerHTML = `
+    <section class="model-page">
+      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">Toyota</a> / ${vehicle.model}</p>
+      <div class="model-page__head">
+        <div>
+          <h1>${vehicle.title}</h1>
+          <p class="scope">${vehicle.scope}</p>
+        </div>
+        ${profiles.length > 1 ? yearTabs(profiles, vehicle) : ''}
+      </div>
+
+      ${statStrip(vehicle)}
+
+      <section class="charts-row">
+        <div class="chart-card">
+          <h3>MSRP by grade</h3>
+          <div class="chart-wrap"><canvas id="chartPrice"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>Fuel economy by grade (combined MPG)</h3>
+          <div class="chart-wrap"><canvas id="chartMpg"></canvas></div>
+        </div>
+      </section>
+
+      ${trimTable(vehicle)}
+      ${featureMatrixSection(vehicle)}
+      ${powertrainSection(vehicle)}
+      ${standardEquipmentSection(vehicle)}
+      ${highlightsSection(vehicle)}
+      ${notesSection(vehicle)}
+      ${sourcesSection(vehicle)}
+    </section>
+  `;
+
+  wireYearTabs(profiles);
+  wireTrimTableSort(vehicle);
+  wireFeatureSearch();
+  buildCharts(vehicle);
+}
+
+function yearTabs(profiles, active) {
+  return `<div class="year-tabs" role="tablist">${profiles.map(p => `
+    <button class="year-tab ${p.year === active.year ? 'is-active' : ''}" data-year="${p.year}" role="tab" aria-selected="${p.year === active.year}">${p.year}</button>`).join('')}</div>`;
+}
+function wireYearTabs(profiles) {
+  document.querySelectorAll('.year-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      location.hash = `#/model/${profiles[0].modelSlug}/${btn.dataset.year}`;
+    });
+  });
+}
+
+function statStrip(vehicle) {
+  const s = trimStats(vehicle);
+  const dt = s.drivetrains.length > 1 ? 'FWD & AWD' : s.drivetrains[0];
+  return `
+  <section class="stat-strip">
+    <div class="stat-tile"><span class="stat-label">Starting MSRP</span><span class="stat-value">${fmtUSD(s.priceMin)}</span></div>
+    <div class="stat-tile"><span class="stat-label">Top trim MSRP</span><span class="stat-value">${fmtUSD(s.priceMax)}</span></div>
+    <div class="stat-tile"><span class="stat-label">Best combined MPG</span><span class="stat-value">${s.mpgMax ?? '—'}</span></div>
+    <div class="stat-tile"><span class="stat-label">Grades</span><span class="stat-value">${s.gradeCount}</span></div>
+    <div class="stat-tile"><span class="stat-label">Drivetrain</span><span class="stat-value">${dt}</span></div>
+  </section>`;
+}
+
+/* ---------- Trim table ---------- */
+
+function trimTable(vehicle) {
+  return `
+  <section class="panel">
+    <h2>Trim overview</h2>
+    <div class="table-scroll">
+      <table class="trim-table" id="trimTable">
+        <thead>
+          <tr>
+            <th data-key="name">Trim</th>
+            <th data-key="drivetrain">Drivetrain</th>
+            <th data-key="msrp" class="num">MSRP</th>
+            <th data-key="mpgCity" class="num">MPG city</th>
+            <th data-key="mpgHwy" class="num">MPG hwy</th>
+            <th data-key="mpgCombined" class="num">MPG comb.</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>${trimRows(vehicle.trims)}</tbody>
+      </table>
+    </div>
+  </section>`;
+}
+
+function trimRows(trims) {
+  return trims.map(t => `
+    <tr>
+      <td class="trim-name">${t.name}</td>
+      <td>${t.drivetrain}</td>
+      <td class="num">${fmtUSD(t.msrp)}</td>
+      <td class="num">${t.mpgCity ?? '—'}</td>
+      <td class="num">${t.mpgHwy ?? '—'}</td>
+      <td class="num">${t.mpgCombined ?? '—'}</td>
+      <td class="trim-note">${[t.blurb, t.awdNote].filter(Boolean).join(' · ')}</td>
+    </tr>`).join('');
+}
+
+function wireTrimTableSort(vehicle) {
+  const table = document.getElementById('trimTable');
+  if (!table) return;
+  let sortKey = null;
+  let sortDir = 1;
+  table.querySelectorAll('th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      sortDir = sortKey === key ? -sortDir : 1;
+      sortKey = key;
+      const sorted = [...vehicle.trims].sort((a, b) => {
+        const av = a[key];
+        const bv = b[key];
+        if (av == null && bv == null) return 0;
+        if (av == null) return 1;
+        if (bv == null) return -1;
+        if (typeof av === 'string') return av.localeCompare(bv) * sortDir;
+        return (av - bv) * sortDir;
+      });
+      table.querySelector('tbody').innerHTML = trimRows(sorted);
+      table.querySelectorAll('th[data-key]').forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+      th.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+    });
+  });
+}
+
+/* ---------- Feature matrix ---------- */
+
+function featureCell(v) {
+  if (v === 'S') return `<span class="fcell fcell--standard" title="Standard"><span aria-hidden="true"></span><span class="sr-only">Standard</span></span>`;
+  if (v === 'A') return `<span class="fcell fcell--available" title="Available"><span aria-hidden="true"></span><span class="sr-only">Available</span></span>`;
+  if (v === '-') return `<span class="fcell fcell--none" title="Not offered"><span aria-hidden="true">–</span><span class="sr-only">Not offered</span></span>`;
+  const m = v.match(/^(S|A)\s*\((.+)\)$/);
+  if (m) {
+    const isStandard = m[1] === 'S';
+    return `<span class="fcell ${isStandard ? 'fcell--standard' : 'fcell--available'}" title="${isStandard ? 'Standard' : 'Available'}: ${m[2]}">
+      <span aria-hidden="true"></span><span class="fcell__note">${m[2]}</span></span>`;
+  }
+  return `<span class="fcell">${v}</span>`;
+}
+
+function featureMatrixSection(vehicle) {
+  const grades = vehicle.featureMatrix.grades;
+  return `
+  <section class="panel">
+    <div class="panel__head">
+      <h2>Full feature matrix</h2>
+      <input type="search" id="featureSearch" placeholder="Search features…" aria-label="Search features">
+    </div>
+    <div class="fcell-legend">
+      <span class="fcell-legend__item"><span class="fcell fcell--standard"><span aria-hidden="true"></span></span> Standard</span>
+      <span class="fcell-legend__item"><span class="fcell fcell--available"><span aria-hidden="true"></span></span> Available</span>
+      <span class="fcell-legend__item"><span class="fcell fcell--none"><span aria-hidden="true">–</span></span> Not offered</span>
+    </div>
+    <div class="table-scroll table-scroll--matrix">
+      <table class="feature-table" id="featureTable">
+        <thead>
+          <tr><th class="feature-col">Feature</th>${grades.map(g => `<th>${g}</th>`).join('')}</tr>
+        </thead>
+        <tbody>
+          ${vehicle.featureMatrix.rows.map(r => `
+            <tr data-feature="${r.feature.toLowerCase()}">
+              <td class="feature-col">${r.feature}</td>
+              ${r.values.map(v => `<td>${featureCell(v)}</td>`).join('')}
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  </section>`;
+}
+
+function wireFeatureSearch() {
+  const input = document.getElementById('featureSearch');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    document.querySelectorAll('#featureTable tbody tr').forEach(tr => {
+      tr.style.display = !q || tr.dataset.feature.includes(q) ? '' : 'none';
+    });
+  });
+}
+
+/* ---------- Powertrain / equipment / highlights / notes / sources ---------- */
+
+function powertrainSection(vehicle) {
+  const hasTrims = vehicle.powertrains.some(p => p.trims);
+  return `
+  <section class="panel">
+    <h2>Powertrain &amp; performance</h2>
+    <div class="table-scroll">
+      <table class="plain-table">
+        <thead><tr><th>System</th>${hasTrims ? '<th>Trims</th>' : ''}<th>Engine / transmission</th><th>Output</th><th>Drivetrain availability</th></tr></thead>
+        <tbody>
+          ${vehicle.powertrains.map(p => `<tr><td>${p.system}</td>${hasTrims ? `<td>${p.trims || '—'}</td>` : ''}<td>${p.engine}</td><td>${p.output}</td><td>${p.availability}</td></tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    ${vehicle.powertrainNotes?.length ? `<ul class="note-list" style="margin-top: var(--space-4)">${vehicle.powertrainNotes.map(n => `<li>${n}</li>`).join('')}</ul>` : ''}
+  </section>`;
+}
+
+function standardEquipmentSection(vehicle) {
+  return `
+  <section class="panel">
+    <h2>Standard on every trim</h2>
+    <ul class="equipment-list">${vehicle.standardEquipment.map(e => `<li>${e}</li>`).join('')}</ul>
+  </section>`;
+}
+
+function highlightsSection(vehicle) {
+  let body = '';
+  if (vehicle.highlights?.length) {
+    body += `<div class="highlight-grid">${vehicle.highlights.map(h => `
+      <div class="highlight-card"><h3>${h.grade}</h3><p>${h.text}</p></div>`).join('')}</div>`;
+  }
+  if (vehicle.progression?.length) {
+    body += `<ul class="progression-list" style="${vehicle.highlights?.length ? 'margin-top: var(--space-4)' : ''}">${vehicle.progression.map(p => `<li>${p}</li>`).join('')}</ul>`;
+  }
+  if (vehicle.specialEditions?.length) {
+    body += `<div style="display:flex; flex-direction:column; gap: var(--space-3); margin-top: ${(vehicle.highlights?.length || vehicle.progression?.length) ? 'var(--space-4)' : '0'}">
+      ${vehicle.specialEditions.map(se => `<div class="callout callout--accent"><h3>${se.name}</h3><p>${se.text}</p></div>`).join('')}
+    </div>`;
+  }
+  if (!body) return '';
+  return `<section class="panel"><h2>Buying guide</h2>${body}</section>`;
+}
+
+function notesSection(vehicle) {
+  if (!vehicle.notes?.length) return '';
+  return `
+  <section class="panel">
+    <h2>Good to know</h2>
+    <ul class="note-list note-list--callout">${vehicle.notes.map(n => `<li>${n}</li>`).join('')}</ul>
+  </section>`;
+}
+
+function sourcesSection(vehicle) {
+  return `
+  <section class="panel panel--footer">
+    <h2>Sources</h2>
+    <ul class="source-list">${vehicle.sources.map(s => `<li><a href="${s.url}" target="_blank" rel="noopener">${s.label}</a></li>`).join('')}</ul>
+    <p class="researched">Researched ${vehicle.researched}. <a href="${vehicle.sourceFile}" target="_blank">View source notes (.md)</a></p>
+  </section>`;
+}
+
+/* ---------- Charts ---------- */
+
+function gradeDrivetrainSeries(vehicle, valueFn) {
+  const grades = vehicle.featureMatrix.grades;
+  const fwd = grades.map(g => {
+    const t = vehicle.trims.find(t => t.grade === g && t.drivetrain === 'FWD');
+    return t ? valueFn(t) : null;
+  });
+  const awd = grades.map(g => {
+    const t = vehicle.trims.find(t => t.grade === g && t.drivetrain === 'AWD');
+    return t ? valueFn(t) : null;
+  });
+  return { grades, fwd, awd, hasFwd: fwd.some(v => v != null), hasAwd: awd.some(v => v != null) };
+}
+
+function barDataset(label, data, color) {
+  return {
+    label,
+    data,
+    backgroundColor: color,
+    borderRadius: { topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0 },
+    borderSkipped: false,
+    maxBarThickness: 24,
+    categoryPercentage: 0.7,
+    barPercentage: 0.85,
+  };
+}
+
+function makeBarChart(canvasId, series, fmt) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return null;
+
+  const seriesFwd = cssVar('--series-fwd');
+  const seriesAwd = cssVar('--series-awd');
+  const textSecondary = cssVar('--text-secondary');
+  const muted = cssVar('--text-muted');
+  const gridline = cssVar('--gridline');
+  const baseline = cssVar('--baseline');
+  const surface = cssVar('--surface-2');
+  const textPrimary = cssVar('--text-primary');
+  const border = cssVar('--border');
+
+  const datasets = [];
+  if (series.hasFwd) datasets.push(barDataset('FWD', series.fwd, seriesFwd));
+  if (series.hasAwd) datasets.push(barDataset('AWD', series.awd, seriesAwd));
+  if (!datasets.length) datasets.push(barDataset('MSRP', series.fwd, seriesFwd));
+
+  const font = { family: 'Inter, system-ui, sans-serif', size: 12 };
+
+  return new Chart(ctx, {
+    type: 'bar',
+    data: { labels: series.grades, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          display: datasets.length > 1,
+          position: 'top',
+          align: 'end',
+          labels: { color: textSecondary, usePointStyle: true, pointStyle: 'circle', boxWidth: 8, boxHeight: 8, font },
+        },
+        tooltip: {
+          backgroundColor: surface,
+          titleColor: textPrimary,
+          bodyColor: textSecondary,
+          borderColor: border,
+          borderWidth: 1,
+          padding: 10,
+          cornerRadius: 8,
+          displayColors: datasets.length > 1,
+          callbacks: {
+            label: (c) => (c.raw == null ? undefined : `${c.dataset.label}: ${fmt.valueFormatter(c.raw)}`),
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          border: { color: baseline },
+          ticks: { color: muted, font },
+        },
+        y: {
+          beginAtZero: true,
+          grid: { color: gridline },
+          border: { display: false },
+          ticks: { color: muted, font: { ...font, size: 11 }, callback: (v) => fmt.axisFormatter(v) },
+        },
+      },
+    },
+  });
+}
+
+function buildCharts(vehicle) {
+  const priceSeries = gradeDrivetrainSeries(vehicle, t => t.msrp);
+  const mpgSeries = gradeDrivetrainSeries(vehicle, avgMpg);
+
+  chartInstances.price = makeBarChart('chartPrice', priceSeries, {
+    valueFormatter: v => fmtUSD(v),
+    axisFormatter: v => `$${v / 1000}k`,
+  });
+  chartInstances.mpg = makeBarChart('chartMpg', mpgSeries, {
+    valueFormatter: v => `${v} MPG`,
+    axisFormatter: v => `${v}`,
+  });
+}
+
+/* ---------- Theme ---------- */
+
+const THEME_ICONS = {
+  system: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+  light: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  dark: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.7 14.9A9 9 0 1 1 9.1 3.3a7 7 0 0 0 11.6 11.6Z"/></svg>',
+};
+
+function applyTheme(mode) {
+  if (mode === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', mode);
+  localStorage.setItem('vh-theme', mode);
+}
+
+function updateThemeIcon(mode) {
+  const btn = document.getElementById('themeToggle');
+  btn.innerHTML = THEME_ICONS[mode];
+  btn.title = `Theme: ${mode}`;
+}
+
+function setupHeaderControls() {
+  let stored = 'system';
+  try { stored = localStorage.getItem('vh-theme') || 'system'; } catch (e) { /* private mode */ }
+  applyTheme(stored);
+  updateThemeIcon(stored);
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const order = ['system', 'light', 'dark'];
+    let current = 'system';
+    try { current = localStorage.getItem('vh-theme') || 'system'; } catch (e) { /* private mode */ }
+    const next = order[(order.indexOf(current) + 1) % order.length];
+    applyTheme(next);
+    updateThemeIcon(next);
+    router();
+  });
+}
+
+/* ---------- Init ---------- */
+
+async function init() {
+  setupHeaderControls();
+  try {
+    const res = await fetch(DATA_URL);
+    DATA = await res.json();
+  } catch (e) {
+    app.innerHTML = `<p class="error">Could not load vehicle data. If you're viewing this file directly from disk, run a local server instead (e.g. <code>python -m http.server</code>) rather than opening index.html directly.</p>`;
+    return;
+  }
+  router();
+}
+
+window.addEventListener('hashchange', router);
+document.addEventListener('DOMContentLoaded', init);

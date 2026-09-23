@@ -1,0 +1,441 @@
+{
+  "makes": ["Toyota"],
+  "vehicles": [
+    {
+      "id": "camry-2026",
+      "make": "Toyota",
+      "model": "Camry",
+      "modelSlug": "camry",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Toyota Camry",
+      "scope": "2026 U.S. Camry sedan. All Camry trims use Toyota's fifth-generation hybrid system.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-toyota-camry-us-trim-comparison.md",
+      "trims": [
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 29600, "mpgCity": 52, "mpgHwy": 49, "mpgCombined": 51, "blurb": "Efficiency/value" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 32100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Sport-oriented" },
+        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "msrp": 33100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 34800, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 36000, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Highest sport trim" },
+        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "msrp": 31125, "mpgCity": 50, "mpgHwy": 49, "mpgCombined": 50, "blurb": "Efficiency/value" },
+        { "name": "SE AWD", "grade": "SE", "drivetrain": "AWD", "msrp": 33625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Sport-oriented" },
+        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "msrp": 34625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
+        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "msrp": 36325, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
+        { "name": "XSE AWD", "grade": "XSE", "drivetrain": "AWD", "msrp": 37525, "mpgCity": 43, "mpgHwy": 43, "mpgCombined": 43, "blurb": "Highest sport trim" }
+      ],
+      "powertrains": [
+        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; ECVT", "output": "225 net combined hp FWD; 232 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }
+      ],
+      "powertrainNotes": [
+        "All Camrys are hybrid-only for 2026 and include Normal, Eco, and Sport drive modes.",
+        "The SE, Nightshade, and XSE have sport-tuned suspension; XSE adds the strongest sport-focused chassis/exterior equipment.",
+        "AWD changes both output and the EPA rating; compare the dedicated AWD table before choosing an in-stock vehicle."
+      ],
+      "standardEquipment": [
+        "2.5L four-cylinder fifth-generation Toyota Hybrid System: 225 net combined hp with FWD or 232 net combined hp with AWD.",
+        "Electronic On-Demand AWD is available on every trim; all have Normal, Eco, and Sport drive modes.",
+        "Toyota Safety Sense 3.0, Blind Spot Monitor, Rear Cross-Traffic Alert, Safe Exit Alert, LED headlights/DRLs, and a backup camera.",
+        "Push-button start, dual-zone automatic climate control with rear vents, Qi wireless charging, and five USB ports.",
+        "Wireless Apple CarPlay and Android Auto, dual Bluetooth phone connectivity, and six speakers."
+      ],
+      "featureMatrix": {
+        "grades": ["LE", "SE", "Nightshade", "XLE", "XSE"],
+        "rows": [
+          { "feature": "7-in digital gauge cluster", "values": ["S", "S", "S", "-", "-"] },
+          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "-", "S", "S"] },
+          { "feature": "8-in multimedia touchscreen", "values": ["S", "S", "S", "-", "-"] },
+          { "feature": "12.3-in multimedia touchscreen", "values": ["A", "A", "A", "S", "S"] },
+          { "feature": "16-in silver alloy wheels", "values": ["S", "-", "-", "-", "-"] },
+          { "feature": "18-in black alloy wheels", "values": ["-", "S", "-", "S (black/machined)", "-"] },
+          { "feature": "19-in wheels", "values": ["-", "-", "S (satin black)", "-", "S (black/smoke gray)"] },
+          { "feature": "Sport-tuned suspension", "values": ["-", "S", "S", "-", "S"] },
+          { "feature": "Sport mesh grille / aerodynamic canards", "values": ["-", "S", "S", "-", "S"] },
+          { "feature": "Black exterior accents and black rear spoiler", "values": ["-", "-", "S", "-", "-"] },
+          { "feature": "Sport SofTex/fabric front seats", "values": ["-", "S", "S", "-", "-"] },
+          { "feature": "Leather and Dinamica microfiber interior", "values": ["-", "-", "-", "S", "-"] },
+          { "feature": "Leather-trimmed sport interior", "values": ["-", "-", "-", "-", "S"] },
+          { "feature": "8-way power driver seat", "values": ["-", "S", "S", "S", "S"] },
+          { "feature": "8-way power front passenger seat", "values": ["-", "-", "-", "S", "S"] },
+          { "feature": "Heated front seats / heated steering wheel", "values": ["A", "A", "-", "S", "S"] },
+          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "Front-side acoustic laminated glass", "values": ["-", "-", "-", "S", "S"] },
+          { "feature": "Panoramic roof", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "10-in head-up display", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "Premium Plus driver-assistance package", "values": ["-", "-", "-", "A", "A"] }
+        ]
+      },
+      "highlights": [
+        { "grade": "LE", "text": "Best economy and lowest entry price; the only 51-combined-MPG Camry in FWD form." },
+        { "grade": "SE", "text": "The practical sport trim with 18-inch black wheels, sport seating, and sport-tuned suspension." },
+        { "grade": "Nightshade", "text": "Essentially a black-accented sport model, with exclusive 19-inch satin-black wheels, black grille/badging, and black spoiler." },
+        { "grade": "XLE", "text": "Premium and quieter ride focus, with 12.3-inch displays, heated leather/microfiber seating, and upscale options." },
+        { "grade": "XSE", "text": "Combines the higher-end technology with sport suspension, aggressive exterior styling, and 19-inch wheels." }
+      ],
+      "notes": [
+        "Premium Plus Package (XLE / XSE only): adds Traffic Jam Assist, Front Cross-Traffic Alert, Lane Change Assist, Panoramic View Monitor, Front and Rear Parking Assist with Automatic Braking, driver-seat/side-mirror memory, and automatic windshield wipers. Digital Key requires the applicable package and an active Remote Connect trial or subscription."
+      ],
+      "sources": [
+        { "label": "Toyota 2026 Camry model page", "url": "https://www.toyota.com/camry/" },
+        { "label": "Toyota 2026 Camry eBrochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/camry_ebrochure.pdf" },
+        { "label": "Toyota newsroom: 2026 Camry Nightshade and grade details", "url": "https://pressroom.toyota.com/toyota-camry-brings-bold-new-nightshade-edition-to-lineup-in-2026/" }
+      ]
+    },
+    {
+      "id": "corolla-2026",
+      "make": "Toyota",
+      "model": "Corolla",
+      "modelSlug": "corolla",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Toyota Corolla",
+      "scope": "Corolla sedan for the U.S. market, model year 2026. Shopper-friendly comparison of standard equipment and major trim differences.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-toyota-corolla-us-trim-comparison.md",
+      "trims": [
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 23125, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": "Lowest-priced gas Corolla with the essential modern safety and phone features" },
+        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "msrp": 24975, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Highest efficiency at the entry price point", "awdAvailable": true, "awdNote": "AWD available — 51 / 44 MPG (city/hwy), price not separately stated" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 25565, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": "Sportier gas model" },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "msrp": 27415, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": "Sportier hybrid, with optional AWD", "awdAvailable": true, "awdNote": "AWD available — 47 / 41 MPG (city/hwy), price not separately stated" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 28840, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": "Fully equipped, performance-oriented gas trim" },
+        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "msrp": 29340, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Fully equipped, comfort-oriented hybrid" }
+      ],
+      "powertrains": [
+        { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
+        { "system": "Hybrid", "trims": "Hybrid LE, Hybrid SE, Hybrid XLE", "engine": "1.8L four-cylinder Toyota Hybrid System; ECVT", "output": "138 net combined hp; 105 lb-ft", "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only" }
+      ],
+      "powertrainNotes": [
+        "The Hybrid XLE is FWD only. Hybrid LE/SE AWD are distinct configurations, with their own lower EPA ratings.",
+        "Gas LE uses Normal and Eco drive modes. The SE, Hybrid SE, and XSE use Normal, Sport, and Eco; Hybrid LE and Hybrid XLE use Normal and Eco."
+      ],
+      "standardEquipment": [
+        "Toyota Safety Sense 3.0, including Pre-Collision System with Pedestrian Detection, Full-Speed Range Dynamic Radar Cruise Control, Lane Departure Alert with Steering Assist, Lane Tracing Assist, Road Sign Assist, Automatic High Beams, and Proactive Driving Assist.",
+        "Blind Spot Monitor with Rear Cross-Traffic Alert and ten airbags.",
+        "An 8-inch Toyota Audio Multimedia touchscreen (the XSE upgrades to 10.5 inches), six speakers, wireless Apple CarPlay and wireless Android Auto, SiriusXM trial, and front and rear USB-C ports.",
+        "FWD, electric power steering, four-wheel disc brakes, and a 5-passenger sedan body.",
+        "Toyota connected-services capability: Remote Connect, Safety Connect, Drive Connect, Service Connect, and Wi-Fi Connect. Trials/subscriptions and cellular coverage apply."
+      ],
+      "featureMatrix": {
+        "grades": ["LE", "Hybrid LE", "SE", "Hybrid SE", "XSE", "Hybrid XLE"],
+        "rows": [
+          { "feature": "2.0L 169-hp gas engine", "values": ["S", "-", "S", "-", "S", "-"] },
+          { "feature": "1.8L hybrid powertrain / ECVT", "values": ["-", "S", "-", "S", "-", "S"] },
+          { "feature": "Electronic On-Demand AWD", "values": ["-", "A", "-", "A", "-", "-"] },
+          { "feature": "Drive modes: Normal + Eco", "values": ["S", "S", "-", "-", "-", "S"] },
+          { "feature": "Drive modes: Normal + Sport + Eco", "values": ["-", "-", "S", "S", "S", "-"] },
+          { "feature": "Multi-link rear suspension", "values": ["-", "S", "S", "S", "S", "S"] },
+          { "feature": "18-inch graphite-finish alloy wheels", "values": ["-", "-", "S", "S", "S", "-"] },
+          { "feature": "7-inch digital gauge cluster", "values": ["S", "S", "S", "S", "-", "-"] },
+          { "feature": "12.3-inch digital gauge cluster", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "8-inch multimedia touchscreen", "values": ["S", "S", "S", "S", "-", "S"] },
+          { "feature": "10.5-inch multimedia touchscreen", "values": ["-", "-", "A", "A", "S", "-"] },
+          { "feature": "Smart Key / push-button start", "values": ["A", "A", "A", "A", "S", "S"] },
+          { "feature": "Premium sport fabric seats", "values": ["-", "-", "S", "S", "-", "-"] },
+          { "feature": "SofTex-trimmed heated front sport seats", "values": ["-", "-", "-", "-", "S", "-"] },
+          { "feature": "SofTex-trimmed heated front seats", "values": ["-", "-", "-", "-", "-", "S"] },
+          { "feature": "Power tilt/slide moonroof", "values": ["A", "A", "A", "A", "S", "S"] },
+          { "feature": "JBL premium audio (9 speakers, subwoofer, amplifier)", "values": ["-", "-", "-", "-", "A", "A"] }
+        ]
+      },
+      "progression": [
+        "LE to Hybrid LE: swaps the 2.0L gas drivetrain for the 1.8L hybrid system, adds the option of AWD, and improves fuel economy substantially.",
+        "LE / Hybrid LE to SE / Hybrid SE: moves toward a sport-focused setup: Sport mode, sport seats, 18-inch wheels, and multi-link rear suspension.",
+        "SE to XSE: retains the gas sport setup and adds the 12.3-inch gauge cluster, 10.5-inch screen, Smart Key, heated SofTex sport seats, standard moonroof, and available JBL audio.",
+        "Hybrid SE to Hybrid XLE: trades the sport emphasis for premium/comfort equipment: 12.3-inch gauge cluster, heated SofTex seats, standard moonroof, and available JBL audio. Hybrid XLE is FWD only."
+      ],
+      "highlights": [],
+      "notes": [
+        "An A in the table does not mean it will be on every dealer vehicle; verify the window sticker or build sheet.",
+        "Toyota lists the LE Premium Package and SE Premium Package. These can change individual vehicle equipment such as Smart Key, moonroof, and larger multimedia displays.",
+        "Fuel-economy figures are EPA estimates; AWD hybrid figures are lower than their FWD counterparts.",
+        "MSRP excludes delivery, processing/handling, taxes, title/license, dealer-installed accessories, and dealer markup."
+      ],
+      "sources": [
+        { "label": "Toyota 2026 Corolla overview, trims, pricing, and estimated MPG", "url": "https://www.toyota.com/corolla/2026/" },
+        { "label": "Toyota 2026 Corolla eBrochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/corolla_ebrochure.pdf" },
+        { "label": "Toyota 2026 Corolla launch information", "url": "https://pressroom.toyota.com/bold-and-compact-the-2026-toyota-corolla-offers-impressive-features-and-technology/" }
+      ]
+    },
+    {
+      "id": "corolla-2027",
+      "make": "Toyota",
+      "model": "Corolla",
+      "modelSlug": "corolla",
+      "year": 2027,
+      "bodyType": "Sedan",
+      "title": "2027 Toyota Corolla",
+      "scope": "U.S. Corolla sedan. S = standard; A = available; - = not offered.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2027-toyota-corolla-us-trim-comparison.md",
+      "trims": [
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 23325, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "msrp": 25175, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 25765, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "msrp": 27615, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": null },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 29040, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "msrp": 29540, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid LE AWD", "grade": "Hybrid LE", "drivetrain": "AWD", "msrp": 26575, "mpgCity": 51, "mpgHwy": 44, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid SE AWD", "grade": "Hybrid SE", "drivetrain": "AWD", "msrp": 29015, "mpgCity": 47, "mpgHwy": 41, "mpgCombined": null, "blurb": null }
+      ],
+      "powertrains": [
+        { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L Dynamic Force four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
+        { "system": "Hybrid", "trims": "Hybrid LE, Hybrid SE, Hybrid XLE", "engine": "1.8L four-cylinder Toyota Hybrid System 5; ECVT", "output": "138 net combined hp", "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only" }
+      ],
+      "powertrainNotes": [
+        "Hybrid XLE is FWD only. AWD Hybrid LE/SE variants are separately priced and have lower EPA ratings.",
+        "The gas CVT uses a physical launch gear for initial acceleration; XSE also has paddle shifters for 10 preset ratios.",
+        "Drive modes vary by grade. The sport grades receive Normal, Sport, and Eco modes; LE-oriented grades prioritize Normal and Eco modes."
+      ],
+      "standardEquipment": [
+        "Toyota Safety Sense 3.0 and Blind Spot Monitor with Rear Cross-Traffic Alert.",
+        "Wireless Apple CarPlay and Android Auto.",
+        "8-inch Toyota Audio Multimedia touchscreen, six speakers, and 7-inch digital gauge cluster."
+      ],
+      "featureMatrix": {
+        "grades": ["LE", "Hybrid LE", "SE", "Hybrid SE", "XSE", "Hybrid XLE"],
+        "rows": [
+          { "feature": "2.0L 169-hp gas engine", "values": ["S", "-", "S", "-", "S", "-"] },
+          { "feature": "1.8L hybrid system (138 net hp)", "values": ["-", "S", "-", "S", "-", "S"] },
+          { "feature": "AWD", "values": ["-", "A", "-", "A", "-", "-"] },
+          { "feature": "Sport drive mode / sport seats / 18-in graphite wheels", "values": ["-", "-", "S", "S", "S", "-"] },
+          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "10.5-in multimedia touchscreen", "values": ["-", "-", "A", "A", "S", "S"] },
+          { "feature": "Heated SofTex front seats", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "8-way power driver seat", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "Power moonroof and Qi wireless charger", "values": ["A", "A", "A", "A", "S", "S"] },
+          { "feature": "JBL Premium Audio", "values": ["-", "-", "-", "-", "A", "A"] }
+        ]
+      },
+      "highlights": [],
+      "notes": [],
+      "specialEditions": [
+        { "name": "60th Anniversary Special Edition", "text": "Limited to 2,500 U.S. vehicles; based on the Hybrid SE; arrives early 2027. Exclusive Ice Cap or Supersonic Red exterior, 18-inch machined black alloy wheels, and 60th Anniversary exterior badging. Black/Red sport-fabric seats, 10.5-inch multimedia display, anniversary door sills, and anniversary floor mats. MSRP had not been announced at the time of research." }
+      ],
+      "sources": [
+        { "label": "Toyota 2027 Corolla model page", "url": "https://www.toyota.com/vehicles/corolla/2027" },
+        { "label": "Toyota newsroom: 2027 Corolla and 60th Anniversary Special Edition", "url": "https://pressroom.toyota.com/built-for-generations-toyota-corolla-celebrates-60-years-with-2027-special-edition/" }
+      ]
+    },
+    {
+      "id": "corolla-cross-2026",
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "modelSlug": "corolla-cross",
+      "year": 2026,
+      "bodyType": "Compact SUV",
+      "title": "2026 Toyota Corolla Cross",
+      "scope": "2026 Corolla Cross gas and hybrid models.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-toyota-corolla-cross-us-trim-comparison.md",
+      "trims": [
+        { "name": "L", "grade": "L", "drivetrain": "FWD", "msrp": 25335, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Lowest-cost compact SUV", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 27665, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Better-equipped gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 30260, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Premium gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "Hybrid S", "grade": "Hybrid S", "drivetrain": "AWD", "msrp": 29795, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Entry hybrid sport model" },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "AWD", "msrp": 31115, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Better-equipped hybrid sport model" },
+        { "name": "Hybrid XSE", "grade": "Hybrid XSE", "drivetrain": "AWD", "msrp": 33830, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Top hybrid model" }
+      ],
+      "powertrains": [
+        { "system": "Gas", "engine": "2.0L four-cylinder; CVT", "output": "169 hp", "availability": "FWD standard; AWD available on L, LE, and XLE" },
+        { "system": "Hybrid", "engine": "Fifth-generation 2.0L four-cylinder Toyota Hybrid System; ECVT", "output": "196 net combined hp", "availability": "Electronic On-Demand AWD standard on Hybrid S, SE, and XSE" }
+      ],
+      "powertrainNotes": [
+        "The hybrid model has a sport-tuned suspension and a manufacturer-estimated 42 MPG combined rating across its three AWD grades.",
+        "Gas models have up to a 32 MPG combined rating. All trims have a 1,500-lb towing capacity.",
+        "Hybrid AWD is standard equipment, not an optional upgrade; for gas models, FWD and AWD should be compared as separate in-stock configurations."
+      ],
+      "standardEquipment": [
+        "Five-passenger compact SUV body, rear-seat vents, 1,500-lb towing capacity, LED headlights/daytime running lights, and Toyota Safety Sense 3.0.",
+        "Wireless Apple CarPlay and Android Auto, six speakers, and Toyota Audio Multimedia.",
+        "The gas powertrain is a 2.0L four-cylinder. Hybrid grades use the fifth-generation Toyota Hybrid System with 196 net combined hp and Electronic On-Demand AWD."
+      ],
+      "featureMatrix": {
+        "grades": ["L", "LE", "XLE", "Hybrid S", "Hybrid SE", "Hybrid XSE"],
+        "rows": [
+          { "feature": "FWD available", "values": ["S", "S", "S", "-", "-", "-"] },
+          { "feature": "AWD available / standard", "values": ["A", "A", "A", "S", "S", "S"] },
+          { "feature": "7-in digital gauge cluster", "values": ["S", "S", "-", "S", "S", "-"] },
+          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "S", "-", "-", "S"] },
+          { "feature": "8-in multimedia touchscreen", "values": ["S", "S", "-", "S", "S", "-"] },
+          { "feature": "10.5-in multimedia touchscreen", "values": ["-", "A", "S", "-", "A", "S"] },
+          { "feature": "17-in alloy wheels", "values": ["-", "S", "-", "S", "S", "-"] },
+          { "feature": "18-in alloy wheels", "values": ["-", "-", "S (dark gray)", "-", "-", "S (black)"] },
+          { "feature": "Fabric seats", "values": ["S", "S", "-", "S", "S", "-"] },
+          { "feature": "SofTex or SofTex/mixed-media seats", "values": ["-", "-", "S", "-", "-", "S"] },
+          { "feature": "Qi wireless charging", "values": ["-", "S", "S", "-", "S", "S"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["-", "S", "S", "-", "S", "S"] },
+          { "feature": "Black roof rails / privacy glass", "values": ["-", "-", "S", "-", "S", "S"] },
+          { "feature": "10-way power driver seat", "values": ["-", "-", "A", "-", "A", "S"] },
+          { "feature": "Dual-zone automatic climate control", "values": ["-", "-", "A", "-", "-", "S"] },
+          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "A", "-", "-", "A"] }
+        ]
+      },
+      "highlights": [
+        { "grade": "L", "text": "Essentials-first gas grade with 8-inch screen, six speakers, 7-inch digital gauge cluster, projector LED headlights, and rear vents." },
+        { "grade": "LE", "text": "Adds Qi charging and Blind Spot Monitor with Rear Cross-Traffic Alert." },
+        { "grade": "XLE", "text": "Gas flagship with 18-inch wheels, standard 12.3-inch gauge cluster and 10.5-inch touchscreen, plus SofTex seating." },
+        { "grade": "Hybrid S", "text": "Entry to the 196-hp AWD hybrid system; distinctive sport grille/bumpers, smoked Toyota emblem, black badging, matte-black heated mirrors, and 17-inch alloys." },
+        { "grade": "Hybrid SE", "text": "Upgrades the Hybrid S with roof rails, privacy glass, sport paddle shifters, Blind Spot Monitor/RCTA, automatic climate control, Qi charging, and four USB-C ports." },
+        { "grade": "Hybrid XSE", "text": "Top hybrid with 18-inch black wheels, SofTex/mixed-media seats, 12.3-inch gauge cluster, 10.5-inch screen, LED fog lights, 10-way power driver seat, dual-zone climate control, ambient lighting, and tonneau cover." }
+      ],
+      "notes": [
+        "Toyota states that all hybrid grades are AWD standard. Only gas grades offer a FWD/AWD choice.",
+        "The 10.5-inch screen is standard on XLE and Hybrid XSE, and available through the Multimedia Upgrade on LE and Hybrid SE.",
+        "A power moonroof and other equipment may depend on packages; verify a specific vehicle's window sticker."
+      ],
+      "sources": [
+        { "label": "Toyota 2026 Corolla Cross model page", "url": "https://www.toyota.com/corollacross/" },
+        { "label": "Toyota newsroom: 2026 Corolla Cross grade and feature details", "url": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/" },
+        { "label": "Toyota 2026 Corolla Cross brochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026-corollacross-brochure.pdf" }
+      ]
+    },
+    {
+      "id": "rav4-hybrid-2026",
+      "make": "Toyota",
+      "model": "RAV4 Hybrid",
+      "modelSlug": "rav4-hybrid",
+      "year": 2026,
+      "bodyType": "SUV",
+      "title": "2026 Toyota RAV4 Hybrid",
+      "scope": "2026 RAV4 Hybrid Electric Vehicle (HEV), not the separately sold RAV4 Plug-in Hybrid.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-toyota-rav4-hybrid-us-trim-comparison.md",
+      "trims": [
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 31900, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Entry/value", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 34700, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Sport-styled", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
+        { "name": "XLE Premium", "grade": "XLE Premium", "drivetrain": "FWD", "msrp": 36100, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Comfort/core premium", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/38/41 MPG" },
+        { "name": "Woodland", "grade": "Woodland", "drivetrain": "AWD", "msrp": 39900, "mpgCity": 41, "mpgHwy": 35, "mpgCombined": 38, "blurb": "Outdoor/rugged" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "AWD", "msrp": 41300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Sport premium" },
+        { "name": "Limited", "grade": "Limited", "drivetrain": "AWD", "msrp": 43300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Top luxury/technology" }
+      ],
+      "powertrains": [
+        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; planetary-type ECVT", "output": "226 net combined hp FWD; 236 net combined hp AWD", "availability": "FWD on LE, SE, XLE Premium; AWD optional on those grades and standard on Woodland, XSE, Limited" }
+      ],
+      "powertrainNotes": [
+        "All hybrid grades have Eco, Sport, Custom, and EV modes. EV mode is short-distance, low-speed operation when conditions permit.",
+        "Woodland has 8.5 inches of ground clearance; LE, SE, XLE Premium, and XSE have 8.1 inches. Woodland also includes all-terrain tires and a tow hitch.",
+        "AWD hybrid grades have a dedicated rear electric motor. XLE Premium, Woodland, SE AWD, and XSE/Limited AWD have up to 3,500-lb towing capability as specified by Toyota.",
+        "AWD availability: LE, SE, and XLE Premium can also be configured with Electronic On-Demand AWD. Woodland, XSE, and Limited Hybrid are AWD only. Toyota lists 45/39/42 MPG for LE/SE AWD and 45/38/41 MPG for XLE Premium AWD."
+      ],
+      "standardEquipment": [
+        "Fifth-generation 2.5L four-cylinder Toyota Hybrid System: 226 net combined hp FWD or 236 hp AWD.",
+        "12.3-inch configurable digital gauge cluster; 10.5-inch Toyota Audio Multimedia system; wireless Apple CarPlay and Android Auto; five USB-C ports.",
+        "Toyota Safety Sense 4.0, Blind Spot Monitor with Rear Cross-Traffic Alert, and backup camera with dynamic guidelines.",
+        "Push-button start, rear-seat fold-flat function, and a rear cargo tonneau cover."
+      ],
+      "featureMatrix": {
+        "grades": ["LE", "SE", "XLE Premium", "Woodland", "XSE", "Limited"],
+        "rows": [
+          { "feature": "FWD available", "values": ["S", "S", "S", "-", "-", "-"] },
+          { "feature": "Electronic On-Demand AWD", "values": ["A", "A", "A", "S", "S", "S"] },
+          { "feature": "18-in wheels", "values": ["-", "S (black sport)", "S", "S (all-terrain)", "-", "-"] },
+          { "feature": "20-in black sport wheels", "values": ["-", "-", "-", "-", "S", "-"] },
+          { "feature": "8.5-in ground clearance", "values": ["-", "-", "-", "S", "-", "-"] },
+          { "feature": "Power liftgate", "values": ["-", "-", "S", "S", "S (hands-free)", "S"] },
+          { "feature": "SofTex seats / 8-way power driver seat", "values": ["-", "-", "S", "S", "S", "S"] },
+          { "feature": "Heated front seats", "values": ["-", "-", "S", "S", "S", "S"] },
+          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "12.9-in multimedia display", "values": ["-", "-", "-", "-", "S", "S"] },
+          { "feature": "20-in sport wheels", "values": ["-", "-", "-", "-", "S", "-"] },
+          { "feature": "Front and Rear Parking Assist with Automatic Braking", "values": ["-", "S", "S", "S", "S", "S"] },
+          { "feature": "3D Panoramic View Monitor / advanced driver assists", "values": ["-", "-", "-", "S", "-", "S"] },
+          { "feature": "Panoramic glass roof", "values": ["-", "-", "-", "-", "-", "S"] },
+          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "-", "-", "S"] },
+          { "feature": "Dual Qi wireless charging", "values": ["-", "-", "-", "-", "-", "S"] }
+        ]
+      },
+      "highlights": [
+        { "grade": "LE", "text": "Lowest-cost Hybrid RAV4; fabric seats and the complete safety/technology baseline." },
+        { "grade": "SE", "text": "Sport design with 18-inch black wheels, sport bumper/overfender styling, and blue interior accenting." },
+        { "grade": "XLE Premium", "text": "Core upgrade for comfort — heated SofTex seats, 8-way power driver seat, power liftgate, 18-inch alloys, and parking assist with automatic braking." },
+        { "grade": "Woodland", "text": "Standard AWD, all-terrain tires, 8.5-inch ground clearance, raised Woodland roof rails/crossbars, tow-hitch receiver, integrated Rigid Industries LED fog lamps, Woodland mats, and a cargo-area 120V/1,500W outlet." },
+        { "grade": "XSE", "text": "Standard AWD sport premium grade — 20-inch black wheels, sport seating in SofTex/synthetic suede, heated/ventilated front seats, 12.9-inch screen, moonroof, and hands-free liftgate." },
+        { "grade": "Limited", "text": "Top comfort/tech hybrid — panoramic glass roof, 9-speaker JBL audio, dual wireless chargers, rain-sensing wipers, 3D Panoramic View Monitor, Advanced Park, Front Cross-Traffic Alert, Lane Change Assist, and Traffic Jam Assist (subscription conditions apply)." }
+      ],
+      "notes": [
+        "Woodland, SE, and XSE also exist in the RAV4 Plug-in Hybrid lineup, but those are different vehicles: PHEVs are AWD-only and have different pricing, output, range, and equipment. Do not compare their window stickers directly against the hybrid prices in this file."
+      ],
+      "sources": [
+        { "label": "Toyota 2026 RAV4 model page", "url": "https://www.toyota.com/rav4/" },
+        { "label": "Toyota 2026 RAV4 full specifications", "url": "https://www.toyota.com/rav4/features/interior/f47/rav4/features/interior/4452/4437/4530/" },
+        { "label": "Toyota newsroom: all-new 2026 RAV4 grades, powertrains, and equipment", "url": "https://pressroom.toyota.com/the-next-adventure-begins-2026-rav4-arrives-this-winter/" },
+        { "label": "Toyota 2026 RAV4 brochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026_rav4_brochure_20260612_142557.pdf" }
+      ]
+    },
+    {
+      "id": "prius-2027",
+      "make": "Toyota",
+      "model": "Prius",
+      "modelSlug": "prius",
+      "year": 2027,
+      "bodyType": "Hatchback",
+      "title": "2027 Toyota Prius",
+      "scope": "2027 U.S. Prius hybrid (not Prius Plug-in Hybrid).",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2027-toyota-prius-us-trim-comparison.md",
+      "trims": [
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 28755, "mpgCity": 59, "mpgHwy": 50, "mpgCombined": null, "blurb": null },
+        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "msrp": 30155, "mpgCity": 56, "mpgHwy": 49, "mpgCombined": null, "blurb": null },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 32200, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "msrp": 33600, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
+        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "msrp": 33005, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "msrp": 34405, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
+        { "name": "Limited", "grade": "Limited", "drivetrain": "FWD", "msrp": 35770, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Limited AWD", "grade": "Limited", "drivetrain": "AWD", "msrp": 37170, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null }
+      ],
+      "powertrains": [
+        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.0L four-cylinder hybrid; ECVT", "output": "194 net combined hp FWD; 196 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }
+      ],
+      "powertrainNotes": [
+        "Toyota quotes 0-60 mph in 7.2 seconds for FWD and 7.0 seconds for AWD.",
+        "Every grade offers EV, Power, Eco, and Normal drive modes. EV mode is for short, low-speed operation when conditions allow.",
+        "AWD costs $1,400 versus the corresponding FWD grade and reduces the EPA rating; it is not a separate trim equipment package."
+      ],
+      "standardEquipment": [
+        "Fifth-generation Toyota Hybrid System with a 2.0L four-cylinder engine: 194 net combined hp FWD, or 196 net combined hp AWD.",
+        "EV, Power, Eco, and Normal drive modes; 60/40 split folding rear seats; and a rear liftback cargo opening.",
+        "Toyota Safety Sense 3.0, Blind Spot Monitor with Rear Cross-Traffic Alert, and a 7-inch top-mount digital gauge display.",
+        "Wireless Apple CarPlay and Android Auto compatibility, an 8-inch Toyota Audio Multimedia display, and Toyota connected-services capability."
+      ],
+      "featureMatrix": {
+        "grades": ["LE", "XLE", "Nightshade", "Limited"],
+        "rows": [
+          { "feature": "FWD and AWD configurations", "values": ["S", "S", "S", "S"] },
+          { "feature": "17-in alloy wheels with wheel covers", "values": ["S", "-", "-", "-"] },
+          { "feature": "19-in alloy wheels", "values": ["-", "S", "-", "S"] },
+          { "feature": "19-in black-finish alloy wheels", "values": ["-", "-", "S", "-"] },
+          { "feature": "Fabric front seats", "values": ["S", "-", "-", "-"] },
+          { "feature": "8-way power SofTex front seats", "values": ["-", "S", "S", "S"] },
+          { "feature": "Heated front seats", "values": ["-", "S", "S", "S"] },
+          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "S"] },
+          { "feature": "Driver-seat memory", "values": ["-", "-", "-", "S"] },
+          { "feature": "Heated rear seats", "values": ["-", "-", "-", "A"] },
+          { "feature": "Qi wireless charging", "values": ["-", "S", "S", "S"] },
+          { "feature": "Rain-sensing wipers", "values": ["-", "S", "S", "S"] },
+          { "feature": "Black exterior accents / blackout badging", "values": ["-", "-", "S", "-"] },
+          { "feature": "Black SofTex seats with gray stitching", "values": ["-", "-", "S", "-"] },
+          { "feature": "Carbon-fiber-look dashboard detail", "values": ["-", "-", "S", "-"] },
+          { "feature": "Power liftback", "values": ["-", "-", "-", "S"] },
+          { "feature": "Fixed glass roof", "values": ["-", "-", "-", "S"] },
+          { "feature": "12.3-in multimedia touchscreen", "values": ["-", "-", "-", "S"] },
+          { "feature": "JBL 8-speaker premium audio", "values": ["-", "-", "-", "S"] }
+        ]
+      },
+      "highlights": [
+        { "grade": "LE", "text": "Lowest price and best efficiency; its FWD 59/50 MPG rating is the range-focused choice." },
+        { "grade": "XLE", "text": "Adds the key daily-comfort upgrades: 19-inch wheels, heated power SofTex seats, Qi charging, and rain-sensing wipers." },
+        { "grade": "Nightshade", "text": "The XLE equipment direction with black 19-inch wheels, dark exterior details, black/gray SofTex seating, and carbon-fiber-look trim." },
+        { "grade": "Limited", "text": "Adds the premium technology and convenience equipment: 12.3-inch touchscreen, JBL audio, fixed glass roof, power liftback, driver memory, and ventilated front seats." }
+      ],
+      "notes": [
+        "AWD is available on every grade; it adds traction and 2 hp, but reduces fuel economy and adds $1,400 versus the equivalent FWD grade."
+      ],
+      "sources": [
+        { "label": "Toyota 2027 Prius model page", "url": "https://www.toyota.com/prius/" },
+        { "label": "Toyota 2027 Prius inventory/model listing", "url": "https://www.toyota.com/vehicles/prius/2027" },
+        { "label": "Toyota Prius brochures", "url": "https://www.toyota.com/brochures/electrified/" }
+      ]
+    }
+  ]
+}
