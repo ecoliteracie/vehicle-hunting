@@ -233,6 +233,7 @@ function featureCell(v) {
   if (v === 'S') return `<span class="fcell fcell--standard" title="Standard"><span aria-hidden="true"></span><span class="sr-only">Standard</span></span>`;
   if (v === 'A') return `<span class="fcell fcell--available" title="Available"><span aria-hidden="true"></span><span class="sr-only">Available</span></span>`;
   if (v === '-') return `<span class="fcell fcell--none" title="Not offered"><span aria-hidden="true">–</span><span class="sr-only">Not offered</span></span>`;
+  if (v === '?') return `<span class="fcell fcell--unknown" title="Unconfirmed — not documented in sources checked"><span aria-hidden="true">?</span><span class="sr-only">Unconfirmed</span></span>`;
   const m = v.match(/^(S|A)\s*\((.+)\)$/);
   if (m) {
     const isStandard = m[1] === 'S';
@@ -254,6 +255,7 @@ function featureMatrixSection(vehicle) {
       <span class="fcell-legend__item"><span class="fcell fcell--standard"><span aria-hidden="true"></span></span> Standard</span>
       <span class="fcell-legend__item"><span class="fcell fcell--available"><span aria-hidden="true"></span></span> Available</span>
       <span class="fcell-legend__item"><span class="fcell fcell--none"><span aria-hidden="true">–</span></span> Not offered</span>
+      <span class="fcell-legend__item"><span class="fcell fcell--unknown"><span aria-hidden="true">?</span></span> Unconfirmed</span>
     </div>
     <div class="table-scroll table-scroll--matrix">
       <table class="feature-table" id="featureTable">

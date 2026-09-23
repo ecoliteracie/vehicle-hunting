@@ -333,6 +333,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   width: auto; height: auto; border-radius: 0; background: none;
   color: var(--text-muted); font-weight: 700;
 }
+.fcell--unknown > span[aria-hidden] {
+  width: 14px; height: 14px; border-radius: 50%; background: none;
+  border: 1.5px dashed var(--text-muted);
+  color: var(--text-muted); font-size: 10px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
 .fcell__note { font-size: 0.6875rem; color: var(--text-muted); max-width: 90px; white-space: normal; text-align: center; }
 
 /* Lists */

@@ -63,7 +63,14 @@
           { "feature": "Panoramic roof", "values": ["-", "-", "-", "A", "A"] },
           { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "A", "A"] },
           { "feature": "10-in head-up display", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "Premium Plus driver-assistance package", "values": ["-", "-", "-", "A", "A"] }
+          { "feature": "Premium Plus driver-assistance package", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S"] },
+          { "feature": "Qi wireless charging", "values": ["S", "S", "S", "S", "S"] },
+          { "feature": "Proximity Sensing Keyless Entry (Smart Key)", "values": ["A", "A", "A", "S", "S"] },
+          { "feature": "Rain-sensing wipers", "values": ["-", "-", "-", "A", "A"] },
+          { "feature": "Front/rear parking sonar with automatic braking", "values": ["-", "-", "-", "A (via Premium Plus)", "A (via Premium Plus)"] },
+          { "feature": "Heated rear seats", "values": ["-", "-", "-", "-", "-"] },
+          { "feature": "Driver-seat memory", "values": ["-", "-", "-", "?", "?"] }
         ]
       },
       "highlights": [
@@ -135,7 +142,14 @@
           { "feature": "SofTex-trimmed heated front sport seats", "values": ["-", "-", "-", "-", "S", "-"] },
           { "feature": "SofTex-trimmed heated front seats", "values": ["-", "-", "-", "-", "-", "S"] },
           { "feature": "Power tilt/slide moonroof", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "JBL premium audio (9 speakers, subwoofer, amplifier)", "values": ["-", "-", "-", "-", "A", "A"] }
+          { "feature": "JBL premium audio (9 speakers, subwoofer, amplifier)", "values": ["-", "-", "-", "-", "A", "A"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
+          { "feature": "Qi wireless charging", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
         ]
       },
       "progression": [
@@ -203,8 +217,16 @@
           { "feature": "10.5-in multimedia touchscreen", "values": ["-", "-", "A", "A", "S", "S"] },
           { "feature": "Heated SofTex front seats", "values": ["-", "-", "-", "-", "S", "S"] },
           { "feature": "8-way power driver seat", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "Power moonroof and Qi wireless charger", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "JBL Premium Audio", "values": ["-", "-", "-", "-", "A", "A"] }
+          { "feature": "JBL Premium Audio", "values": ["-", "-", "-", "-", "A", "A"] },
+          { "feature": "Qi wireless charging (bundled with moonroof below this tier)", "values": ["A", "A", "A", "A", "S", "S"] },
+          { "feature": "Moonroof / glass roof (bundled with Qi charging above this tier)", "values": ["A", "A", "A", "A", "S", "S"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
+          { "feature": "Proximity Sensing Keyless Entry (Smart Key)", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
         ]
       },
       "highlights": [],
@@ -268,7 +290,15 @@
           { "feature": "Black roof rails / privacy glass", "values": ["-", "-", "S", "-", "S", "S"] },
           { "feature": "10-way power driver seat", "values": ["-", "-", "A", "-", "A", "S"] },
           { "feature": "Dual-zone automatic climate control", "values": ["-", "-", "A", "-", "-", "S"] },
-          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "A", "-", "-", "A"] }
+          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "A", "-", "-", "A"] },
+          { "feature": "Heated front seats", "values": ["-", "A", "S", "?", "?", "?"] },
+          { "feature": "Proximity Sensing Keyless Entry / push-button start", "values": ["-", "S", "S", "S", "S", "S"] },
+          { "feature": "Moonroof / glass roof", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
         ]
       },
       "highlights": [
@@ -342,7 +372,13 @@
           { "feature": "3D Panoramic View Monitor / advanced driver assists", "values": ["-", "-", "-", "S", "-", "S"] },
           { "feature": "Panoramic glass roof", "values": ["-", "-", "-", "-", "-", "S"] },
           { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "-", "-", "S"] },
-          { "feature": "Dual Qi wireless charging", "values": ["-", "-", "-", "-", "-", "S"] }
+          { "feature": "Dual Qi wireless charging", "values": ["-", "-", "-", "-", "-", "S"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
+          { "feature": "Smart Key / push-button start", "values": ["S", "S", "S", "S", "S", "S"] },
+          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "S"] },
+          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
+          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] }
         ]
       },
       "highlights": [
@@ -419,7 +455,11 @@
           { "feature": "Power liftback", "values": ["-", "-", "-", "S"] },
           { "feature": "Fixed glass roof", "values": ["-", "-", "-", "S"] },
           { "feature": "12.3-in multimedia touchscreen", "values": ["-", "-", "-", "S"] },
-          { "feature": "JBL 8-speaker premium audio", "values": ["-", "-", "-", "S"] }
+          { "feature": "JBL 8-speaker premium audio", "values": ["-", "-", "-", "S"] },
+          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S"] },
+          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "A"] },
+          { "feature": "Head-up display", "values": ["-", "-", "-", "-"] },
+          { "feature": "Proximity Sensing Keyless Entry / push-button start", "values": ["?", "?", "?", "S"] }
         ]
       },
       "highlights": [
