@@ -13,16 +13,16 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-camry-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 29600, "mpgCity": 52, "mpgHwy": 49, "mpgCombined": 51, "blurb": "Efficiency/value" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 32100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Sport-oriented" },
-        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "msrp": 33100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 34800, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 36000, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Highest sport trim" },
-        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "msrp": 31125, "mpgCity": 50, "mpgHwy": 49, "mpgCombined": 50, "blurb": "Efficiency/value" },
-        { "name": "SE AWD", "grade": "SE", "drivetrain": "AWD", "msrp": 33625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Sport-oriented" },
-        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "msrp": 34625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
-        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "msrp": 36325, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
-        { "name": "XSE AWD", "grade": "XSE", "drivetrain": "AWD", "msrp": 37525, "mpgCity": 43, "mpgHwy": 43, "mpgCombined": 43, "blurb": "Highest sport trim" }
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 29600, "mpgCity": 52, "mpgHwy": 49, "mpgCombined": 51, "blurb": "Efficiency/value" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 32100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Sport-oriented" },
+        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 33100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 34800, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 36000, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Highest sport trim" },
+        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 31125, "mpgCity": 50, "mpgHwy": 49, "mpgCombined": 50, "blurb": "Efficiency/value" },
+        { "name": "SE AWD", "grade": "SE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 33625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Sport-oriented" },
+        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 34625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
+        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 36325, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
+        { "name": "XSE AWD", "grade": "XSE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 37525, "mpgCity": 43, "mpgHwy": 43, "mpgCombined": 43, "blurb": "Highest sport trim" }
       ],
       "powertrains": [
         { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; ECVT", "output": "225 net combined hp FWD; 232 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }
@@ -101,12 +101,12 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-corolla-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 23125, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": "Lowest-priced gas Corolla with the essential modern safety and phone features" },
-        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "msrp": 24975, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Highest efficiency at the entry price point", "awdAvailable": true, "awdNote": "AWD available — 51 / 44 MPG (city/hwy), price not separately stated" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 25565, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": "Sportier gas model" },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "msrp": 27415, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": "Sportier hybrid, with optional AWD", "awdAvailable": true, "awdNote": "AWD available — 47 / 41 MPG (city/hwy), price not separately stated" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 28840, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": "Fully equipped, performance-oriented gas trim" },
-        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "msrp": 29340, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Fully equipped, comfort-oriented hybrid" }
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 23125, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": "Lowest-priced gas Corolla with the essential modern safety and phone features" },
+        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 24975, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Highest efficiency at the entry price point", "awdAvailable": true, "awdNote": "AWD available — 51 / 44 MPG (city/hwy), price not separately stated" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25565, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": "Sportier gas model" },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 27415, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": "Sportier hybrid, with optional AWD", "awdAvailable": true, "awdNote": "AWD available — 47 / 41 MPG (city/hwy), price not separately stated" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 28840, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": "Fully equipped, performance-oriented gas trim" },
+        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29340, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Fully equipped, comfort-oriented hybrid" }
       ],
       "powertrains": [
         { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
@@ -183,14 +183,14 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2027-toyota-corolla-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 23325, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "msrp": 25175, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 25765, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "msrp": 27615, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": null },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "msrp": 29040, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "msrp": 29540, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid LE AWD", "grade": "Hybrid LE", "drivetrain": "AWD", "msrp": 26575, "mpgCity": 51, "mpgHwy": 44, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid SE AWD", "grade": "Hybrid SE", "drivetrain": "AWD", "msrp": 29015, "mpgCity": 47, "mpgHwy": 41, "mpgCombined": null, "blurb": null }
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 23325, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 25175, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25765, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 27615, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": null },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 29040, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29540, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid LE AWD", "grade": "Hybrid LE", "drivetrain": "AWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 26575, "mpgCity": 51, "mpgHwy": 44, "mpgCombined": null, "blurb": null },
+        { "name": "Hybrid SE AWD", "grade": "Hybrid SE", "drivetrain": "AWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29015, "mpgCity": 47, "mpgHwy": 41, "mpgCombined": null, "blurb": null }
       ],
       "powertrains": [
         { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L Dynamic Force four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
@@ -251,12 +251,12 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-corolla-cross-us-trim-comparison.md",
       "trims": [
-        { "name": "L", "grade": "L", "drivetrain": "FWD", "msrp": 25335, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Lowest-cost compact SUV", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 27665, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Better-equipped gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 30260, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Premium gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "Hybrid S", "grade": "Hybrid S", "drivetrain": "AWD", "msrp": 29795, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Entry hybrid sport model" },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "AWD", "msrp": 31115, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Better-equipped hybrid sport model" },
-        { "name": "Hybrid XSE", "grade": "Hybrid XSE", "drivetrain": "AWD", "msrp": 33830, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Top hybrid model" }
+        { "name": "L", "grade": "L", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25335, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Lowest-cost compact SUV", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 27665, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Better-equipped gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 30260, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Premium gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
+        { "name": "Hybrid S", "grade": "Hybrid S", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 29795, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Entry hybrid sport model" },
+        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 31115, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Better-equipped hybrid sport model" },
+        { "name": "Hybrid XSE", "grade": "Hybrid XSE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 33830, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Top hybrid model" }
       ],
       "powertrains": [
         { "system": "Gas", "engine": "2.0L four-cylinder; CVT", "output": "169 hp", "availability": "FWD standard; AWD available on L, LE, and XLE" },
@@ -332,12 +332,12 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-rav4-hybrid-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 31900, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Entry/value", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "msrp": 34700, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Sport-styled", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
-        { "name": "XLE Premium", "grade": "XLE Premium", "drivetrain": "FWD", "msrp": 36100, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Comfort/core premium", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/38/41 MPG" },
-        { "name": "Woodland", "grade": "Woodland", "drivetrain": "AWD", "msrp": 39900, "mpgCity": 41, "mpgHwy": 35, "mpgCombined": 38, "blurb": "Outdoor/rugged" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "AWD", "msrp": 41300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Sport premium" },
-        { "name": "Limited", "grade": "Limited", "drivetrain": "AWD", "msrp": 43300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Top luxury/technology" }
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 31900, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Entry/value", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
+        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 34700, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Sport-styled", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
+        { "name": "XLE Premium", "grade": "XLE Premium", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 36100, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Comfort/core premium", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/38/41 MPG" },
+        { "name": "Woodland", "grade": "Woodland", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 39900, "mpgCity": 41, "mpgHwy": 35, "mpgCombined": 38, "blurb": "Outdoor/rugged" },
+        { "name": "XSE", "grade": "XSE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 41300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Sport premium" },
+        { "name": "Limited", "grade": "Limited", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 43300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Top luxury/technology" }
       ],
       "powertrains": [
         { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; planetary-type ECVT", "output": "226 net combined hp FWD; 236 net combined hp AWD", "availability": "FWD on LE, SE, XLE Premium; AWD optional on those grades and standard on Woodland, XSE, Limited" }
@@ -411,14 +411,14 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2027-toyota-prius-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "msrp": 28755, "mpgCity": 59, "mpgHwy": 50, "mpgCombined": null, "blurb": null },
-        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "msrp": 30155, "mpgCity": 56, "mpgHwy": 49, "mpgCombined": null, "blurb": null },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "msrp": 32200, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "msrp": 33600, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
-        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "msrp": 33005, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "msrp": 34405, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
-        { "name": "Limited", "grade": "Limited", "drivetrain": "FWD", "msrp": 35770, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Limited AWD", "grade": "Limited", "drivetrain": "AWD", "msrp": 37170, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null }
+        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 28755, "mpgCity": 59, "mpgHwy": 50, "mpgCombined": null, "blurb": null },
+        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 30155, "mpgCity": 56, "mpgHwy": 49, "mpgCombined": null, "blurb": null },
+        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 32200, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 33600, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
+        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 33005, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 34405, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
+        { "name": "Limited", "grade": "Limited", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 35770, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
+        { "name": "Limited AWD", "grade": "Limited", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 37170, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null }
       ],
       "powertrains": [
         { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.0L four-cylinder hybrid; ECVT", "output": "194 net combined hp FWD; 196 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }

@@ -43,6 +43,8 @@ function router() {
   const parts = hash.split('/').filter(Boolean);
   if (parts[0] === 'model' && parts[1]) {
     renderModelPage(parts[1], parts[2] ? Number(parts[2]) : null);
+  } else if (parts[0] === 'all-trims') {
+    renderAllTrimsPage();
   } else {
     renderHome();
   }
@@ -62,6 +64,13 @@ function renderHome() {
     <section class="model-grid">
       ${groups.map(modelCard).join('')}
     </section>
+    <a class="all-trims-banner" href="#/all-trims">
+      <div>
+        <h2>See every trim, every model, in one table</h2>
+        <p>Price, engine/output, efficiency, and the handful of features tracked consistently across all profiles — sortable and filterable. Not a full apples-to-apples feature comparison (body styles and powertrains differ too much for that) but enough to scan the whole lineup at once.</p>
+      </div>
+      <span class="all-trims-banner__arrow" aria-hidden="true">→</span>
+    </a>
   `;
 }
 
@@ -86,6 +95,206 @@ function modelCard(g) {
       <div><dt>Grades</dt><dd>${gradeCount}</dd></div>
     </dl>
   </a>`;
+}
+
+/* ---------- All Trims ---------- */
+
+const FEATURE_LOOKUP = {
+  roof: {
+    'camry-2026': ['Panoramic roof'],
+    'corolla-2026': ['Power tilt/slide moonroof'],
+    'corolla-2027': ['Moonroof / glass roof (bundled with Qi charging above this tier)'],
+    'corolla-cross-2026': ['Moonroof / glass roof'],
+    'rav4-hybrid-2026': ['Panoramic glass roof'],
+    'prius-2027': ['Fixed glass roof'],
+  },
+  heatedSeats: {
+    'camry-2026': ['Heated front seats / heated steering wheel'],
+    'corolla-2026': ['SofTex-trimmed heated front sport seats', 'SofTex-trimmed heated front seats'],
+    'corolla-2027': ['Heated SofTex front seats'],
+    'corolla-cross-2026': ['Heated front seats'],
+    'rav4-hybrid-2026': ['Heated front seats'],
+    'prius-2027': ['Heated front seats'],
+  },
+  audio: {
+    'camry-2026': ['JBL 9-speaker premium audio'],
+    'corolla-2026': ['JBL premium audio (9 speakers, subwoofer, amplifier)'],
+    'corolla-2027': ['JBL Premium Audio'],
+    'corolla-cross-2026': ['JBL 9-speaker premium audio'],
+    'rav4-hybrid-2026': ['JBL 9-speaker premium audio'],
+    'prius-2027': ['JBL 8-speaker premium audio'],
+  },
+  hud: {
+    'camry-2026': ['10-in head-up display'],
+    'corolla-2026': ['Head-up display'],
+    'corolla-2027': ['Head-up display'],
+    'corolla-cross-2026': ['Head-up display'],
+    'rav4-hybrid-2026': ['Head-up display'],
+    'prius-2027': ['Head-up display'],
+  },
+};
+
+function lookupFeature(vehicle, grade, key) {
+  const featureNames = FEATURE_LOOKUP[key]?.[vehicle.id];
+  if (!featureNames) return null;
+  const gradeIdx = vehicle.featureMatrix.grades.indexOf(grade);
+  if (gradeIdx === -1) return null;
+  let fallback = null;
+  for (const fname of featureNames) {
+    const row = vehicle.featureMatrix.rows.find(r => r.feature === fname);
+    if (!row) continue;
+    const v = row.values[gradeIdx];
+    if (fallback == null) fallback = v;
+    if (v && v !== '-') return v;
+  }
+  return fallback;
+}
+
+function allTrimsFlat() {
+  const rows = [];
+  for (const v of DATA.vehicles) {
+    for (const t of v.trims) {
+      rows.push({
+        model: v.model,
+        modelSlug: v.modelSlug,
+        year: v.year,
+        vehicleLabel: `${v.model} '${String(v.year).slice(2)} ${t.name}`,
+        bodyType: v.bodyType,
+        drivetrain: t.drivetrain,
+        engine: t.engine,
+        hp: t.hp,
+        msrp: t.msrp,
+        mpgCombined: avgMpg(t),
+        roof: lookupFeature(v, t.grade, 'roof'),
+        heatedSeats: lookupFeature(v, t.grade, 'heatedSeats'),
+        audio: lookupFeature(v, t.grade, 'audio'),
+        hud: lookupFeature(v, t.grade, 'hud'),
+      });
+    }
+  }
+  return rows;
+}
+
+function renderAllTrimsPage() {
+  const allRows = allTrimsFlat();
+  const models = Array.from(new Set(DATA.vehicles.map(v => v.model)));
+
+  app.innerHTML = `
+    <section class="model-page">
+      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">Toyota</a> / All Trims</p>
+      <div class="model-page__head">
+        <div>
+          <h1>All Toyota trims at a glance</h1>
+          <p class="scope">Every trim across every model, one row each. A full apples-to-apples feature comparison isn't possible across different body styles and powertrains, so this sticks to what's genuinely comparable: price, engine/output, efficiency, and the handful of features tracked consistently across all six profiles. Click a column header to sort, or a model chip to filter. Open a model's own page for its complete feature matrix.</p>
+        </div>
+      </div>
+
+      <div class="chip-row" id="modelFilter">
+        ${models.map(m => `<button type="button" class="chip is-active" data-model="${m}">${m}</button>`).join('')}
+      </div>
+
+      <section class="panel">
+        <div class="panel__head">
+          <h2 id="allTrimsCount">${allRows.length} trims</h2>
+          <input type="search" id="allTrimsSearch" placeholder="Search trims…" aria-label="Search trims">
+        </div>
+        <div class="fcell-legend">
+          <span class="fcell-legend__item"><span class="fcell fcell--standard"><span aria-hidden="true"></span></span> Standard</span>
+          <span class="fcell-legend__item"><span class="fcell fcell--available"><span aria-hidden="true"></span></span> Available</span>
+          <span class="fcell-legend__item"><span class="fcell fcell--none"><span aria-hidden="true">–</span></span> Not offered</span>
+          <span class="fcell-legend__item"><span class="fcell fcell--unknown"><span aria-hidden="true">?</span></span> Unconfirmed</span>
+        </div>
+        <div class="table-scroll table-scroll--matrix">
+          <table class="trim-table" id="allTrimsTable">
+            <thead>
+              <tr>
+                <th data-key="vehicleLabel" class="feature-col">Vehicle</th>
+                <th data-key="bodyType">Body</th>
+                <th data-key="drivetrain">Drive</th>
+                <th data-key="engine">Engine</th>
+                <th data-key="hp" class="num">HP</th>
+                <th data-key="msrp" class="num">MSRP</th>
+                <th data-key="mpgCombined" class="num">MPG comb.</th>
+                <th>Roof</th>
+                <th>Htd seats</th>
+                <th>Audio</th>
+                <th>HUD</th>
+              </tr>
+            </thead>
+            <tbody>${allTrimsRows(allRows)}</tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  `;
+
+  wireAllTrimsTable(allRows);
+}
+
+function allTrimsRows(rows) {
+  return rows.map(r => `
+    <tr>
+      <td class="trim-name feature-col"><a href="#/model/${r.modelSlug}/${r.year}">${r.vehicleLabel}</a></td>
+      <td>${r.bodyType}</td>
+      <td>${r.drivetrain}</td>
+      <td>${r.engine}</td>
+      <td class="num">${r.hp}</td>
+      <td class="num">${fmtUSD(r.msrp)}</td>
+      <td class="num">${r.mpgCombined ?? '—'}</td>
+      <td>${r.roof ? featureCell(r.roof) : '—'}</td>
+      <td>${r.heatedSeats ? featureCell(r.heatedSeats) : '—'}</td>
+      <td>${r.audio ? featureCell(r.audio) : '—'}</td>
+      <td>${r.hud ? featureCell(r.hud) : '—'}</td>
+    </tr>`).join('');
+}
+
+function wireAllTrimsTable(allRows) {
+  const table = document.getElementById('allTrimsTable');
+  const chipRow = document.getElementById('modelFilter');
+  const search = document.getElementById('allTrimsSearch');
+  const countEl = document.getElementById('allTrimsCount');
+  let sortKey = null;
+  let sortDir = 1;
+
+  function apply() {
+    const active = new Set(Array.from(chipRow.querySelectorAll('.chip.is-active')).map(c => c.dataset.model));
+    let rows = allRows.filter(r => active.has(r.model));
+    const q = search.value.trim().toLowerCase();
+    if (q) rows = rows.filter(r => r.vehicleLabel.toLowerCase().includes(q));
+    if (sortKey) {
+      rows = [...rows].sort((a, b) => {
+        const av = a[sortKey];
+        const bv = b[sortKey];
+        if (av == null && bv == null) return 0;
+        if (av == null) return 1;
+        if (bv == null) return -1;
+        if (typeof av === 'string') return av.localeCompare(bv) * sortDir;
+        return (av - bv) * sortDir;
+      });
+    }
+    table.querySelector('tbody').innerHTML = allTrimsRows(rows);
+    countEl.textContent = `${rows.length} trim${rows.length === 1 ? '' : 's'}`;
+  }
+
+  chipRow.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('is-active');
+      apply();
+    });
+  });
+
+  search.addEventListener('input', apply);
+
+  table.querySelectorAll('th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      sortDir = sortKey === key ? -sortDir : 1;
+      sortKey = key;
+      table.querySelectorAll('th[data-key]').forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+      th.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+      apply();
+    });
+  });
 }
 
 /* ---------- Model page ---------- */
