@@ -4,8 +4,9 @@ A static comparison site for car shopping — pick a make, then a model, and see
 every trim's price, efficiency, and full feature matrix on one page, with
 charts so the differences are clear at a glance. An "All Trims" page lists
 every trim across every model in one sortable/filterable table for a
-cross-model, glance-level view. Toyota only for now; built to extend to other
-makes later.
+cross-model, glance-level view. Toyota and Honda are covered so far; built to
+extend to other makes later. The make selector in the header switches between
+them (persisted per-browser via `localStorage`).
 
 **[Live site](https://ecoliteracie.github.io/vehicle-hunting/)**
 

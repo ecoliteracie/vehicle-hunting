@@ -1,5 +1,8 @@
 {
-  "makes": ["Toyota"],
+  "makes": [
+    "Toyota",
+    "Honda"
+  ],
   "vehicles": [
     {
       "id": "camry-2026",
@@ -13,19 +16,134 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-camry-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 29600, "mpgCity": 52, "mpgHwy": 49, "mpgCombined": 51, "blurb": "Efficiency/value" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 32100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Sport-oriented" },
-        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 33100, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 34800, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 225, "msrp": 36000, "mpgCity": 47, "mpgHwy": 45, "mpgCombined": 46, "blurb": "Highest sport trim" },
-        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 31125, "mpgCity": 50, "mpgHwy": 49, "mpgCombined": 50, "blurb": "Efficiency/value" },
-        { "name": "SE AWD", "grade": "SE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 33625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Sport-oriented" },
-        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 34625, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Blacked-out sport appearance" },
-        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 36325, "mpgCity": 46, "mpgHwy": 46, "mpgCombined": 46, "blurb": "Comfort/luxury-oriented" },
-        { "name": "XSE AWD", "grade": "XSE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 232, "msrp": 37525, "mpgCity": 43, "mpgHwy": 43, "mpgCombined": 43, "blurb": "Highest sport trim" }
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 225,
+          "msrp": 29600,
+          "mpgCity": 52,
+          "mpgHwy": 49,
+          "mpgCombined": 51,
+          "blurb": "Efficiency/value"
+        },
+        {
+          "name": "SE",
+          "grade": "SE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 225,
+          "msrp": 32100,
+          "mpgCity": 47,
+          "mpgHwy": 45,
+          "mpgCombined": 46,
+          "blurb": "Sport-oriented"
+        },
+        {
+          "name": "Nightshade",
+          "grade": "Nightshade",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 225,
+          "msrp": 33100,
+          "mpgCity": 47,
+          "mpgHwy": 45,
+          "mpgCombined": 46,
+          "blurb": "Blacked-out sport appearance"
+        },
+        {
+          "name": "XLE",
+          "grade": "XLE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 225,
+          "msrp": 34800,
+          "mpgCity": 47,
+          "mpgHwy": 45,
+          "mpgCombined": 46,
+          "blurb": "Comfort/luxury-oriented"
+        },
+        {
+          "name": "XSE",
+          "grade": "XSE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 225,
+          "msrp": 36000,
+          "mpgCity": 47,
+          "mpgHwy": 45,
+          "mpgCombined": 46,
+          "blurb": "Highest sport trim"
+        },
+        {
+          "name": "LE AWD",
+          "grade": "LE",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 232,
+          "msrp": 31125,
+          "mpgCity": 50,
+          "mpgHwy": 49,
+          "mpgCombined": 50,
+          "blurb": "Efficiency/value"
+        },
+        {
+          "name": "SE AWD",
+          "grade": "SE",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 232,
+          "msrp": 33625,
+          "mpgCity": 46,
+          "mpgHwy": 46,
+          "mpgCombined": 46,
+          "blurb": "Sport-oriented"
+        },
+        {
+          "name": "Nightshade AWD",
+          "grade": "Nightshade",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 232,
+          "msrp": 34625,
+          "mpgCity": 46,
+          "mpgHwy": 46,
+          "mpgCombined": 46,
+          "blurb": "Blacked-out sport appearance"
+        },
+        {
+          "name": "XLE AWD",
+          "grade": "XLE",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 232,
+          "msrp": 36325,
+          "mpgCity": 46,
+          "mpgHwy": 46,
+          "mpgCombined": 46,
+          "blurb": "Comfort/luxury-oriented"
+        },
+        {
+          "name": "XSE AWD",
+          "grade": "XSE",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 232,
+          "msrp": 37525,
+          "mpgCity": 43,
+          "mpgHwy": 43,
+          "mpgCombined": 43,
+          "blurb": "Highest sport trim"
+        }
       ],
       "powertrains": [
-        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; ECVT", "output": "225 net combined hp FWD; 232 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }
+        {
+          "system": "Fifth-generation Toyota Hybrid System",
+          "engine": "2.5L four-cylinder hybrid; ECVT",
+          "output": "225 net combined hp FWD; 232 net combined hp AWD",
+          "availability": "FWD and Electronic On-Demand AWD on every grade"
+        }
       ],
       "powertrainNotes": [
         "All Camrys are hybrid-only for 2026 and include Normal, Eco, and Sport drive modes.",
@@ -40,53 +158,344 @@
         "Wireless Apple CarPlay and Android Auto, dual Bluetooth phone connectivity, and six speakers."
       ],
       "featureMatrix": {
-        "grades": ["LE", "SE", "Nightshade", "XLE", "XSE"],
+        "grades": [
+          "LE",
+          "SE",
+          "Nightshade",
+          "XLE",
+          "XSE"
+        ],
         "rows": [
-          { "feature": "7-in digital gauge cluster", "values": ["S", "S", "S", "-", "-"] },
-          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "-", "S", "S"] },
-          { "feature": "8-in multimedia touchscreen", "values": ["S", "S", "S", "-", "-"] },
-          { "feature": "12.3-in multimedia touchscreen", "values": ["A", "A", "A", "S", "S"] },
-          { "feature": "16-in silver alloy wheels", "values": ["S", "-", "-", "-", "-"] },
-          { "feature": "18-in black alloy wheels", "values": ["-", "S", "-", "S (black/machined)", "-"] },
-          { "feature": "19-in wheels", "values": ["-", "-", "S (satin black)", "-", "S (black/smoke gray)"] },
-          { "feature": "Sport-tuned suspension", "values": ["-", "S", "S", "-", "S"] },
-          { "feature": "Sport mesh grille / aerodynamic canards", "values": ["-", "S", "S", "-", "S"] },
-          { "feature": "Black exterior accents and black rear spoiler", "values": ["-", "-", "S", "-", "-"] },
-          { "feature": "Sport SofTex/fabric front seats", "values": ["-", "S", "S", "-", "-"] },
-          { "feature": "Leather and Dinamica microfiber interior", "values": ["-", "-", "-", "S", "-"] },
-          { "feature": "Leather-trimmed sport interior", "values": ["-", "-", "-", "-", "S"] },
-          { "feature": "8-way power driver seat", "values": ["-", "S", "S", "S", "S"] },
-          { "feature": "8-way power front passenger seat", "values": ["-", "-", "-", "S", "S"] },
-          { "feature": "Heated front seats / heated steering wheel", "values": ["A", "A", "-", "S", "S"] },
-          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "Front-side acoustic laminated glass", "values": ["-", "-", "-", "S", "S"] },
-          { "feature": "Panoramic roof", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "10-in head-up display", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "Premium Plus driver-assistance package", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S"] },
-          { "feature": "Qi wireless charging", "values": ["S", "S", "S", "S", "S"] },
-          { "feature": "Proximity Sensing Keyless Entry (Smart Key)", "values": ["A", "A", "A", "S", "S"] },
-          { "feature": "Rain-sensing wipers", "values": ["-", "-", "-", "A", "A"] },
-          { "feature": "Front/rear parking sonar with automatic braking", "values": ["-", "-", "-", "A (via Premium Plus)", "A (via Premium Plus)"] },
-          { "feature": "Heated rear seats", "values": ["-", "-", "-", "-", "-"] },
-          { "feature": "Driver-seat memory", "values": ["-", "-", "-", "?", "?"] }
+          {
+            "feature": "7-in digital gauge cluster",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "12.3-in digital gauge cluster",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-in multimedia touchscreen",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "12.3-in multimedia touchscreen",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "16-in silver alloy wheels",
+            "values": [
+              "S",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "18-in black alloy wheels",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S (black/machined)",
+              "-"
+            ]
+          },
+          {
+            "feature": "19-in wheels",
+            "values": [
+              "-",
+              "-",
+              "S (satin black)",
+              "-",
+              "S (black/smoke gray)"
+            ]
+          },
+          {
+            "feature": "Sport-tuned suspension",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Sport mesh grille / aerodynamic canards",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Black exterior accents and black rear spoiler",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Sport SofTex/fabric front seats",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Leather and Dinamica microfiber interior",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Leather-trimmed sport interior",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-way power driver seat",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-way power front passenger seat",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats / heated steering wheel",
+            "values": [
+              "A",
+              "A",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Front-side acoustic laminated glass",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Panoramic roof",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "JBL 9-speaker premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "10-in head-up display",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Premium Plus driver-assistance package",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Qi wireless charging",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Proximity Sensing Keyless Entry (Smart Key)",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar with automatic braking",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A (via Premium Plus)",
+              "A (via Premium Plus)"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "?",
+              "?"
+            ]
+          }
         ]
       },
       "highlights": [
-        { "grade": "LE", "text": "Best economy and lowest entry price; the only 51-combined-MPG Camry in FWD form." },
-        { "grade": "SE", "text": "The practical sport trim with 18-inch black wheels, sport seating, and sport-tuned suspension." },
-        { "grade": "Nightshade", "text": "Essentially a black-accented sport model, with exclusive 19-inch satin-black wheels, black grille/badging, and black spoiler." },
-        { "grade": "XLE", "text": "Premium and quieter ride focus, with 12.3-inch displays, heated leather/microfiber seating, and upscale options." },
-        { "grade": "XSE", "text": "Combines the higher-end technology with sport suspension, aggressive exterior styling, and 19-inch wheels." }
+        {
+          "grade": "LE",
+          "text": "Best economy and lowest entry price; the only 51-combined-MPG Camry in FWD form."
+        },
+        {
+          "grade": "SE",
+          "text": "The practical sport trim with 18-inch black wheels, sport seating, and sport-tuned suspension."
+        },
+        {
+          "grade": "Nightshade",
+          "text": "Essentially a black-accented sport model, with exclusive 19-inch satin-black wheels, black grille/badging, and black spoiler."
+        },
+        {
+          "grade": "XLE",
+          "text": "Premium and quieter ride focus, with 12.3-inch displays, heated leather/microfiber seating, and upscale options."
+        },
+        {
+          "grade": "XSE",
+          "text": "Combines the higher-end technology with sport suspension, aggressive exterior styling, and 19-inch wheels."
+        }
       ],
       "notes": [
         "Premium Plus Package (XLE / XSE only): adds Traffic Jam Assist, Front Cross-Traffic Alert, Lane Change Assist, Panoramic View Monitor, Front and Rear Parking Assist with Automatic Braking, driver-seat/side-mirror memory, and automatic windshield wipers. Digital Key requires the applicable package and an active Remote Connect trial or subscription."
       ],
       "sources": [
-        { "label": "Toyota 2026 Camry model page", "url": "https://www.toyota.com/camry/" },
-        { "label": "Toyota 2026 Camry eBrochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/camry_ebrochure.pdf" },
-        { "label": "Toyota newsroom: 2026 Camry Nightshade and grade details", "url": "https://pressroom.toyota.com/toyota-camry-brings-bold-new-nightshade-edition-to-lineup-in-2026/" }
+        {
+          "label": "Toyota 2026 Camry model page",
+          "url": "https://www.toyota.com/camry/"
+        },
+        {
+          "label": "Toyota 2026 Camry eBrochure",
+          "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/camry_ebrochure.pdf"
+        },
+        {
+          "label": "Toyota newsroom: 2026 Camry Nightshade and grade details",
+          "url": "https://pressroom.toyota.com/toyota-camry-brings-bold-new-nightshade-edition-to-lineup-in-2026/"
+        }
       ]
     },
     {
@@ -101,16 +510,98 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-corolla-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 23125, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": "Lowest-priced gas Corolla with the essential modern safety and phone features" },
-        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 24975, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Highest efficiency at the entry price point", "awdAvailable": true, "awdNote": "AWD available — 51 / 44 MPG (city/hwy), price not separately stated" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25565, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": "Sportier gas model" },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 27415, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": "Sportier hybrid, with optional AWD", "awdAvailable": true, "awdNote": "AWD available — 47 / 41 MPG (city/hwy), price not separately stated" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 28840, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": "Fully equipped, performance-oriented gas trim" },
-        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29340, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": "Fully equipped, comfort-oriented hybrid" }
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 23125,
+          "mpgCity": 32,
+          "mpgHwy": 41,
+          "mpgCombined": null,
+          "blurb": "Lowest-priced gas Corolla with the essential modern safety and phone features"
+        },
+        {
+          "name": "Hybrid LE",
+          "grade": "Hybrid LE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 24975,
+          "mpgCity": 53,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": "Highest efficiency at the entry price point",
+          "awdAvailable": true,
+          "awdNote": "AWD available — 51 / 44 MPG (city/hwy), price not separately stated"
+        },
+        {
+          "name": "SE",
+          "grade": "SE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 25565,
+          "mpgCity": 31,
+          "mpgHwy": 40,
+          "mpgCombined": null,
+          "blurb": "Sportier gas model"
+        },
+        {
+          "name": "Hybrid SE",
+          "grade": "Hybrid SE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 27415,
+          "mpgCity": 50,
+          "mpgHwy": 43,
+          "mpgCombined": null,
+          "blurb": "Sportier hybrid, with optional AWD",
+          "awdAvailable": true,
+          "awdNote": "AWD available — 47 / 41 MPG (city/hwy), price not separately stated"
+        },
+        {
+          "name": "XSE",
+          "grade": "XSE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 28840,
+          "mpgCity": 31,
+          "mpgHwy": 38,
+          "mpgCombined": null,
+          "blurb": "Fully equipped, performance-oriented gas trim"
+        },
+        {
+          "name": "Hybrid XLE",
+          "grade": "Hybrid XLE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 29340,
+          "mpgCity": 53,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": "Fully equipped, comfort-oriented hybrid"
+        }
       ],
       "powertrains": [
-        { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
-        { "system": "Hybrid", "trims": "Hybrid LE, Hybrid SE, Hybrid XLE", "engine": "1.8L four-cylinder Toyota Hybrid System; ECVT", "output": "138 net combined hp; 105 lb-ft", "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only" }
+        {
+          "system": "Gas",
+          "trims": "LE, SE, XSE",
+          "engine": "2.0L four-cylinder; Dynamic-Shift CVT",
+          "output": "169 hp; 151 lb-ft",
+          "availability": "FWD only"
+        },
+        {
+          "system": "Hybrid",
+          "trims": "Hybrid LE, Hybrid SE, Hybrid XLE",
+          "engine": "1.8L four-cylinder Toyota Hybrid System; ECVT",
+          "output": "138 net combined hp; 105 lb-ft",
+          "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only"
+        }
       ],
       "powertrainNotes": [
         "The Hybrid XLE is FWD only. Hybrid LE/SE AWD are distinct configurations, with their own lower EPA ratings.",
@@ -124,32 +615,279 @@
         "Toyota connected-services capability: Remote Connect, Safety Connect, Drive Connect, Service Connect, and Wi-Fi Connect. Trials/subscriptions and cellular coverage apply."
       ],
       "featureMatrix": {
-        "grades": ["LE", "Hybrid LE", "SE", "Hybrid SE", "XSE", "Hybrid XLE"],
+        "grades": [
+          "LE",
+          "Hybrid LE",
+          "SE",
+          "Hybrid SE",
+          "XSE",
+          "Hybrid XLE"
+        ],
         "rows": [
-          { "feature": "2.0L 169-hp gas engine", "values": ["S", "-", "S", "-", "S", "-"] },
-          { "feature": "1.8L hybrid powertrain / ECVT", "values": ["-", "S", "-", "S", "-", "S"] },
-          { "feature": "Electronic On-Demand AWD", "values": ["-", "A", "-", "A", "-", "-"] },
-          { "feature": "Drive modes: Normal + Eco", "values": ["S", "S", "-", "-", "-", "S"] },
-          { "feature": "Drive modes: Normal + Sport + Eco", "values": ["-", "-", "S", "S", "S", "-"] },
-          { "feature": "Multi-link rear suspension", "values": ["-", "S", "S", "S", "S", "S"] },
-          { "feature": "18-inch graphite-finish alloy wheels", "values": ["-", "-", "S", "S", "S", "-"] },
-          { "feature": "7-inch digital gauge cluster", "values": ["S", "S", "S", "S", "-", "-"] },
-          { "feature": "12.3-inch digital gauge cluster", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "8-inch multimedia touchscreen", "values": ["S", "S", "S", "S", "-", "S"] },
-          { "feature": "10.5-inch multimedia touchscreen", "values": ["-", "-", "A", "A", "S", "-"] },
-          { "feature": "Smart Key / push-button start", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "Premium sport fabric seats", "values": ["-", "-", "S", "S", "-", "-"] },
-          { "feature": "SofTex-trimmed heated front sport seats", "values": ["-", "-", "-", "-", "S", "-"] },
-          { "feature": "SofTex-trimmed heated front seats", "values": ["-", "-", "-", "-", "-", "S"] },
-          { "feature": "Power tilt/slide moonroof", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "JBL premium audio (9 speakers, subwoofer, amplifier)", "values": ["-", "-", "-", "-", "A", "A"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
-          { "feature": "Qi wireless charging", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
+          {
+            "feature": "2.0L 169-hp gas engine",
+            "values": [
+              "S",
+              "-",
+              "S",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "1.8L hybrid powertrain / ECVT",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Electronic On-Demand AWD",
+            "values": [
+              "-",
+              "A",
+              "-",
+              "A",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Drive modes: Normal + Eco",
+            "values": [
+              "S",
+              "S",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Drive modes: Normal + Sport + Eco",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Multi-link rear suspension",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "18-inch graphite-finish alloy wheels",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "7-inch digital gauge cluster",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "12.3-inch digital gauge cluster",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-inch multimedia touchscreen",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "10.5-inch multimedia touchscreen",
+            "values": [
+              "-",
+              "-",
+              "A",
+              "A",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Smart Key / push-button start",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Premium sport fabric seats",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "SofTex-trimmed heated front sport seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "SofTex-trimmed heated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Power tilt/slide moonroof",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "JBL premium audio (9 speakers, subwoofer, amplifier)",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Qi wireless charging",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          }
         ]
       },
       "progression": [
@@ -166,9 +904,18 @@
         "MSRP excludes delivery, processing/handling, taxes, title/license, dealer-installed accessories, and dealer markup."
       ],
       "sources": [
-        { "label": "Toyota 2026 Corolla overview, trims, pricing, and estimated MPG", "url": "https://www.toyota.com/corolla/2026/" },
-        { "label": "Toyota 2026 Corolla eBrochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/corolla_ebrochure.pdf" },
-        { "label": "Toyota 2026 Corolla launch information", "url": "https://pressroom.toyota.com/bold-and-compact-the-2026-toyota-corolla-offers-impressive-features-and-technology/" }
+        {
+          "label": "Toyota 2026 Corolla overview, trims, pricing, and estimated MPG",
+          "url": "https://www.toyota.com/corolla/2026/"
+        },
+        {
+          "label": "Toyota 2026 Corolla eBrochure",
+          "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/corolla_ebrochure.pdf"
+        },
+        {
+          "label": "Toyota 2026 Corolla launch information",
+          "url": "https://pressroom.toyota.com/bold-and-compact-the-2026-toyota-corolla-offers-impressive-features-and-technology/"
+        }
       ]
     },
     {
@@ -183,18 +930,118 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2027-toyota-corolla-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 23325, "mpgCity": 32, "mpgHwy": 41, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid LE", "grade": "Hybrid LE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 25175, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25765, "mpgCity": 31, "mpgHwy": 40, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 27615, "mpgCity": 50, "mpgHwy": 43, "mpgCombined": null, "blurb": null },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 29040, "mpgCity": 31, "mpgHwy": 38, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid XLE", "grade": "Hybrid XLE", "drivetrain": "FWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29540, "mpgCity": 53, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid LE AWD", "grade": "Hybrid LE", "drivetrain": "AWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 26575, "mpgCity": 51, "mpgHwy": 44, "mpgCombined": null, "blurb": null },
-        { "name": "Hybrid SE AWD", "grade": "Hybrid SE", "drivetrain": "AWD", "engine": "1.8L I4 Hybrid", "hp": 138, "msrp": 29015, "mpgCity": 47, "mpgHwy": 41, "mpgCombined": null, "blurb": null }
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 23325,
+          "mpgCity": 32,
+          "mpgHwy": 41,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Hybrid LE",
+          "grade": "Hybrid LE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 25175,
+          "mpgCity": 53,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "SE",
+          "grade": "SE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 25765,
+          "mpgCity": 31,
+          "mpgHwy": 40,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Hybrid SE",
+          "grade": "Hybrid SE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 27615,
+          "mpgCity": 50,
+          "mpgHwy": 43,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "XSE",
+          "grade": "XSE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 29040,
+          "mpgCity": 31,
+          "mpgHwy": 38,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Hybrid XLE",
+          "grade": "Hybrid XLE",
+          "drivetrain": "FWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 29540,
+          "mpgCity": 53,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Hybrid LE AWD",
+          "grade": "Hybrid LE",
+          "drivetrain": "AWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 26575,
+          "mpgCity": 51,
+          "mpgHwy": 44,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Hybrid SE AWD",
+          "grade": "Hybrid SE",
+          "drivetrain": "AWD",
+          "engine": "1.8L I4 Hybrid",
+          "hp": 138,
+          "msrp": 29015,
+          "mpgCity": 47,
+          "mpgHwy": 41,
+          "mpgCombined": null,
+          "blurb": null
+        }
       ],
       "powertrains": [
-        { "system": "Gas", "trims": "LE, SE, XSE", "engine": "2.0L Dynamic Force four-cylinder; Dynamic-Shift CVT", "output": "169 hp; 151 lb-ft", "availability": "FWD only" },
-        { "system": "Hybrid", "trims": "Hybrid LE, Hybrid SE, Hybrid XLE", "engine": "1.8L four-cylinder Toyota Hybrid System 5; ECVT", "output": "138 net combined hp", "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only" }
+        {
+          "system": "Gas",
+          "trims": "LE, SE, XSE",
+          "engine": "2.0L Dynamic Force four-cylinder; Dynamic-Shift CVT",
+          "output": "169 hp; 151 lb-ft",
+          "availability": "FWD only"
+        },
+        {
+          "system": "Hybrid",
+          "trims": "Hybrid LE, Hybrid SE, Hybrid XLE",
+          "engine": "1.8L four-cylinder Toyota Hybrid System 5; ECVT",
+          "output": "138 net combined hp",
+          "availability": "FWD standard; Electronic On-Demand AWD available on Hybrid LE and Hybrid SE only"
+        }
       ],
       "powertrainNotes": [
         "Hybrid XLE is FWD only. AWD Hybrid LE/SE variants are separately priced and have lower EPA ratings.",
@@ -207,36 +1054,232 @@
         "8-inch Toyota Audio Multimedia touchscreen, six speakers, and 7-inch digital gauge cluster."
       ],
       "featureMatrix": {
-        "grades": ["LE", "Hybrid LE", "SE", "Hybrid SE", "XSE", "Hybrid XLE"],
+        "grades": [
+          "LE",
+          "Hybrid LE",
+          "SE",
+          "Hybrid SE",
+          "XSE",
+          "Hybrid XLE"
+        ],
         "rows": [
-          { "feature": "2.0L 169-hp gas engine", "values": ["S", "-", "S", "-", "S", "-"] },
-          { "feature": "1.8L hybrid system (138 net hp)", "values": ["-", "S", "-", "S", "-", "S"] },
-          { "feature": "AWD", "values": ["-", "A", "-", "A", "-", "-"] },
-          { "feature": "Sport drive mode / sport seats / 18-in graphite wheels", "values": ["-", "-", "S", "S", "S", "-"] },
-          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "10.5-in multimedia touchscreen", "values": ["-", "-", "A", "A", "S", "S"] },
-          { "feature": "Heated SofTex front seats", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "8-way power driver seat", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "JBL Premium Audio", "values": ["-", "-", "-", "-", "A", "A"] },
-          { "feature": "Qi wireless charging (bundled with moonroof below this tier)", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "Moonroof / glass roof (bundled with Qi charging above this tier)", "values": ["A", "A", "A", "A", "S", "S"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
-          { "feature": "Proximity Sensing Keyless Entry (Smart Key)", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
+          {
+            "feature": "2.0L 169-hp gas engine",
+            "values": [
+              "S",
+              "-",
+              "S",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "1.8L hybrid system (138 net hp)",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "AWD",
+            "values": [
+              "-",
+              "A",
+              "-",
+              "A",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Sport drive mode / sport seats / 18-in graphite wheels",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "12.3-in digital gauge cluster",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "10.5-in multimedia touchscreen",
+            "values": [
+              "-",
+              "-",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated SofTex front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-way power driver seat",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "JBL Premium Audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "A",
+              "A"
+            ]
+          },
+          {
+            "feature": "Qi wireless charging (bundled with moonroof below this tier)",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Moonroof / glass roof (bundled with Qi charging above this tier)",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "A",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Proximity Sensing Keyless Entry (Smart Key)",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          }
         ]
       },
       "highlights": [],
       "notes": [],
       "specialEditions": [
-        { "name": "60th Anniversary Special Edition", "text": "Limited to 2,500 U.S. vehicles; based on the Hybrid SE; arrives early 2027. Exclusive Ice Cap or Supersonic Red exterior, 18-inch machined black alloy wheels, and 60th Anniversary exterior badging. Black/Red sport-fabric seats, 10.5-inch multimedia display, anniversary door sills, and anniversary floor mats. MSRP had not been announced at the time of research." }
+        {
+          "name": "60th Anniversary Special Edition",
+          "text": "Limited to 2,500 U.S. vehicles; based on the Hybrid SE; arrives early 2027. Exclusive Ice Cap or Supersonic Red exterior, 18-inch machined black alloy wheels, and 60th Anniversary exterior badging. Black/Red sport-fabric seats, 10.5-inch multimedia display, anniversary door sills, and anniversary floor mats. MSRP had not been announced at the time of research."
+        }
       ],
       "sources": [
-        { "label": "Toyota 2027 Corolla model page", "url": "https://www.toyota.com/vehicles/corolla/2027" },
-        { "label": "Toyota newsroom: 2027 Corolla and 60th Anniversary Special Edition", "url": "https://pressroom.toyota.com/built-for-generations-toyota-corolla-celebrates-60-years-with-2027-special-edition/" }
+        {
+          "label": "Toyota 2027 Corolla model page",
+          "url": "https://www.toyota.com/vehicles/corolla/2027"
+        },
+        {
+          "label": "Toyota newsroom: 2027 Corolla and 60th Anniversary Special Edition",
+          "url": "https://pressroom.toyota.com/built-for-generations-toyota-corolla-celebrates-60-years-with-2027-special-edition/"
+        }
       ]
     },
     {
@@ -251,16 +1294,98 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-corolla-cross-us-trim-comparison.md",
       "trims": [
-        { "name": "L", "grade": "L", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 25335, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Lowest-cost compact SUV", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 27665, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Better-equipped gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.0L I4", "hp": 169, "msrp": 30260, "mpgCity": 31, "mpgHwy": 33, "mpgCombined": null, "blurb": "Premium gas model", "awdAvailable": true, "awdNote": "AWD available, price not separately stated" },
-        { "name": "Hybrid S", "grade": "Hybrid S", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 29795, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Entry hybrid sport model" },
-        { "name": "Hybrid SE", "grade": "Hybrid SE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 31115, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Better-equipped hybrid sport model" },
-        { "name": "Hybrid XSE", "grade": "Hybrid XSE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 33830, "mpgCity": 46, "mpgHwy": 39, "mpgCombined": null, "blurb": "Top hybrid model" }
+        {
+          "name": "L",
+          "grade": "L",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 25335,
+          "mpgCity": 31,
+          "mpgHwy": 33,
+          "mpgCombined": null,
+          "blurb": "Lowest-cost compact SUV",
+          "awdAvailable": true,
+          "awdNote": "AWD available, price not separately stated"
+        },
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 27665,
+          "mpgCity": 31,
+          "mpgHwy": 33,
+          "mpgCombined": null,
+          "blurb": "Better-equipped gas model",
+          "awdAvailable": true,
+          "awdNote": "AWD available, price not separately stated"
+        },
+        {
+          "name": "XLE",
+          "grade": "XLE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 169,
+          "msrp": 30260,
+          "mpgCity": 31,
+          "mpgHwy": 33,
+          "mpgCombined": null,
+          "blurb": "Premium gas model",
+          "awdAvailable": true,
+          "awdNote": "AWD available, price not separately stated"
+        },
+        {
+          "name": "Hybrid S",
+          "grade": "Hybrid S",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 29795,
+          "mpgCity": 46,
+          "mpgHwy": 39,
+          "mpgCombined": null,
+          "blurb": "Entry hybrid sport model"
+        },
+        {
+          "name": "Hybrid SE",
+          "grade": "Hybrid SE",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 31115,
+          "mpgCity": 46,
+          "mpgHwy": 39,
+          "mpgCombined": null,
+          "blurb": "Better-equipped hybrid sport model"
+        },
+        {
+          "name": "Hybrid XSE",
+          "grade": "Hybrid XSE",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 33830,
+          "mpgCity": 46,
+          "mpgHwy": 39,
+          "mpgCombined": null,
+          "blurb": "Top hybrid model"
+        }
       ],
       "powertrains": [
-        { "system": "Gas", "engine": "2.0L four-cylinder; CVT", "output": "169 hp", "availability": "FWD standard; AWD available on L, LE, and XLE" },
-        { "system": "Hybrid", "engine": "Fifth-generation 2.0L four-cylinder Toyota Hybrid System; ECVT", "output": "196 net combined hp", "availability": "Electronic On-Demand AWD standard on Hybrid S, SE, and XSE" }
+        {
+          "system": "Gas",
+          "engine": "2.0L four-cylinder; CVT",
+          "output": "169 hp",
+          "availability": "FWD standard; AWD available on L, LE, and XLE"
+        },
+        {
+          "system": "Hybrid",
+          "engine": "Fifth-generation 2.0L four-cylinder Toyota Hybrid System; ECVT",
+          "output": "196 net combined hp",
+          "availability": "Electronic On-Demand AWD standard on Hybrid S, SE, and XSE"
+        }
       ],
       "powertrainNotes": [
         "The hybrid model has a sport-tuned suspension and a manufacturer-estimated 42 MPG combined rating across its three AWD grades.",
@@ -273,41 +1398,306 @@
         "The gas powertrain is a 2.0L four-cylinder. Hybrid grades use the fifth-generation Toyota Hybrid System with 196 net combined hp and Electronic On-Demand AWD."
       ],
       "featureMatrix": {
-        "grades": ["L", "LE", "XLE", "Hybrid S", "Hybrid SE", "Hybrid XSE"],
+        "grades": [
+          "L",
+          "LE",
+          "XLE",
+          "Hybrid S",
+          "Hybrid SE",
+          "Hybrid XSE"
+        ],
         "rows": [
-          { "feature": "FWD available", "values": ["S", "S", "S", "-", "-", "-"] },
-          { "feature": "AWD available / standard", "values": ["A", "A", "A", "S", "S", "S"] },
-          { "feature": "7-in digital gauge cluster", "values": ["S", "S", "-", "S", "S", "-"] },
-          { "feature": "12.3-in digital gauge cluster", "values": ["-", "-", "S", "-", "-", "S"] },
-          { "feature": "8-in multimedia touchscreen", "values": ["S", "S", "-", "S", "S", "-"] },
-          { "feature": "10.5-in multimedia touchscreen", "values": ["-", "A", "S", "-", "A", "S"] },
-          { "feature": "17-in alloy wheels", "values": ["-", "S", "-", "S", "S", "-"] },
-          { "feature": "18-in alloy wheels", "values": ["-", "-", "S (dark gray)", "-", "-", "S (black)"] },
-          { "feature": "Fabric seats", "values": ["S", "S", "-", "S", "S", "-"] },
-          { "feature": "SofTex or SofTex/mixed-media seats", "values": ["-", "-", "S", "-", "-", "S"] },
-          { "feature": "Qi wireless charging", "values": ["-", "S", "S", "-", "S", "S"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["-", "S", "S", "-", "S", "S"] },
-          { "feature": "Black roof rails / privacy glass", "values": ["-", "-", "S", "-", "S", "S"] },
-          { "feature": "10-way power driver seat", "values": ["-", "-", "A", "-", "A", "S"] },
-          { "feature": "Dual-zone automatic climate control", "values": ["-", "-", "A", "-", "-", "S"] },
-          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "A", "-", "-", "A"] },
-          { "feature": "Heated front seats", "values": ["-", "A", "S", "?", "?", "?"] },
-          { "feature": "Proximity Sensing Keyless Entry / push-button start", "values": ["-", "S", "S", "S", "S", "S"] },
-          { "feature": "Moonroof / glass roof", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "?", "?", "?"] }
+          {
+            "feature": "FWD available",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "AWD available / standard",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "7-in digital gauge cluster",
+            "values": [
+              "S",
+              "S",
+              "-",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "12.3-in digital gauge cluster",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-in multimedia touchscreen",
+            "values": [
+              "S",
+              "S",
+              "-",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "10.5-in multimedia touchscreen",
+            "values": [
+              "-",
+              "A",
+              "S",
+              "-",
+              "A",
+              "S"
+            ]
+          },
+          {
+            "feature": "17-in alloy wheels",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "18-in alloy wheels",
+            "values": [
+              "-",
+              "-",
+              "S (dark gray)",
+              "-",
+              "-",
+              "S (black)"
+            ]
+          },
+          {
+            "feature": "Fabric seats",
+            "values": [
+              "S",
+              "S",
+              "-",
+              "S",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "SofTex or SofTex/mixed-media seats",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Qi wireless charging",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Black roof rails / privacy glass",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "10-way power driver seat",
+            "values": [
+              "-",
+              "-",
+              "A",
+              "-",
+              "A",
+              "S"
+            ]
+          },
+          {
+            "feature": "Dual-zone automatic climate control",
+            "values": [
+              "-",
+              "-",
+              "A",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "JBL 9-speaker premium audio",
+            "values": [
+              "-",
+              "-",
+              "A",
+              "-",
+              "-",
+              "A"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "-",
+              "A",
+              "S",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Proximity Sensing Keyless Entry / push-button start",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Moonroof / glass roof",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          }
         ]
       },
       "highlights": [
-        { "grade": "L", "text": "Essentials-first gas grade with 8-inch screen, six speakers, 7-inch digital gauge cluster, projector LED headlights, and rear vents." },
-        { "grade": "LE", "text": "Adds Qi charging and Blind Spot Monitor with Rear Cross-Traffic Alert." },
-        { "grade": "XLE", "text": "Gas flagship with 18-inch wheels, standard 12.3-inch gauge cluster and 10.5-inch touchscreen, plus SofTex seating." },
-        { "grade": "Hybrid S", "text": "Entry to the 196-hp AWD hybrid system; distinctive sport grille/bumpers, smoked Toyota emblem, black badging, matte-black heated mirrors, and 17-inch alloys." },
-        { "grade": "Hybrid SE", "text": "Upgrades the Hybrid S with roof rails, privacy glass, sport paddle shifters, Blind Spot Monitor/RCTA, automatic climate control, Qi charging, and four USB-C ports." },
-        { "grade": "Hybrid XSE", "text": "Top hybrid with 18-inch black wheels, SofTex/mixed-media seats, 12.3-inch gauge cluster, 10.5-inch screen, LED fog lights, 10-way power driver seat, dual-zone climate control, ambient lighting, and tonneau cover." }
+        {
+          "grade": "L",
+          "text": "Essentials-first gas grade with 8-inch screen, six speakers, 7-inch digital gauge cluster, projector LED headlights, and rear vents."
+        },
+        {
+          "grade": "LE",
+          "text": "Adds Qi charging and Blind Spot Monitor with Rear Cross-Traffic Alert."
+        },
+        {
+          "grade": "XLE",
+          "text": "Gas flagship with 18-inch wheels, standard 12.3-inch gauge cluster and 10.5-inch touchscreen, plus SofTex seating."
+        },
+        {
+          "grade": "Hybrid S",
+          "text": "Entry to the 196-hp AWD hybrid system; distinctive sport grille/bumpers, smoked Toyota emblem, black badging, matte-black heated mirrors, and 17-inch alloys."
+        },
+        {
+          "grade": "Hybrid SE",
+          "text": "Upgrades the Hybrid S with roof rails, privacy glass, sport paddle shifters, Blind Spot Monitor/RCTA, automatic climate control, Qi charging, and four USB-C ports."
+        },
+        {
+          "grade": "Hybrid XSE",
+          "text": "Top hybrid with 18-inch black wheels, SofTex/mixed-media seats, 12.3-inch gauge cluster, 10.5-inch screen, LED fog lights, 10-way power driver seat, dual-zone climate control, ambient lighting, and tonneau cover."
+        }
       ],
       "notes": [
         "Toyota states that all hybrid grades are AWD standard. Only gas grades offer a FWD/AWD choice.",
@@ -315,9 +1705,18 @@
         "A power moonroof and other equipment may depend on packages; verify a specific vehicle's window sticker."
       ],
       "sources": [
-        { "label": "Toyota 2026 Corolla Cross model page", "url": "https://www.toyota.com/corollacross/" },
-        { "label": "Toyota newsroom: 2026 Corolla Cross grade and feature details", "url": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/" },
-        { "label": "Toyota 2026 Corolla Cross brochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026-corollacross-brochure.pdf" }
+        {
+          "label": "Toyota 2026 Corolla Cross model page",
+          "url": "https://www.toyota.com/corollacross/"
+        },
+        {
+          "label": "Toyota newsroom: 2026 Corolla Cross grade and feature details",
+          "url": "https://pressroom.toyota.com/assembled-in-america-and-arriving-now-2026-toyota-corolla-cross/"
+        },
+        {
+          "label": "Toyota 2026 Corolla Cross brochure",
+          "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026-corollacross-brochure.pdf"
+        }
       ]
     },
     {
@@ -332,15 +1731,92 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2026-toyota-rav4-hybrid-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 31900, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Entry/value", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
-        { "name": "SE", "grade": "SE", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 34700, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Sport-styled", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG" },
-        { "name": "XLE Premium", "grade": "XLE Premium", "drivetrain": "FWD", "engine": "2.5L I4 Hybrid", "hp": 226, "msrp": 36100, "mpgCity": 47, "mpgHwy": 40, "mpgCombined": 43, "blurb": "Comfort/core premium", "awdAvailable": true, "awdNote": "Electronic On-Demand AWD optional — EPA 45/38/41 MPG" },
-        { "name": "Woodland", "grade": "Woodland", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 39900, "mpgCity": 41, "mpgHwy": 35, "mpgCombined": 38, "blurb": "Outdoor/rugged" },
-        { "name": "XSE", "grade": "XSE", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 41300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Sport premium" },
-        { "name": "Limited", "grade": "Limited", "drivetrain": "AWD", "engine": "2.5L I4 Hybrid", "hp": 236, "msrp": 43300, "mpgCity": 43, "mpgHwy": 37, "mpgCombined": 42, "blurb": "Top luxury/technology" }
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 226,
+          "msrp": 31900,
+          "mpgCity": 47,
+          "mpgHwy": 40,
+          "mpgCombined": 43,
+          "blurb": "Entry/value",
+          "awdAvailable": true,
+          "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG"
+        },
+        {
+          "name": "SE",
+          "grade": "SE",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 226,
+          "msrp": 34700,
+          "mpgCity": 47,
+          "mpgHwy": 40,
+          "mpgCombined": 43,
+          "blurb": "Sport-styled",
+          "awdAvailable": true,
+          "awdNote": "Electronic On-Demand AWD optional — EPA 45/39/42 MPG"
+        },
+        {
+          "name": "XLE Premium",
+          "grade": "XLE Premium",
+          "drivetrain": "FWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 226,
+          "msrp": 36100,
+          "mpgCity": 47,
+          "mpgHwy": 40,
+          "mpgCombined": 43,
+          "blurb": "Comfort/core premium",
+          "awdAvailable": true,
+          "awdNote": "Electronic On-Demand AWD optional — EPA 45/38/41 MPG"
+        },
+        {
+          "name": "Woodland",
+          "grade": "Woodland",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 236,
+          "msrp": 39900,
+          "mpgCity": 41,
+          "mpgHwy": 35,
+          "mpgCombined": 38,
+          "blurb": "Outdoor/rugged"
+        },
+        {
+          "name": "XSE",
+          "grade": "XSE",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 236,
+          "msrp": 41300,
+          "mpgCity": 43,
+          "mpgHwy": 37,
+          "mpgCombined": 42,
+          "blurb": "Sport premium"
+        },
+        {
+          "name": "Limited",
+          "grade": "Limited",
+          "drivetrain": "AWD",
+          "engine": "2.5L I4 Hybrid",
+          "hp": 236,
+          "msrp": 43300,
+          "mpgCity": 43,
+          "mpgHwy": 37,
+          "mpgCombined": 42,
+          "blurb": "Top luxury/technology"
+        }
       ],
       "powertrains": [
-        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.5L four-cylinder hybrid; planetary-type ECVT", "output": "226 net combined hp FWD; 236 net combined hp AWD", "availability": "FWD on LE, SE, XLE Premium; AWD optional on those grades and standard on Woodland, XSE, Limited" }
+        {
+          "system": "Fifth-generation Toyota Hybrid System",
+          "engine": "2.5L four-cylinder hybrid; planetary-type ECVT",
+          "output": "226 net combined hp FWD; 236 net combined hp AWD",
+          "availability": "FWD on LE, SE, XLE Premium; AWD optional on those grades and standard on Woodland, XSE, Limited"
+        }
       ],
       "powertrainNotes": [
         "All hybrid grades have Eco, Sport, Custom, and EV modes. EV mode is short-distance, low-speed operation when conditions permit.",
@@ -355,48 +1831,305 @@
         "Push-button start, rear-seat fold-flat function, and a rear cargo tonneau cover."
       ],
       "featureMatrix": {
-        "grades": ["LE", "SE", "XLE Premium", "Woodland", "XSE", "Limited"],
+        "grades": [
+          "LE",
+          "SE",
+          "XLE Premium",
+          "Woodland",
+          "XSE",
+          "Limited"
+        ],
         "rows": [
-          { "feature": "FWD available", "values": ["S", "S", "S", "-", "-", "-"] },
-          { "feature": "Electronic On-Demand AWD", "values": ["A", "A", "A", "S", "S", "S"] },
-          { "feature": "18-in wheels", "values": ["-", "S (black sport)", "S", "S (all-terrain)", "-", "-"] },
-          { "feature": "20-in black sport wheels", "values": ["-", "-", "-", "-", "S", "-"] },
-          { "feature": "8.5-in ground clearance", "values": ["-", "-", "-", "S", "-", "-"] },
-          { "feature": "Power liftgate", "values": ["-", "-", "S", "S", "S (hands-free)", "S"] },
-          { "feature": "SofTex seats / 8-way power driver seat", "values": ["-", "-", "S", "S", "S", "S"] },
-          { "feature": "Heated front seats", "values": ["-", "-", "S", "S", "S", "S"] },
-          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "12.9-in multimedia display", "values": ["-", "-", "-", "-", "S", "S"] },
-          { "feature": "20-in sport wheels", "values": ["-", "-", "-", "-", "S", "-"] },
-          { "feature": "Front and Rear Parking Assist with Automatic Braking", "values": ["-", "S", "S", "S", "S", "S"] },
-          { "feature": "3D Panoramic View Monitor / advanced driver assists", "values": ["-", "-", "-", "S", "-", "S"] },
-          { "feature": "Panoramic glass roof", "values": ["-", "-", "-", "-", "-", "S"] },
-          { "feature": "JBL 9-speaker premium audio", "values": ["-", "-", "-", "-", "-", "S"] },
-          { "feature": "Dual Qi wireless charging", "values": ["-", "-", "-", "-", "-", "S"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S", "S", "S"] },
-          { "feature": "Smart Key / push-button start", "values": ["S", "S", "S", "S", "S", "S"] },
-          { "feature": "Rain-sensing wipers", "values": ["?", "?", "?", "?", "?", "S"] },
-          { "feature": "Heated rear seats", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Driver-seat memory", "values": ["?", "?", "?", "?", "?", "?"] },
-          { "feature": "Head-up display", "values": ["?", "?", "?", "?", "?", "?"] }
+          {
+            "feature": "FWD available",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Electronic On-Demand AWD",
+            "values": [
+              "A",
+              "A",
+              "A",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "18-in wheels",
+            "values": [
+              "-",
+              "S (black sport)",
+              "S",
+              "S (all-terrain)",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "20-in black sport wheels",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "8.5-in ground clearance",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Power liftgate",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S (hands-free)",
+              "S"
+            ]
+          },
+          {
+            "feature": "SofTex seats / 8-way power driver seat",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "12.9-in multimedia display",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "20-in sport wheels",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Front and Rear Parking Assist with Automatic Braking",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "3D Panoramic View Monitor / advanced driver assists",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Panoramic glass roof",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "JBL 9-speaker premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Dual Qi wireless charging",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Smart Key / push-button start",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          }
         ]
       },
       "highlights": [
-        { "grade": "LE", "text": "Lowest-cost Hybrid RAV4; fabric seats and the complete safety/technology baseline." },
-        { "grade": "SE", "text": "Sport design with 18-inch black wheels, sport bumper/overfender styling, and blue interior accenting." },
-        { "grade": "XLE Premium", "text": "Core upgrade for comfort — heated SofTex seats, 8-way power driver seat, power liftgate, 18-inch alloys, and parking assist with automatic braking." },
-        { "grade": "Woodland", "text": "Standard AWD, all-terrain tires, 8.5-inch ground clearance, raised Woodland roof rails/crossbars, tow-hitch receiver, integrated Rigid Industries LED fog lamps, Woodland mats, and a cargo-area 120V/1,500W outlet." },
-        { "grade": "XSE", "text": "Standard AWD sport premium grade — 20-inch black wheels, sport seating in SofTex/synthetic suede, heated/ventilated front seats, 12.9-inch screen, moonroof, and hands-free liftgate." },
-        { "grade": "Limited", "text": "Top comfort/tech hybrid — panoramic glass roof, 9-speaker JBL audio, dual wireless chargers, rain-sensing wipers, 3D Panoramic View Monitor, Advanced Park, Front Cross-Traffic Alert, Lane Change Assist, and Traffic Jam Assist (subscription conditions apply)." }
+        {
+          "grade": "LE",
+          "text": "Lowest-cost Hybrid RAV4; fabric seats and the complete safety/technology baseline."
+        },
+        {
+          "grade": "SE",
+          "text": "Sport design with 18-inch black wheels, sport bumper/overfender styling, and blue interior accenting."
+        },
+        {
+          "grade": "XLE Premium",
+          "text": "Core upgrade for comfort — heated SofTex seats, 8-way power driver seat, power liftgate, 18-inch alloys, and parking assist with automatic braking."
+        },
+        {
+          "grade": "Woodland",
+          "text": "Standard AWD, all-terrain tires, 8.5-inch ground clearance, raised Woodland roof rails/crossbars, tow-hitch receiver, integrated Rigid Industries LED fog lamps, Woodland mats, and a cargo-area 120V/1,500W outlet."
+        },
+        {
+          "grade": "XSE",
+          "text": "Standard AWD sport premium grade — 20-inch black wheels, sport seating in SofTex/synthetic suede, heated/ventilated front seats, 12.9-inch screen, moonroof, and hands-free liftgate."
+        },
+        {
+          "grade": "Limited",
+          "text": "Top comfort/tech hybrid — panoramic glass roof, 9-speaker JBL audio, dual wireless chargers, rain-sensing wipers, 3D Panoramic View Monitor, Advanced Park, Front Cross-Traffic Alert, Lane Change Assist, and Traffic Jam Assist (subscription conditions apply)."
+        }
       ],
       "notes": [
         "Woodland, SE, and XSE also exist in the RAV4 Plug-in Hybrid lineup, but those are different vehicles: PHEVs are AWD-only and have different pricing, output, range, and equipment. Do not compare their window stickers directly against the hybrid prices in this file."
       ],
       "sources": [
-        { "label": "Toyota 2026 RAV4 model page", "url": "https://www.toyota.com/rav4/" },
-        { "label": "Toyota 2026 RAV4 full specifications", "url": "https://www.toyota.com/rav4/features/interior/f47/rav4/features/interior/4452/4437/4530/" },
-        { "label": "Toyota newsroom: all-new 2026 RAV4 grades, powertrains, and equipment", "url": "https://pressroom.toyota.com/the-next-adventure-begins-2026-rav4-arrives-this-winter/" },
-        { "label": "Toyota 2026 RAV4 brochure", "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026_rav4_brochure_20260612_142557.pdf" }
+        {
+          "label": "Toyota 2026 RAV4 model page",
+          "url": "https://www.toyota.com/rav4/"
+        },
+        {
+          "label": "Toyota 2026 RAV4 full specifications",
+          "url": "https://www.toyota.com/rav4/features/interior/f47/rav4/features/interior/4452/4437/4530/"
+        },
+        {
+          "label": "Toyota newsroom: all-new 2026 RAV4 grades, powertrains, and equipment",
+          "url": "https://pressroom.toyota.com/the-next-adventure-begins-2026-rav4-arrives-this-winter/"
+        },
+        {
+          "label": "Toyota 2026 RAV4 brochure",
+          "url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/2026_rav4_brochure_20260612_142557.pdf"
+        }
       ]
     },
     {
@@ -411,17 +2144,110 @@
       "researched": "September 23, 2026",
       "sourceFile": "vehicle-profile/2027-toyota-prius-us-trim-comparison.md",
       "trims": [
-        { "name": "LE", "grade": "LE", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 28755, "mpgCity": 59, "mpgHwy": 50, "mpgCombined": null, "blurb": null },
-        { "name": "LE AWD", "grade": "LE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 30155, "mpgCity": 56, "mpgHwy": 49, "mpgCombined": null, "blurb": null },
-        { "name": "XLE", "grade": "XLE", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 32200, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "XLE AWD", "grade": "XLE", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 33600, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
-        { "name": "Nightshade", "grade": "Nightshade", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 33005, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Nightshade AWD", "grade": "Nightshade", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 34405, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null },
-        { "name": "Limited", "grade": "Limited", "drivetrain": "FWD", "engine": "2.0L I4 Hybrid", "hp": 194, "msrp": 35770, "mpgCity": 54, "mpgHwy": 46, "mpgCombined": null, "blurb": null },
-        { "name": "Limited AWD", "grade": "Limited", "drivetrain": "AWD", "engine": "2.0L I4 Hybrid", "hp": 196, "msrp": 37170, "mpgCity": 51, "mpgHwy": 45, "mpgCombined": null, "blurb": null }
+        {
+          "name": "LE",
+          "grade": "LE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 194,
+          "msrp": 28755,
+          "mpgCity": 59,
+          "mpgHwy": 50,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "LE AWD",
+          "grade": "LE",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 30155,
+          "mpgCity": 56,
+          "mpgHwy": 49,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "XLE",
+          "grade": "XLE",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 194,
+          "msrp": 32200,
+          "mpgCity": 54,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "XLE AWD",
+          "grade": "XLE",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 33600,
+          "mpgCity": 51,
+          "mpgHwy": 45,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Nightshade",
+          "grade": "Nightshade",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 194,
+          "msrp": 33005,
+          "mpgCity": 54,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Nightshade AWD",
+          "grade": "Nightshade",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 34405,
+          "mpgCity": 51,
+          "mpgHwy": 45,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Limited",
+          "grade": "Limited",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 194,
+          "msrp": 35770,
+          "mpgCity": 54,
+          "mpgHwy": 46,
+          "mpgCombined": null,
+          "blurb": null
+        },
+        {
+          "name": "Limited AWD",
+          "grade": "Limited",
+          "drivetrain": "AWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 196,
+          "msrp": 37170,
+          "mpgCity": 51,
+          "mpgHwy": 45,
+          "mpgCombined": null,
+          "blurb": null
+        }
       ],
       "powertrains": [
-        { "system": "Fifth-generation Toyota Hybrid System", "engine": "2.0L four-cylinder hybrid; ECVT", "output": "194 net combined hp FWD; 196 net combined hp AWD", "availability": "FWD and Electronic On-Demand AWD on every grade" }
+        {
+          "system": "Fifth-generation Toyota Hybrid System",
+          "engine": "2.0L four-cylinder hybrid; ECVT",
+          "output": "194 net combined hp FWD; 196 net combined hp AWD",
+          "availability": "FWD and Electronic On-Demand AWD on every grade"
+        }
       ],
       "powertrainNotes": [
         "Toyota quotes 0-60 mph in 7.2 seconds for FWD and 7.0 seconds for AWD.",
@@ -435,46 +2261,1701 @@
         "Wireless Apple CarPlay and Android Auto compatibility, an 8-inch Toyota Audio Multimedia display, and Toyota connected-services capability."
       ],
       "featureMatrix": {
-        "grades": ["LE", "XLE", "Nightshade", "Limited"],
+        "grades": [
+          "LE",
+          "XLE",
+          "Nightshade",
+          "Limited"
+        ],
         "rows": [
-          { "feature": "FWD and AWD configurations", "values": ["S", "S", "S", "S"] },
-          { "feature": "17-in alloy wheels with wheel covers", "values": ["S", "-", "-", "-"] },
-          { "feature": "19-in alloy wheels", "values": ["-", "S", "-", "S"] },
-          { "feature": "19-in black-finish alloy wheels", "values": ["-", "-", "S", "-"] },
-          { "feature": "Fabric front seats", "values": ["S", "-", "-", "-"] },
-          { "feature": "8-way power SofTex front seats", "values": ["-", "S", "S", "S"] },
-          { "feature": "Heated front seats", "values": ["-", "S", "S", "S"] },
-          { "feature": "Ventilated front seats", "values": ["-", "-", "-", "S"] },
-          { "feature": "Driver-seat memory", "values": ["-", "-", "-", "S"] },
-          { "feature": "Heated rear seats", "values": ["-", "-", "-", "A"] },
-          { "feature": "Qi wireless charging", "values": ["-", "S", "S", "S"] },
-          { "feature": "Rain-sensing wipers", "values": ["-", "S", "S", "S"] },
-          { "feature": "Black exterior accents / blackout badging", "values": ["-", "-", "S", "-"] },
-          { "feature": "Black SofTex seats with gray stitching", "values": ["-", "-", "S", "-"] },
-          { "feature": "Carbon-fiber-look dashboard detail", "values": ["-", "-", "S", "-"] },
-          { "feature": "Power liftback", "values": ["-", "-", "-", "S"] },
-          { "feature": "Fixed glass roof", "values": ["-", "-", "-", "S"] },
-          { "feature": "12.3-in multimedia touchscreen", "values": ["-", "-", "-", "S"] },
-          { "feature": "JBL 8-speaker premium audio", "values": ["-", "-", "-", "S"] },
-          { "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert", "values": ["S", "S", "S", "S"] },
-          { "feature": "Front/rear parking sonar or parking assist", "values": ["?", "?", "?", "A"] },
-          { "feature": "Head-up display", "values": ["-", "-", "-", "-"] },
-          { "feature": "Proximity Sensing Keyless Entry / push-button start", "values": ["?", "?", "?", "S"] }
+          {
+            "feature": "FWD and AWD configurations",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "17-in alloy wheels with wheel covers",
+            "values": [
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "19-in alloy wheels",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "19-in black-finish alloy wheels",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Fabric front seats",
+            "values": [
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "8-way power SofTex front seats",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated rear seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "A"
+            ]
+          },
+          {
+            "feature": "Qi wireless charging",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Black exterior accents / blackout badging",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Black SofTex seats with gray stitching",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Carbon-fiber-look dashboard detail",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Power liftback",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Fixed glass roof",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "12.3-in multimedia touchscreen",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "JBL 8-speaker premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Monitor / Rear Cross-Traffic Alert",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "A"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Proximity Sensing Keyless Entry / push-button start",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "S"
+            ]
+          }
         ]
       },
       "highlights": [
-        { "grade": "LE", "text": "Lowest price and best efficiency; its FWD 59/50 MPG rating is the range-focused choice." },
-        { "grade": "XLE", "text": "Adds the key daily-comfort upgrades: 19-inch wheels, heated power SofTex seats, Qi charging, and rain-sensing wipers." },
-        { "grade": "Nightshade", "text": "The XLE equipment direction with black 19-inch wheels, dark exterior details, black/gray SofTex seating, and carbon-fiber-look trim." },
-        { "grade": "Limited", "text": "Adds the premium technology and convenience equipment: 12.3-inch touchscreen, JBL audio, fixed glass roof, power liftback, driver memory, and ventilated front seats." }
+        {
+          "grade": "LE",
+          "text": "Lowest price and best efficiency; its FWD 59/50 MPG rating is the range-focused choice."
+        },
+        {
+          "grade": "XLE",
+          "text": "Adds the key daily-comfort upgrades: 19-inch wheels, heated power SofTex seats, Qi charging, and rain-sensing wipers."
+        },
+        {
+          "grade": "Nightshade",
+          "text": "The XLE equipment direction with black 19-inch wheels, dark exterior details, black/gray SofTex seating, and carbon-fiber-look trim."
+        },
+        {
+          "grade": "Limited",
+          "text": "Adds the premium technology and convenience equipment: 12.3-inch touchscreen, JBL audio, fixed glass roof, power liftback, driver memory, and ventilated front seats."
+        }
       ],
       "notes": [
         "AWD is available on every grade; it adds traction and 2 hp, but reduces fuel economy and adds $1,400 versus the equivalent FWD grade."
       ],
       "sources": [
-        { "label": "Toyota 2027 Prius model page", "url": "https://www.toyota.com/prius/" },
-        { "label": "Toyota 2027 Prius inventory/model listing", "url": "https://www.toyota.com/vehicles/prius/2027" },
-        { "label": "Toyota Prius brochures", "url": "https://www.toyota.com/brochures/electrified/" }
+        {
+          "label": "Toyota 2027 Prius model page",
+          "url": "https://www.toyota.com/prius/"
+        },
+        {
+          "label": "Toyota 2027 Prius inventory/model listing",
+          "url": "https://www.toyota.com/vehicles/prius/2027"
+        },
+        {
+          "label": "Toyota Prius brochures",
+          "url": "https://www.toyota.com/brochures/electrified/"
+        }
+      ]
+    },
+    {
+      "id": "accord-2026",
+      "make": "Honda",
+      "model": "Accord",
+      "modelSlug": "accord",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Honda Accord",
+      "scope": "2026 Accord sedan with the gasoline powertrain only (LX and SE). The four Accord Hybrid trims are covered separately.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-accord-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "LX",
+          "grade": "LX",
+          "drivetrain": "FWD",
+          "engine": "1.5L Turbo I4",
+          "hp": 192,
+          "msrp": 28395,
+          "mpgCity": 29,
+          "mpgHwy": 37,
+          "mpgCombined": 32,
+          "blurb": "Value/comfort"
+        },
+        {
+          "name": "SE",
+          "grade": "SE",
+          "drivetrain": "FWD",
+          "engine": "1.5L Turbo I4",
+          "hp": 192,
+          "msrp": 30695,
+          "mpgCity": 28,
+          "mpgHwy": 36,
+          "mpgCombined": 31,
+          "blurb": "Style and convenience"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Turbo gas",
+          "engine": "1.5L turbocharged four-cylinder; CVT",
+          "output": "192 hp; 192 lb-ft",
+          "availability": "FWD only; AWD not offered"
+        }
+      ],
+      "powertrainNotes": [
+        "Normal and ECON drive modes plus idle-stop are standard on both trims.",
+        "No gas Accord trim offers AWD."
+      ],
+      "standardEquipment": [
+        "Honda Sensing: Collision Mitigation Braking, Road Departure Mitigation, adaptive cruise control with Low-Speed Follow, Lane Keeping Assist, Traffic Jam Assist, and Traffic Sign Recognition.",
+        "10.2-inch digital instrument cluster, 9-inch touchscreen, wireless Apple CarPlay and Android Auto, wireless phone charging, four-speaker audio, and front USB-C ports.",
+        "Full LED headlights, push-button start, automatic climate control, and a multi-angle rearview camera."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "LX",
+          "SE"
+        ],
+        "rows": [
+          {
+            "feature": "17-in alloy wheels",
+            "values": [
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "19-in alloy wheels",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Cloth seats",
+            "values": [
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "10-way power driver seat",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "One-touch power moonroof",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Dual-zone automatic climate control",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Smart Entry / Walk Away Auto Lock",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Remote engine start",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Information / Cross Traffic Monitor",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Eight-speaker, 180-watt audio",
+            "values": [
+              "-",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "LX",
+          "text": "The value choice; it keeps the same engine, digital gauges, core safety suite, and best gas-model fuel economy."
+        },
+        {
+          "grade": "SE",
+          "text": "The worthwhile comfort upgrade if you want heated seats, a power driver seat, moonroof, blind-spot monitoring, larger wheels, and keyless-entry conveniences."
+        }
+      ],
+      "notes": [
+        "Choose the separately covered Accord Hybrid if acceleration, a 12.3-inch touchscreen, or substantially better city economy matters; no gas Accord trim offers AWD."
+      ],
+      "sources": [
+        {
+          "label": "Honda 2026 Accord family page",
+          "url": "https://automobiles.honda.com/accord"
+        },
+        {
+          "label": "Honda 2026 Accord specifications and trim comparison",
+          "url": "https://automobiles.honda.com/accord-sedan/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda 2026 Accord brochure",
+          "url": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2026/accord-sedan/Brochure/MY26ACCORDBROFNL.pdf?sc_lang=en"
+        }
+      ]
+    },
+    {
+      "id": "accord-hybrid-2026",
+      "make": "Honda",
+      "model": "Accord Hybrid",
+      "modelSlug": "accord-hybrid",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Honda Accord Hybrid",
+      "scope": "2026 Accord two-motor hybrid trims.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-accord-hybrid-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "Sport Hybrid",
+          "grade": "Sport",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 204,
+          "msrp": 33795,
+          "mpgCity": 46,
+          "mpgHwy": 41,
+          "mpgCombined": 44,
+          "blurb": "Sport-styled entry hybrid"
+        },
+        {
+          "name": "EX-L Hybrid",
+          "grade": "EX-L",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 204,
+          "msrp": 35095,
+          "mpgCity": 51,
+          "mpgHwy": 44,
+          "mpgCombined": 48,
+          "blurb": "Efficiency and comfort"
+        },
+        {
+          "name": "Sport-L Hybrid",
+          "grade": "Sport-L",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 204,
+          "msrp": 35495,
+          "mpgCity": 46,
+          "mpgHwy": 41,
+          "mpgCombined": 44,
+          "blurb": "Leather sport appearance"
+        },
+        {
+          "name": "Touring Hybrid",
+          "grade": "Touring",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 204,
+          "msrp": 39495,
+          "mpgCity": 46,
+          "mpgHwy": 41,
+          "mpgCombined": 44,
+          "blurb": "Maximum technology/luxury"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Honda two-motor hybrid",
+          "engine": "2.0L Atkinson-cycle four-cylinder, two electric motors, direct-drive unit",
+          "output": "204 total system hp; 247 lb-ft traction-motor torque",
+          "availability": "FWD only"
+        }
+      ],
+      "powertrainNotes": [
+        "All trims have regenerative-braking deceleration selectors and ECON, Normal, Sport, and Individual modes.",
+        "The EX-L's 17-inch wheels are the reason it earns the best EPA rating; the other hybrids use 19-inch wheels."
+      ],
+      "standardEquipment": [
+        "Honda Sensing, Blind Spot Information with Cross Traffic Monitor, full LED lighting, and a multi-angle rearview camera.",
+        "12.3-inch touchscreen with wireless Apple CarPlay and Android Auto, 10.2-inch digital gauge cluster, wireless phone charging, and eight-speaker audio.",
+        "Smart Entry, remote start, dual-zone climate control, one-touch moonroof, and a 10-way power driver seat."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "Sport",
+          "EX-L",
+          "Sport-L",
+          "Touring"
+        ],
+        "rows": [
+          {
+            "feature": "17-in alloy wheels",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "19-in alloy wheels",
+            "values": [
+              "S",
+              "-",
+              "S (matte black)",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Leather-trimmed seats",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Power front-passenger seat",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Parking sensors",
+            "values": [
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Google built-in",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Bose 12-speaker premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated rear outboard seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "Sport",
+          "text": "Lowest hybrid price and the complete large-screen technology baseline, but it omits heated seats."
+        },
+        {
+          "grade": "EX-L",
+          "text": "Strongest rational buy — best fuel economy plus leather, heated seats, memory, and parking sensors."
+        },
+        {
+          "grade": "Sport-L",
+          "text": "Mostly the EX-L comfort content with black 19-inch wheels and sport styling, trading away the EX-L's efficiency advantage."
+        },
+        {
+          "grade": "Touring",
+          "text": "Adds Google built-in, Bose audio, head-up display, ventilated front seats, heated rear seats, and rain-sensing wipers."
+        }
+      ],
+      "notes": [],
+      "sources": [
+        {
+          "label": "Honda 2026 Accord family page",
+          "url": "https://automobiles.honda.com/accord"
+        },
+        {
+          "label": "Honda 2026 Accord specifications and trim comparison",
+          "url": "https://automobiles.honda.com/accord-sedan/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda 2026 Accord brochure",
+          "url": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2026/accord-sedan/Brochure/MY26ACCORDBROFNL.pdf?sc_lang=en"
+        }
+      ]
+    },
+    {
+      "id": "civic-2026",
+      "make": "Honda",
+      "model": "Civic",
+      "modelSlug": "civic",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Honda Civic Sedan",
+      "scope": "2026 Civic gasoline sedan (LX and Sport). Civic Hybrid and Civic Si are covered separately.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-civic-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "LX",
+          "grade": "LX",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 150,
+          "msrp": 24695,
+          "mpgCity": 32,
+          "mpgHwy": 41,
+          "mpgCombined": 36,
+          "blurb": "Lowest price / best gas MPG"
+        },
+        {
+          "name": "Sport",
+          "grade": "Sport",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4",
+          "hp": 150,
+          "msrp": 26695,
+          "mpgCity": 31,
+          "mpgHwy": 39,
+          "mpgCombined": 34,
+          "blurb": "Style and convenience"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Gas",
+          "engine": "2.0L naturally aspirated four-cylinder; CVT",
+          "output": "150 hp; 133 lb-ft",
+          "availability": "FWD only; AWD and manual not offered"
+        }
+      ],
+      "powertrainNotes": [],
+      "standardEquipment": [
+        "Honda Sensing with adaptive cruise control with Low-Speed Follow, Collision Mitigation Braking, Road Departure Mitigation, Lane Keeping Assist, and Traffic Sign Recognition.",
+        "7-inch touchscreen, wired Apple CarPlay and Android Auto, 7-inch driver display, push-button start, and automatic climate control.",
+        "Full LED headlights and a multi-angle rearview camera with dynamic guidelines."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "LX",
+          "Sport"
+        ],
+        "rows": [
+          {
+            "feature": "16-in wheels with covers",
+            "values": [
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "18-in gloss-black alloy wheels",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "CVT paddle shifters",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "ECON / Normal / Sport modes",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "60/40 split folding rear seat",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Eight-speaker, 180-watt audio",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Leather-wrapped steering wheel",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Smart Entry / remote start",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Information / Cross Traffic Monitor",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated side mirrors",
+            "values": [
+              "-",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "LX",
+          "text": "Best value and fuel economy; choose it if the smaller wheels and basic audio/entry system are acceptable."
+        },
+        {
+          "grade": "Sport",
+          "text": "Adds the useful blind-spot system and keyless/remote-start features, plus larger black wheels and sport styling. It does not add horsepower."
+        }
+      ],
+      "notes": [
+        "The separately covered Sport Hybrid costs more but delivers 200 system hp and 49 combined MPG; Civic Si is the manual-transmission enthusiast model."
+      ],
+      "sources": [
+        {
+          "label": "Honda 2026 Civic Sedan model page",
+          "url": "https://automobiles.honda.com/civic-sedan"
+        },
+        {
+          "label": "Honda 2026 Civic Sedan specifications and trim comparison",
+          "url": "https://automobiles.honda.com/civic-sedan/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda 2026 Civic family page",
+          "url": "https://automobiles.honda.com/civic"
+        }
+      ]
+    },
+    {
+      "id": "civic-hybrid-2026",
+      "make": "Honda",
+      "model": "Civic Hybrid",
+      "modelSlug": "civic-hybrid",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Honda Civic Hybrid Sedan",
+      "scope": "2026 Civic sedan with Honda's two-motor hybrid system. The Civic Hatchback Hybrid is not included.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-civic-hybrid-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "Sport Hybrid",
+          "grade": "Sport Hybrid",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 200,
+          "msrp": 29395,
+          "mpgCity": 50,
+          "mpgHwy": 47,
+          "mpgCombined": 49,
+          "blurb": "Performance/value hybrid"
+        },
+        {
+          "name": "Sport Touring Hybrid",
+          "grade": "Sport Touring Hybrid",
+          "drivetrain": "FWD",
+          "engine": "2.0L I4 Hybrid",
+          "hp": 200,
+          "msrp": 32395,
+          "mpgCity": 50,
+          "mpgHwy": 47,
+          "mpgCombined": 49,
+          "blurb": "Premium/technology hybrid"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Honda two-motor hybrid",
+          "engine": "2.0L Atkinson-cycle four-cylinder + two-motor hybrid system",
+          "output": "200 total system hp; 232 lb-ft traction-motor torque (0-2,000 rpm)",
+          "availability": "FWD only; AWD not available"
+        }
+      ],
+      "powertrainNotes": [
+        "Both trims include regenerative-braking deceleration selectors."
+      ],
+      "standardEquipment": [
+        "Honda Sensing plus Blind Spot Information with Cross Traffic Monitor.",
+        "18-inch alloy wheels, heated front seats, one-touch moonroof, dual-zone climate control, and a 60/40 split rear seat.",
+        "7-inch touchscreen with wired Apple CarPlay/Android Auto, eight-speaker audio, Smart Entry, and remote start."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "Sport Hybrid",
+          "Sport Touring Hybrid"
+        ],
+        "rows": [
+          {
+            "feature": "18-in gloss-black alloy wheels",
+            "values": [
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "18-in alloys with matte Shark Gray inserts",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Cloth seats",
+            "values": [
+              "S",
+              "-"
+            ]
+          },
+          {
+            "feature": "Leather-trimmed seats",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "8-way power driver seat",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "9-in touchscreen",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "10.2-in digital instrument cluster",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Wireless Apple CarPlay / Android Auto",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Google built-in",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Bose 12-speaker premium audio",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Wireless phone charger",
+            "values": [
+              "-",
+              "S"
+            ]
+          },
+          {
+            "feature": "Parking sensors / Low-Speed Braking Control",
+            "values": [
+              "-",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "Sport Hybrid",
+          "text": "Keeps the same power, fuel economy, heated seats, moonroof, and safety fundamentals for $3,000 less."
+        },
+        {
+          "grade": "Sport Touring Hybrid",
+          "text": "The technology/luxury step — leather, power driver seat, larger displays, wireless phone integration, Google built-in, Bose audio, and parking aids."
+        }
+      ],
+      "notes": [
+        "Neither sedan hybrid offers AWD. Shoppers needing a liftgate can compare the separate Civic Hatchback Hybrid lineup."
+      ],
+      "sources": [
+        {
+          "label": "Honda 2026 Civic Sedan model page",
+          "url": "https://automobiles.honda.com/civic-sedan"
+        },
+        {
+          "label": "Honda 2026 Civic Sedan specifications and trim comparison",
+          "url": "https://automobiles.honda.com/civic-sedan/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda Civic family page",
+          "url": "https://automobiles.honda.com/civic"
+        }
+      ]
+    },
+    {
+      "id": "civic-si-2026",
+      "make": "Honda",
+      "model": "Civic Si",
+      "modelSlug": "civic-si",
+      "year": 2026,
+      "bodyType": "Sedan",
+      "title": "2026 Honda Civic Si Sedan",
+      "scope": "2026 Civic Si sedan. The Si has one trim and one powertrain, so this profile compares its standard equipment with the practical alternatives in the Civic family.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-civic-si-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "Si",
+          "grade": "Si",
+          "drivetrain": "FWD",
+          "engine": "1.5L Turbo I4, 6MT",
+          "hp": 200,
+          "msrp": 31495,
+          "mpgCity": 27,
+          "mpgHwy": 37,
+          "mpgCombined": 31,
+          "blurb": "Manual-transmission enthusiast sedan"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Turbo gas, manual",
+          "engine": "1.5L turbocharged four-cylinder; close-ratio 6-speed manual with rev-match control",
+          "output": "200 hp @ 6,000 rpm; 192 lb-ft (1,800-5,000 rpm)",
+          "availability": "FWD only; no automatic or AWD option"
+        }
+      ],
+      "powertrainNotes": [
+        "Lightweight single-mass flywheel and helical limited-slip differential are standard.",
+        "Sport-tuned suspension, larger brakes, dual exhaust finishers, 18-inch matte-black alloy wheels, and 235/40 R18 summer tires are standard.",
+        "Normal, Sport, and Individual drive modes with an integrated LED shift-light indicator."
+      ],
+      "standardEquipment": [
+        "Sport seats with red accents, aluminum shift knob and pedals, and leather-wrapped steering wheel.",
+        "9-in touchscreen; 10.2-in digital instrument cluster; wireless Apple CarPlay and Android Auto; Google built-in; Wi-Fi hotspot capability.",
+        "Bose 12-speaker premium system with subwoofer.",
+        "One-touch moonroof; dual-zone climate control; heated front seats.",
+        "Smart Entry, Walk Away Auto Lock, push-button start.",
+        "Honda Sensing; Blind Spot Information with Cross Traffic Monitor; multi-angle rearview camera."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "Si"
+        ],
+        "rows": [
+          {
+            "feature": "18-in matte-black alloy wheels",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Summer performance tires (235/40 R18)",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Helical limited-slip differential",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Sport seats with red accents",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Bose 12-speaker premium audio",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "One-touch moonroof",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Google built-in",
+            "values": [
+              "S"
+            ]
+          },
+          {
+            "feature": "Blind Spot Information / Cross Traffic Monitor",
+            "values": [
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "Si",
+          "text": "Choose for the manual transmission, limited-slip differential, sport chassis, and summer tires — not for straight-line output alone."
+        }
+      ],
+      "notes": [
+        "The Civic Sport Touring Hybrid has the same headline 200-hp figure and better economy, but its driving character, transmission, and torque delivery are very different.",
+        "The factory summer tires improve warm-weather grip but are inappropriate for freezing or snowy conditions; budget for a seasonal tire solution where needed.",
+        "The more powerful Civic Type R is a separate hatchback model and is not part of this comparison."
+      ],
+      "sources": [
+        {
+          "label": "Honda 2026 Civic Si model page",
+          "url": "https://automobiles.honda.com/civic-si-sedan"
+        },
+        {
+          "label": "Honda 2026 Civic Si specifications",
+          "url": "https://automobiles.honda.com/civic-si-sedan/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda Civic family page",
+          "url": "https://automobiles.honda.com/civic"
+        }
+      ]
+    },
+    {
+      "id": "passport-2026",
+      "make": "Honda",
+      "model": "Passport",
+      "modelSlug": "passport",
+      "year": 2026,
+      "bodyType": "SUV",
+      "title": "2026 Honda Passport",
+      "scope": "2026 U.S. Passport. Honda has previewed a 2027 landing page, but its published figures conflict with Honda's current U.S. specification database; this profile therefore uses the complete, internally consistent 2026 model-year data.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-passport-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "RTL",
+          "grade": "RTL",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 44950,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "Core road-oriented trim"
+        },
+        {
+          "name": "RTL Towing",
+          "grade": "RTL Towing",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 45650,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "Factory hitch and harness"
+        },
+        {
+          "name": "RTL Blackout",
+          "grade": "RTL Blackout",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 46150,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "RTL dark appearance package"
+        },
+        {
+          "name": "TrailSport",
+          "grade": "TrailSport",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 48650,
+          "mpgCity": 18,
+          "mpgHwy": 23,
+          "mpgCombined": 20,
+          "blurb": "Off-road hardware"
+        },
+        {
+          "name": "TrailSport Blackout",
+          "grade": "TrailSport Blackout",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 49850,
+          "mpgCity": 18,
+          "mpgHwy": 23,
+          "mpgCombined": 20,
+          "blurb": "TrailSport dark appearance"
+        },
+        {
+          "name": "TrailSport Elite",
+          "grade": "TrailSport Elite",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 52650,
+          "mpgCity": 18,
+          "mpgHwy": 23,
+          "mpgCombined": 20,
+          "blurb": "Off-road plus premium cabin"
+        },
+        {
+          "name": "TrailSport Elite Blackout",
+          "grade": "TrailSport Elite Blackout",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 53850,
+          "mpgCity": 18,
+          "mpgHwy": 23,
+          "mpgCombined": 20,
+          "blurb": "Top trim with dark appearance"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Gas V6",
+          "engine": "3.5L V6; 10-speed automatic",
+          "output": "285 hp; 262 lb-ft",
+          "availability": "Second-generation i-VTM4 AWD standard on every configuration; no FWD version offered"
+        }
+      ],
+      "powertrainNotes": [
+        "Every Passport has Trail Torque Logic, seven drive modes, and 8.3 inches of ground clearance.",
+        "Properly equipped towing capacity is 5,000 lb.",
+        "It is a two-row, five-seat SUV; no third row is offered."
+      ],
+      "standardEquipment": [
+        "Honda Sensing, Blind Spot Information with Lane Change Assist and Cross Traffic Monitor, parking sensors, and rearview camera.",
+        "12.3-inch touchscreen with Google built-in, wireless Apple CarPlay/Android Auto, wireless charging, and 10.2-inch digital gauges.",
+        "Heated front seats, power front seats with driver memory, tri-zone climate control, power tailgate, and roof rails."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "RTL",
+          "RTL Towing",
+          "RTL Blackout",
+          "TrailSport",
+          "TrailSport Blackout",
+          "TrailSport Elite",
+          "TrailSport Elite Blackout"
+        ],
+        "rows": [
+          {
+            "feature": "i-VTM4 AWD / seven drive modes",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Leather-and-cloth seats",
+            "values": [
+              "S",
+              "S",
+              "S",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Off-road-tuned suspension / all-terrain tires",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Steel skid plates / recovery points",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Integrated Class III hitch",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "TrailWatch multi-view camera",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Amber hood marker lights",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Perforated leather seating",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated and ventilated front seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Heated rear outboard seats / rear sunshades",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Bose premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [],
+      "progression": [
+        "RTL Towing adds the factory Class III hitch and wiring harness; regular RTL retains the same 5,000-lb maximum only when properly equipped.",
+        "Blackout versions are appearance configurations — black wheels, badges, and related trim — not additional mechanical capability.",
+        "TrailSport is the meaningful capability step with all-terrain tires, off-road suspension, skid plates, recovery points, hitch, and TrailWatch.",
+        "TrailSport Elite combines that hardware with the best comfort and audio equipment."
+      ],
+      "notes": [],
+      "sources": [
+        {
+          "label": "Honda 2026 Passport model page",
+          "url": "https://automobiles.honda.com/passport"
+        },
+        {
+          "label": "Honda 2026 Passport specifications and trim comparison",
+          "url": "https://automobiles.honda.com/passport/specs-features-trim-comparison"
+        },
+        {
+          "label": "Honda Info Center: 2026 Passport features by trim",
+          "url": "https://www.hondainfocenter.com/2026/Passport/Feature-Guide/Features-by-Trim/"
+        },
+        {
+          "label": "Honda Info Center: 2026 Passport EPA ratings",
+          "url": "https://www.hondainfocenter.com/2026/Passport/Feature-Guide/EPA-Fuel-Economy-Ratings/"
+        }
+      ]
+    },
+    {
+      "id": "pilot-2026",
+      "make": "Honda",
+      "model": "Pilot",
+      "modelSlug": "pilot",
+      "year": 2026,
+      "bodyType": "SUV",
+      "title": "2026 Honda Pilot",
+      "scope": "2026 U.S. Pilot three-row SUV.",
+      "researched": "September 23, 2026",
+      "sourceFile": "vehicle-profile/2026-honda-pilot-us-trim-comparison.md",
+      "trims": [
+        {
+          "name": "Sport",
+          "grade": "Sport",
+          "drivetrain": "FWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 42395,
+          "mpgCity": 19,
+          "mpgHwy": 27,
+          "mpgCombined": 22,
+          "blurb": "Core/value trim",
+          "awdAvailable": true,
+          "awdNote": "Real Time i-VTM4 AWD available, price not separately stated; AWD MPG 19/25/21"
+        },
+        {
+          "name": "EX-L",
+          "grade": "EX-L",
+          "drivetrain": "FWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 44695,
+          "mpgCity": 19,
+          "mpgHwy": 27,
+          "mpgCombined": 22,
+          "blurb": "Leather family trim",
+          "awdAvailable": true,
+          "awdNote": "Real Time i-VTM4 AWD available, price not separately stated; AWD MPG 19/25/21"
+        },
+        {
+          "name": "TrailSport",
+          "grade": "TrailSport",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 50595,
+          "mpgCity": 18,
+          "mpgHwy": 23,
+          "mpgCombined": 20,
+          "blurb": "Off-road/capability"
+        },
+        {
+          "name": "Touring",
+          "grade": "Touring",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 51295,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "Family technology/luxury"
+        },
+        {
+          "name": "Touring Blackout",
+          "grade": "Touring",
+          "drivetrain": "FWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 52495,
+          "mpgCity": 19,
+          "mpgHwy": 27,
+          "mpgCombined": 22,
+          "blurb": "Touring dark appearance",
+          "awdAvailable": true,
+          "awdNote": "AWD available (unlike regular Touring, not standard), price not separately stated"
+        },
+        {
+          "name": "Elite",
+          "grade": "Elite",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 53695,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "Maximum comfort/technology"
+        },
+        {
+          "name": "Black Edition",
+          "grade": "Black Ed.",
+          "drivetrain": "AWD",
+          "engine": "3.5L V6",
+          "hp": 285,
+          "msrp": 55195,
+          "mpgCity": 19,
+          "mpgHwy": 25,
+          "mpgCombined": 21,
+          "blurb": "Elite-based dark appearance"
+        }
+      ],
+      "powertrains": [
+        {
+          "system": "Gas V6",
+          "engine": "3.5L V6; 10-speed automatic",
+          "output": "285 hp; 262 lb-ft",
+          "availability": "Real Time i-VTM4 AWD available on Sport, EX-L, and Touring Blackout; standard on TrailSport, Touring, Elite, and Black Edition"
+        }
+      ],
+      "powertrainNotes": [
+        "FWD models are rated 19/27/22 MPG; most AWD models are 19/25/21. TrailSport is 18/23/20.",
+        "AWD Pilots can tow up to 5,000 lb when properly equipped; FWD models are limited to 3,500 lb.",
+        "Verify the window sticker because FWD/AWD availability materially affects price, MPG, and towing."
+      ],
+      "standardEquipment": [
+        "Three rows, up to eight seats, tri-zone climate control, heated front seats, power driver seat, power tailgate, and roof rails.",
+        "12.3-inch touchscreen with Google built-in, wireless Apple CarPlay/Android Auto, Wi-Fi hotspot capability, and 10.2-inch digital gauges.",
+        "Honda Sensing, Blind Spot Information with Cross Traffic Monitor, rearview camera, and Hill Descent Control."
+      ],
+      "featureMatrix": {
+        "grades": [
+          "Sport",
+          "EX-L",
+          "TrailSport",
+          "Touring",
+          "Elite",
+          "Black Ed."
+        ],
+        "rows": [
+          {
+            "feature": "AWD standard",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Leather-trimmed seats",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Stowable 2nd-row center seat",
+            "values": [
+              "-",
+              "S",
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "2nd-row captain's chairs",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "Panoramic moonroof",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Off-road suspension / all-terrain tires",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "feature": "TrailWatch multi-view camera",
+            "values": [
+              "-",
+              "-",
+              "S",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Bose premium audio",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Hands-free power tailgate",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "S",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Ventilated front / heated 2nd-row seats",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          },
+          {
+            "feature": "Head-up display / heated steering wheel",
+            "values": [
+              "-",
+              "-",
+              "-",
+              "-",
+              "S",
+              "S"
+            ]
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "grade": "Sport",
+          "text": "Strong standard technology but cloth seating and a non-removable second-row bench."
+        },
+        {
+          "grade": "EX-L",
+          "text": "Value sweet spot for families wanting leather, the stowable center seat, parking sensors, and wireless charging."
+        },
+        {
+          "grade": "TrailSport",
+          "text": "Choose for actual hardware — standard AWD with Trail Torque Logic, all-terrain tires, off-road suspension, skid plates, recovery points, hitch, and TrailWatch."
+        },
+        {
+          "grade": "Touring",
+          "text": "The road-focused premium choice with Bose audio, panoramic roof, multi-view camera, and hands-free tailgate."
+        },
+        {
+          "grade": "Elite",
+          "text": "Adds the comfort flagship features over Touring."
+        },
+        {
+          "grade": "Black Ed.",
+          "text": "Primarily an appearance treatment over Elite, with gloss-black exterior trim and a model-specific black/red leather interior."
+        }
+      ],
+      "notes": [
+        "Touring Blackout follows Touring equipment with black 20-inch wheels, badges, and trim; unlike regular Touring, Honda lists AWD as available rather than standard."
+      ],
+      "sources": [
+        {
+          "label": "Honda 2026 Pilot model page",
+          "url": "https://automobiles.honda.com/pilot"
+        },
+        {
+          "label": "Honda 2026 Pilot build-and-price trim list",
+          "url": "https://automobiles.honda.com/tools/build-and-price-trimwalk?modelseries=pilot&modelyear=2026"
+        },
+        {
+          "label": "Honda 2026 Pilot brochure",
+          "url": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2026/Pilot/Brochures/2026/MY26PilotBrochFNL.pdf?sc_lang=en"
+        }
       ]
     }
   ]

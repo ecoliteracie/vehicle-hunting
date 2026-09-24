@@ -33,6 +33,24 @@ function trimStats(vehicle) {
   };
 }
 
+/* ---------- Make selection ---------- */
+
+function getCurrentMake() {
+  let stored = 'Toyota';
+  try { stored = localStorage.getItem('vh-make') || 'Toyota'; } catch (e) { /* private mode */ }
+  const makes = DATA?.makes || ['Toyota'];
+  return makes.includes(stored) ? stored : makes[0];
+}
+
+function setCurrentMake(make) {
+  try { localStorage.setItem('vh-make', make); } catch (e) { /* private mode */ }
+}
+
+function vehiclesForCurrentMake() {
+  const make = getCurrentMake();
+  return DATA.vehicles.filter(v => v.make === make);
+}
+
 /* ---------- Router ---------- */
 
 function router() {
@@ -54,11 +72,12 @@ function router() {
 /* ---------- Home ---------- */
 
 function renderHome() {
-  const groups = groupVehicles(DATA.vehicles);
+  const make = getCurrentMake();
+  const groups = groupVehicles(vehiclesForCurrentMake());
   app.innerHTML = `
     <section class="hero">
-      <p class="eyebrow">Car / Toyota</p>
-      <h1>Every Toyota trim, compared at a glance</h1>
+      <p class="eyebrow">Car / ${make}</p>
+      <h1>Every ${make} trim, compared at a glance</h1>
       <p class="hero-sub">Pick a model to see every trim's price, efficiency, and full feature matrix on one page.</p>
     </section>
     <section class="model-grid">
@@ -152,7 +171,7 @@ function lookupFeature(vehicle, grade, key) {
 
 function allTrimsFlat() {
   const rows = [];
-  for (const v of DATA.vehicles) {
+  for (const v of vehiclesForCurrentMake()) {
     for (const t of v.trims) {
       rows.push({
         model: v.model,
@@ -176,15 +195,16 @@ function allTrimsFlat() {
 }
 
 function renderAllTrimsPage() {
+  const make = getCurrentMake();
   const allRows = allTrimsFlat();
-  const models = Array.from(new Set(DATA.vehicles.map(v => v.model)));
+  const models = Array.from(new Set(vehiclesForCurrentMake().map(v => v.model)));
 
   app.innerHTML = `
     <section class="model-page">
-      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">Toyota</a> / All Trims</p>
+      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">${make}</a> / All Trims</p>
       <div class="model-page__head">
         <div>
-          <h1>All Toyota trims at a glance</h1>
+          <h1>All ${make} trims at a glance</h1>
           <p class="scope">Every trim across every model, one row each. A full apples-to-apples feature comparison isn't possible across different body styles and powertrains, so this sticks to what's genuinely comparable: price, engine/output, efficiency, and the handful of features tracked consistently across all six profiles. Click a column header to sort, or a model chip to filter. Open a model's own page for its complete feature matrix.</p>
         </div>
       </div>
@@ -309,7 +329,7 @@ function renderModelPage(modelSlug, year) {
 
   app.innerHTML = `
     <section class="model-page">
-      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">Toyota</a> / ${vehicle.model}</p>
+      <p class="eyebrow"><a href="#/">Car</a> / <a href="#/">${vehicle.make}</a> / ${vehicle.model}</p>
       <div class="model-page__head">
         <div>
           <h1>${vehicle.title}</h1>
@@ -698,6 +718,14 @@ function setupHeaderControls() {
     const next = order[(order.indexOf(current) + 1) % order.length];
     applyTheme(next);
     updateThemeIcon(next);
+    router();
+  });
+
+  const makeSelect = document.getElementById('makeSelect');
+  makeSelect.value = getCurrentMake();
+  makeSelect.addEventListener('change', () => {
+    setCurrentMake(makeSelect.value);
+    location.hash = '#/';
     router();
   });
 }
