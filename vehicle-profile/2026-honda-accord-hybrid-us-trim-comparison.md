@@ -1,6 +1,6 @@
 # 2026 Honda Accord Hybrid (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 Accord two-motor hybrid trims. **S** = standard; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 Accord two-motor hybrid trims. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## Lineup, price, and efficiency
 
@@ -41,6 +41,14 @@ All trims have regenerative-braking deceleration selectors and ECON, Normal, Spo
 | Head-up display | - | - | - | S |
 | Heated rear outboard seats | - | - | - | S |
 | Ventilated front seats | - | - | - | S |
+| Rain-sensing wipers | ? | ? | ? | S |
+| Front/rear parking sonar with automatic braking | ? | ? | ? | ? |
+
+## Grade-by-grade buying path
+
+- Sport Hybrid to EX-L Hybrid: swaps 19-inch wheels for 17-inch (improving EPA rating) and adds leather, heated front seats, power passenger seat, driver memory, and parking sensors.
+- EX-L Hybrid to Sport-L Hybrid: keeps the EX-L comfort content, moves back to 19-inch wheels (matte black) for sport styling, at the cost of the EX-L's best-in-lineup fuel economy.
+- Sport-L Hybrid to Touring Hybrid: adds Google built-in, Bose 12-speaker audio, head-up display, heated rear outboard seats, and ventilated front seats.
 
 ## Quick buying guide
 

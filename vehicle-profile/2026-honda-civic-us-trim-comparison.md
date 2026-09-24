@@ -1,6 +1,6 @@
 # 2026 Honda Civic Sedan (U.S.) - Gas Trim & Feature Comparison
 
-> **Scope:** 2026 Civic gasoline sedan (LX and Sport). Civic Hybrid and Civic Si are covered separately. **S** = standard; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 Civic gasoline sedan (LX and Sport). Civic Hybrid and Civic Si are covered separately. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## Lineup, price, and efficiency
 
@@ -31,6 +31,15 @@ Both use a naturally aspirated 2.0-liter four-cylinder producing 150 hp and 133 
 | Smart Entry / remote start | - | S |
 | Blind Spot Information / Cross Traffic Monitor | - | S |
 | Heated side mirrors | - | S |
+| Heated front seats | ? | ? |
+| Rain-sensing wipers | ? | ? |
+| Driver-seat memory | ? | ? |
+| Front/rear parking sonar or parking assist | ? | ? |
+| Head-up display | ? | ? |
+
+## Grade-by-grade buying path
+
+- LX to Sport: keeps the same 150-hp engine and fuel economy, and adds 18-inch gloss-black wheels, CVT paddle shifters, additional drive modes, leather-wrapped steering wheel, Smart Entry/remote start, Blind Spot Information/Cross Traffic Monitor, and heated side mirrors.
 
 ## Quick buying guide
 

@@ -2649,6 +2649,34 @@
               "-",
               "S"
             ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?"
+            ]
           }
         ]
       },
@@ -2678,6 +2706,9 @@
           "label": "Honda 2026 Accord brochure",
           "url": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2026/accord-sedan/Brochure/MY26ACCORDBROFNL.pdf?sc_lang=en"
         }
+      ],
+      "progression": [
+        "LX to SE: keeps the same 192-hp engine and adds heated front seats, 10-way power driver seat, moonroof, dual-zone climate control, Smart Entry/remote start, Blind Spot Information/Cross Traffic Monitor, larger 19-inch wheels, and upgraded 8-speaker audio."
       ]
     },
     {
@@ -2873,6 +2904,24 @@
               "-",
               "S"
             ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "S"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar with automatic braking",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
           }
         ]
       },
@@ -2908,6 +2957,11 @@
           "label": "Honda 2026 Accord brochure",
           "url": "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2026/accord-sedan/Brochure/MY26ACCORDBROFNL.pdf?sc_lang=en"
         }
+      ],
+      "progression": [
+        "Sport Hybrid to EX-L Hybrid: swaps 19-inch wheels for 17-inch (improving EPA rating) and adds leather, heated front seats, power passenger seat, driver memory, and parking sensors.",
+        "EX-L Hybrid to Sport-L Hybrid: keeps the EX-L comfort content, moves back to 19-inch wheels (matte black) for sport styling, at the cost of the EX-L's best-in-lineup fuel economy.",
+        "Sport-L Hybrid to Touring Hybrid: adds Google built-in, Bose 12-speaker audio, head-up display, heated rear outboard seats, and ventilated front seats."
       ]
     },
     {
@@ -3036,6 +3090,41 @@
               "-",
               "S"
             ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Heated front seats",
+            "values": [
+              "?",
+              "?"
+            ]
           }
         ]
       },
@@ -3065,6 +3154,9 @@
           "label": "Honda 2026 Civic family page",
           "url": "https://automobiles.honda.com/civic"
         }
+      ],
+      "progression": [
+        "LX to Sport: keeps the same 150-hp engine and fuel economy, and adds 18-inch gloss-black wheels, CVT paddle shifters, additional drive modes, leather-wrapped steering wheel, Smart Entry/remote start, Blind Spot Information/Cross Traffic Monitor, and heated side mirrors."
       ]
     },
     {
@@ -3209,6 +3301,34 @@
               "-",
               "S"
             ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "?",
+              "?"
+            ]
           }
         ]
       },
@@ -3238,6 +3358,9 @@
           "label": "Honda Civic family page",
           "url": "https://automobiles.honda.com/civic"
         }
+      ],
+      "progression": [
+        "Sport Hybrid to Sport Touring Hybrid: keeps the same 200-hp hybrid system and EPA rating, and adds leather seating, an 8-way power driver seat, larger 9-inch touchscreen and 10.2-inch digital cluster, wireless phone integration, Google built-in, Bose 12-speaker audio, a wireless charger, and parking sensors."
       ]
     },
     {
@@ -3343,6 +3466,30 @@
             "feature": "Blind Spot Information / Cross Traffic Monitor",
             "values": [
               "S"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?"
+            ]
+          },
+          {
+            "feature": "Driver-seat memory",
+            "values": [
+              "?"
+            ]
+          },
+          {
+            "feature": "Front/rear parking sonar or parking assist",
+            "values": [
+              "?"
+            ]
+          },
+          {
+            "feature": "Ventilated front seats",
+            "values": [
+              "?"
             ]
           }
         ]
@@ -3630,15 +3777,39 @@
               "S",
               "S"
             ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Head-up display",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
           }
         ]
       },
       "highlights": [],
       "progression": [
-        "RTL Towing adds the factory Class III hitch and wiring harness; regular RTL retains the same 5,000-lb maximum only when properly equipped.",
-        "Blackout versions are appearance configurations — black wheels, badges, and related trim — not additional mechanical capability.",
-        "TrailSport is the meaningful capability step with all-terrain tires, off-road suspension, skid plates, recovery points, hitch, and TrailWatch.",
-        "TrailSport Elite combines that hardware with the best comfort and audio equipment."
+        "RTL to RTL Towing: adds the factory Class III hitch and wiring harness; regular RTL retains the same 5,000-lb maximum only when properly equipped.",
+        "RTL to RTL Blackout: appearance-only configuration — black wheels, badges, and related trim — not additional mechanical capability.",
+        "RTL family to TrailSport family: the meaningful capability step, trading leather-and-cloth seats for all-terrain tires, off-road-tuned suspension, steel skid plates, recovery points, a standard hitch, TrailWatch multi-view camera, and amber hood marker lights.",
+        "TrailSport family to TrailSport Elite family: keeps the off-road hardware and adds the best comfort/audio equipment — perforated leather, heated and ventilated front seats, heated rear outboard seats, rear sunshades, and Bose premium audio."
       ],
       "notes": [],
       "sources": [
@@ -3910,6 +4081,28 @@
               "-",
               "S",
               "S"
+            ]
+          },
+          {
+            "feature": "Rain-sensing wipers",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          },
+          {
+            "feature": "Wireless phone charging",
+            "values": [
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
             ]
           }
         ]

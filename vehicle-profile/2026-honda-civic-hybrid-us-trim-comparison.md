@@ -1,6 +1,6 @@
 # 2026 Honda Civic Hybrid Sedan (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 Civic sedan with Honda's two-motor hybrid system. The Civic Hatchback Hybrid is not included. **S** = standard; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 Civic sedan with Honda's two-motor hybrid system. The Civic Hatchback Hybrid is not included. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## Lineup, price, and efficiency
 
@@ -35,6 +35,14 @@ Both trims pair a 2.0-liter Atkinson-cycle four-cylinder with a two-motor hybrid
 | Bose 12-speaker premium audio | - | S |
 | Wireless phone charger | - | S |
 | Parking sensors / Low-Speed Braking Control | - | S |
+| Rain-sensing wipers | ? | ? |
+| Driver-seat memory | ? | ? |
+| Head-up display | ? | ? |
+| Ventilated front seats | ? | ? |
+
+## Grade-by-grade buying path
+
+- Sport Hybrid to Sport Touring Hybrid: keeps the same 200-hp hybrid system and EPA rating, and adds leather seating, an 8-way power driver seat, larger 9-inch touchscreen and 10.2-inch digital cluster, wireless phone integration, Google built-in, Bose 12-speaker audio, a wireless charger, and parking sensors.
 
 ## Quick buying guide
 

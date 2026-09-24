@@ -1,6 +1,6 @@
 # 2026 Honda Accord (U.S.) - Gas Trim & Feature Comparison
 
-> **Scope:** 2026 Accord sedan with the gasoline powertrain only (LX and SE). The four Accord Hybrid trims are covered separately. **S** = standard; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 Accord sedan with the gasoline powertrain only (LX and SE). The four Accord Hybrid trims are covered separately. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## Lineup, price, and efficiency
 
@@ -34,6 +34,14 @@ Both trims use a 192-hp, 192-lb-ft turbocharged 1.5-liter four-cylinder, continu
 | Remote engine start | - | S |
 | Blind Spot Information / Cross Traffic Monitor | - | S |
 | Eight-speaker, 180-watt audio | - | S |
+| Rain-sensing wipers | ? | ? |
+| Driver-seat memory | ? | ? |
+| Front/rear parking sonar or parking assist | ? | ? |
+| Head-up display | ? | ? |
+
+## Grade-by-grade buying path
+
+- LX to SE: keeps the same 192-hp engine and adds heated front seats, 10-way power driver seat, moonroof, dual-zone climate control, Smart Entry/remote start, Blind Spot Information/Cross Traffic Monitor, larger 19-inch wheels, and upgraded 8-speaker audio.
 
 ## Quick buying guide
 

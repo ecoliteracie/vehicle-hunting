@@ -27,6 +27,26 @@ The turbocharged four-cylinder produces 200 hp at 6,000 rpm and 192 lb-ft from 1
 | Convenience | Smart Entry, Walk Away Auto Lock, push-button start |
 | Driver assistance | Honda Sensing; Blind Spot Information with Cross Traffic Monitor; multi-angle rearview camera |
 
+## Feature matrix
+
+Single-trim model — every row is standard on Si. **S** = standard; **?** = unconfirmed — checked but not documented in any source available.
+
+| Feature | Si |
+|---|:---:|
+| 18-in matte-black alloy wheels | S |
+| Summer performance tires (235/40 R18) | S |
+| Helical limited-slip differential | S |
+| Sport seats with red accents | S |
+| Bose 12-speaker premium audio | S |
+| One-touch moonroof | S |
+| Heated front seats | S |
+| Google built-in | S |
+| Blind Spot Information / Cross Traffic Monitor | S |
+| Rain-sensing wipers | ? |
+| Driver-seat memory | ? |
+| Front/rear parking sonar or parking assist | ? |
+| Ventilated front seats | ? |
+
 ## Shopping context
 
 - Choose **Si** for the manual transmission, limited-slip differential, sport chassis, and summer tires—not for straight-line output alone.

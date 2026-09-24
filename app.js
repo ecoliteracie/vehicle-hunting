@@ -126,6 +126,11 @@ const FEATURE_LOOKUP = {
     'corolla-cross-2026': ['Moonroof / glass roof'],
     'rav4-hybrid-2026': ['Panoramic glass roof'],
     'prius-2027': ['Fixed glass roof'],
+    'accord-2026': ['One-touch power moonroof'],
+    'accord-hybrid-2026': ['One-touch moonroof'],
+    'civic-si-2026': ['One-touch moonroof'],
+    'civic-hybrid-2026': ['One-touch moonroof'],
+    'pilot-2026': ['Panoramic moonroof'],
   },
   heatedSeats: {
     'camry-2026': ['Heated front seats / heated steering wheel'],
@@ -134,6 +139,12 @@ const FEATURE_LOOKUP = {
     'corolla-cross-2026': ['Heated front seats'],
     'rav4-hybrid-2026': ['Heated front seats'],
     'prius-2027': ['Heated front seats'],
+    'accord-2026': ['Heated front seats'],
+    'accord-hybrid-2026': ['Heated front seats'],
+    'civic-hybrid-2026': ['Heated front seats'],
+    'civic-si-2026': ['Heated front seats'],
+    'passport-2026': ['Heated and ventilated front seats'],
+    'pilot-2026': ['Ventilated front / heated 2nd-row seats'],
   },
   audio: {
     'camry-2026': ['JBL 9-speaker premium audio'],
@@ -142,6 +153,13 @@ const FEATURE_LOOKUP = {
     'corolla-cross-2026': ['JBL 9-speaker premium audio'],
     'rav4-hybrid-2026': ['JBL 9-speaker premium audio'],
     'prius-2027': ['JBL 8-speaker premium audio'],
+    'accord-2026': ['Eight-speaker, 180-watt audio'],
+    'accord-hybrid-2026': ['Bose 12-speaker premium audio'],
+    'civic-2026': ['Eight-speaker, 180-watt audio'],
+    'civic-hybrid-2026': ['Bose 12-speaker premium audio'],
+    'civic-si-2026': ['Bose 12-speaker premium audio'],
+    'passport-2026': ['Bose premium audio'],
+    'pilot-2026': ['Bose premium audio'],
   },
   hud: {
     'camry-2026': ['10-in head-up display'],
@@ -150,6 +168,8 @@ const FEATURE_LOOKUP = {
     'corolla-cross-2026': ['Head-up display'],
     'rav4-hybrid-2026': ['Head-up display'],
     'prius-2027': ['Head-up display'],
+    'accord-hybrid-2026': ['Head-up display'],
+    'pilot-2026': ['Head-up display / heated steering wheel'],
   },
 };
 

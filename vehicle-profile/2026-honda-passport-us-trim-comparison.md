@@ -1,6 +1,6 @@
 # 2026 Honda Passport (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 U.S. Passport. Honda has previewed a 2027 landing page, but its published figures conflict with Honda's current U.S. specification database; this profile therefore uses the complete, internally consistent 2026 model-year data. **S** = standard; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 U.S. Passport. Honda has previewed a 2027 landing page, but its published figures conflict with Honda's current U.S. specification database; this profile therefore uses the complete, internally consistent 2026 model-year data. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## All seven configurations
 
@@ -39,6 +39,15 @@ Every Passport has a 285-hp, 262-lb-ft 3.5-liter V6, 10-speed automatic, second-
 | Heated and ventilated front seats | - | - | S |
 | Heated rear outboard seats / rear sunshades | - | - | S |
 | Bose premium audio | - | - | S |
+| Rain-sensing wipers | ? | ? | ? |
+| Head-up display | ? | ? | ? |
+
+## Grade-by-grade buying path
+
+- RTL to RTL Towing: adds the factory Class III hitch and wiring harness; regular RTL retains the same 5,000-lb maximum only when properly equipped.
+- RTL to RTL Blackout: appearance-only configuration — black wheels, badges, and related trim — not additional mechanical capability.
+- RTL family to TrailSport family: the meaningful capability step, trading leather-and-cloth seats for all-terrain tires, off-road-tuned suspension, steel skid plates, recovery points, a standard hitch, TrailWatch multi-view camera, and amber hood marker lights.
+- TrailSport family to TrailSport Elite family: keeps the off-road hardware and adds the best comfort/audio equipment — perforated leather, heated and ventilated front seats, heated rear outboard seats, rear sunshades, and Bose premium audio.
 
 ## Configuration notes
 

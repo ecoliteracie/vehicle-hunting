@@ -10,6 +10,33 @@ them (persisted per-browser via `localStorage`).
 
 **[Live site](https://ecoliteracie.github.io/vehicle-hunting/)**
 
+## Relationship to `car-shopping-indicators`
+
+This repo is one of two related-but-independent workspaces:
+
+- **`car-shopping-indicators`** is where the data is *authored*: pricing and
+  trim/feature research pulled from official manufacturer sources (new
+  inventory) and used-listing data pulled from dealer/retailer sources,
+  massaged into the `vehicle-profile/*.md` research notes and the valuation
+  CSVs/scripts that live there.
+- **`vehicle-hunting`** (this repo) *presents* a subset of that
+  research — the new-vehicle trim/feature comparisons — as a static,
+  publishable website on GitHub Pages. It re-transcribes each vehicle's
+  `vehicle-profile/*.md` file into `data/vehicles.json` and does not touch
+  the used-listing valuation data or scripts at all; that side of
+  `car-shopping-indicators` has no equivalent here.
+
+The two are connected by convention, not by code or an automated pipeline:
+nothing in either repo reads from or calls into the other, and neither
+`git`-references the other. `car-shopping-indicators` doesn't need to know
+`vehicle-hunting` exists — it can keep producing research/valuation data on
+its own. `vehicle-hunting` *does* benefit from knowing where its source
+research came from (hence keeping a copy of the relevant `vehicle-profile/*.md`
+files here, and citing `sourceFile` on every vehicle in `vehicles.json`), but
+it doesn't depend on the other repo's structure, tooling, or presence to do
+its own job. Adding a vehicle to one repo is a manual, human-initiated step
+into the other — see "Adding or updating a vehicle" below.
+
 ## Structure
 
 ```

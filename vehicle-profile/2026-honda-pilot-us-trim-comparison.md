@@ -1,6 +1,6 @@
 # 2026 Honda Pilot (U.S.) - Trim & Feature Comparison
 
-> **Scope:** 2026 U.S. Pilot three-row SUV. **S** = standard; **A** = available; **-** = not offered. MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+> **Scope:** 2026 U.S. Pilot three-row SUV. **S** = standard; **A** = available; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
 
 ## Lineup and pricing
 
@@ -41,6 +41,8 @@ All trims use a 285-hp, 262-lb-ft 3.5-liter V6 and 10-speed automatic. FWD model
 | Hands-free power tailgate | - | - | - | S | S | S |
 | Ventilated front / heated 2nd-row seats | - | - | - | - | S | S |
 | Head-up display / heated steering wheel | - | - | - | - | S | S |
+| Rain-sensing wipers | ? | ? | ? | ? | ? | ? |
+| Wireless phone charging | ? | ? | ? | ? | ? | ? |
 
 Touring Blackout follows Touring equipment with black 20-inch wheels, badges, and trim; unlike regular Touring, Honda lists AWD as available rather than standard. Black Edition follows Elite equipment with gloss-black exterior trim and a model-specific black/red leather interior.
 
