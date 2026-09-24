@@ -1,0 +1,4 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+PRI-001,Toyota,Prius,LE,Unspecified,Hybrid,2026,New,sale_pending,0,30434,TRUE,TRUE,Toyota|Prius|LE,Dealership listing (Today's Price),2026-07-17
+PRI-002,Toyota,Prius,XLE,Unspecified,Hybrid,2026,New,available,0,34201,TRUE,TRUE,Toyota|Prius|XLE,Dealership listing (Today's Price),2026-07-17
+PRI-003,Toyota,Prius,Limited,Unspecified,Hybrid,2026,New,in_transit,0,37613,TRUE,TRUE,Toyota|Prius|Limited,Dealership listing (Today's Price),2026-07-22

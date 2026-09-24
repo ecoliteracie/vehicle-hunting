@@ -1,0 +1,2 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+HL-001,Toyota,Highlander,Hybrid XLE,Unspecified,Hybrid,2026,New,sale_pending,0,48432,TRUE,TRUE,Toyota|Highlander|Hybrid XLE,Dealership listing (Today's Price),2026-07-17

@@ -1,0 +1,10 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+4R-001,Toyota,4Runner,SR5,Unspecified,Unspecified,2026,New,available,0,44417,TRUE,TRUE,Toyota|4Runner|SR5,Dealership listing (Today's Price),2026-07-17
+4R-002,Toyota,4Runner,TRD Sport Premium,Unspecified,Unspecified,2026,New,available,0,54640,TRUE,TRUE,Toyota|4Runner|TRD Sport Premium,Dealership listing (Today's Price),2026-07-17
+4R-003,Toyota,4Runner,Limited,Unspecified,Unspecified,2026,New,available,0,57631,TRUE,TRUE,Toyota|4Runner|Limited,Dealership listing (Today's Price),2026-07-17
+4R-004,Toyota,4Runner,TRD Sport Premium,Unspecified,Unspecified,2026,New,in_transit,0,54640,TRUE,TRUE,Toyota|4Runner|TRD Sport Premium,Dealership listing (Today's Price),2026-07-17
+4R-005,Toyota,4Runner,SR5,Unspecified,Unspecified,2026,New,available,0,44433,TRUE,TRUE,Toyota|4Runner|SR5,Dealership listing (Today's Price),2026-07-17
+4R-006,Toyota,4Runner,SR5,Unspecified,Unspecified,2026,New,available,0,44495,TRUE,TRUE,Toyota|4Runner|SR5,Dealership listing (Today's Price),2026-07-17
+4R-007,Toyota,4Runner,SR5,Unspecified,Unspecified,2026,New,available,0,48922,TRUE,TRUE,Toyota|4Runner|SR5,Dealership listing (Today's Price),2026-07-17
+4R-008,Toyota,4Runner,TRD Off-Road Premium,Unspecified,Unspecified,2026,New,available,0,55728,TRUE,TRUE,Toyota|4Runner|TRD Off-Road Premium,Dealership listing (Today's Price),2026-07-17
+4R-009,Toyota,4Runner,Limited,Unspecified,Unspecified,2026,New,available,0,57631,TRUE,TRUE,Toyota|4Runner|Limited,Dealership listing (Today's Price),2026-07-17

@@ -1,0 +1,2 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+CHB-001,Toyota,Corolla Hatchback,XSE,Unspecified,Unspecified,2026,New,in_transit,0,30414,TRUE,TRUE,Toyota|Corolla Hatchback|XSE,Dealership listing (Today's Price),2026-07-22

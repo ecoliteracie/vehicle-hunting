@@ -1,0 +1,12 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+COR-001,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,sale_pending,0,25019,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-17
+COR-002,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,sale_pending,0,25284,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-003,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,24392,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-004,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,24392,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-005,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,24392,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-006,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,24392,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-007,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,24392,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22
+COR-008,Toyota,Corolla,SE,Unspecified,Unspecified,2026,New,in_production,0,26650,TRUE,TRUE,Toyota|Corolla|SE,Dealership listing (Today's Price),2026-07-22
+COR-009,Toyota,Corolla,SE,Unspecified,Unspecified,2026,New,in_production,0,26650,TRUE,TRUE,Toyota|Corolla|SE,Dealership listing (Today's Price),2026-07-17
+COR-010,Toyota,Corolla,SE,Unspecified,Unspecified,2026,New,in_production,0,26650,TRUE,TRUE,Toyota|Corolla|SE,Dealership listing (Today's Price),2026-07-17
+COR-011,Toyota,Corolla,LE,Unspecified,Unspecified,2026,New,in_production,0,25284,TRUE,TRUE,Toyota|Corolla|LE,Dealership listing (Today's Price),2026-07-22

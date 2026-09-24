@@ -1,0 +1,14 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+RAV-001,Toyota,RAV4,LE,Unspecified,Unspecified,2026,New,sale_pending,0,34059,TRUE,TRUE,Toyota|RAV4|LE,Dealership listing (Today's Price),2026-07-17
+RAV-002,Toyota,RAV4,SE,Unspecified,Unspecified,2026,New,in_transit,0,36859,TRUE,TRUE,Toyota|RAV4|SE,Dealership listing (Today's Price),2026-07-22
+RAV-003,Toyota,RAV4,SE,Unspecified,Unspecified,2026,New,sale_pending,0,38259,TRUE,TRUE,Toyota|RAV4|SE,Dealership listing (Today's Price),2026-07-17
+RAV-004,Toyota,RAV4,XLE Premium,Unspecified,Unspecified,2026,New,available,0,37959,TRUE,TRUE,Toyota|RAV4|XLE Premium,Dealership listing (Today's Price),2026-07-17
+RAV-005,Toyota,RAV4,XLE Premium,Unspecified,Unspecified,2026,New,available,0,37959,TRUE,TRUE,Toyota|RAV4|XLE Premium,Dealership listing (Today's Price),2026-07-17
+RAV-006,Toyota,RAV4,XLE Premium,Unspecified,Unspecified,2026,New,sale_pending,0,38734,TRUE,TRUE,Toyota|RAV4|XLE Premium,Dealership listing (Today's Price),2026-07-17
+RAV-007,Toyota,RAV4,XLE Premium,Unspecified,Unspecified,2026,New,sale_pending,0,42541,TRUE,TRUE,Toyota|RAV4|XLE Premium,Dealership listing (Today's Price),2026-07-17
+RAV-008,Toyota,RAV4,XLE Premium,Unspecified,Unspecified,2026,New,sale_pending,0,40659,TRUE,TRUE,Toyota|RAV4|XLE Premium,Dealership listing (Today's Price),2026-07-22
+RAV-009,Toyota,RAV4,Woodland,Unspecified,Unspecified,2026,New,available,0,42270,TRUE,TRUE,Toyota|RAV4|Woodland,Dealership listing (Today's Price),2026-07-17
+RAV-010,Toyota,RAV4,XSE,Unspecified,Unspecified,2026,New,available,0,44154,TRUE,TRUE,Toyota|RAV4|XSE,Dealership listing (Today's Price),2026-07-17
+RAV-011,Toyota,RAV4,XSE,Unspecified,Unspecified,2026,New,available,0,44654,TRUE,TRUE,Toyota|RAV4|XSE,Dealership listing (Today's Price),2026-07-17
+RAV-012,Toyota,RAV4,Limited,Unspecified,Unspecified,2026,New,available,0,45759,TRUE,TRUE,Toyota|RAV4|Limited,Dealership listing (Today's Price),2026-07-17
+RAV-013,Toyota,RAV4,Limited,Unspecified,Unspecified,2026,New,in_transit,0,46234,TRUE,TRUE,Toyota|RAV4|Limited,Dealership listing (Today's Price),2026-07-22

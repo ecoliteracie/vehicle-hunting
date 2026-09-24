@@ -1,0 +1,5 @@
+vehicle_id,make,model,trim,drivetrain,powertrain,year,condition,status,mileage,price,doc_fee_included,dealer_adjustment_included,comparable_key,source,date_collected
+CC-001,Toyota,Corolla Cross,LE,Unspecified,Unspecified,2026,New,available,0,31471,TRUE,TRUE,Toyota|Corolla Cross|LE,Dealership listing (Today's Price),2026-07-17
+CC-002,Toyota,Corolla Cross,XLE,Unspecified,Unspecified,2026,New,available,0,32691,TRUE,TRUE,Toyota|Corolla Cross|XLE,Dealership listing (Today's Price),2026-07-17
+CC-003,Toyota,Corolla Cross,XLE,Unspecified,Unspecified,2026,New,sale_pending,0,35381,TRUE,TRUE,Toyota|Corolla Cross|XLE,Dealership listing (Today's Price),2026-07-22
+CC-004,Toyota,Corolla Cross,LE,Unspecified,Unspecified,2026,New,sale_pending,0,31696,TRUE,TRUE,Toyota|Corolla Cross|LE,Dealership listing (Today's Price),2026-07-22
