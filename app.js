@@ -21,7 +21,7 @@ function groupVehicles(vehicles) {
 }
 
 function trimStats(vehicle) {
-  const prices = vehicle.trims.map(t => t.msrp).filter(v => v != null);
+  const prices = vehicle.trims.map(displayedPrice).filter(v => v != null);
   const mpgs = vehicle.trims.map(avgMpg).filter(v => v != null);
   const drivetrains = Array.from(new Set(vehicle.trims.map(t => t.drivetrain)));
   return {
@@ -31,6 +31,14 @@ function trimStats(vehicle) {
     gradeCount: vehicle.featureMatrix.grades.length,
     drivetrains,
   };
+}
+
+// Dealer inventory almost never matches a bare factory MSRP: destination,
+// factory packages, port-installed accessories, and dealer fees can all be
+// included in an advertised price. Prefer the researched listing estimate,
+// but retain MSRP as a fallback for newly added profiles.
+function displayedPrice(trim) {
+  return trim.dealerPrice ?? trim.msrp;
 }
 
 /* ---------- Make selection ---------- */
@@ -202,7 +210,7 @@ function allTrimsFlat() {
         drivetrain: t.drivetrain,
         engine: t.engine,
         hp: t.hp,
-        msrp: t.msrp,
+        msrp: displayedPrice(t),
         mpgCombined: avgMpg(t),
         roof: lookupFeature(v, t.grade, 'roof'),
         heatedSeats: lookupFeature(v, t.grade, 'heatedSeats'),
@@ -253,7 +261,7 @@ function renderAllTrimsPage() {
                 <th data-key="drivetrain">Drive</th>
                 <th data-key="engine">Engine</th>
                 <th data-key="hp" class="num">HP</th>
-                <th data-key="msrp" class="num">MSRP</th>
+                <th data-key="msrp" class="num">Typical listing</th>
                 <th data-key="mpgCombined" class="num">MPG comb.</th>
                 <th>Roof</th>
                 <th>Htd seats</th>
@@ -362,7 +370,7 @@ function renderModelPage(modelSlug, year) {
 
       <section class="charts-row">
         <div class="chart-card">
-          <h3>MSRP by grade</h3>
+          <h3>Typical dealer listing by grade</h3>
           <div class="chart-wrap"><canvas id="chartPrice"></canvas></div>
         </div>
         <div class="chart-card">
@@ -404,8 +412,8 @@ function statStrip(vehicle) {
   const dt = s.drivetrains.length > 1 ? 'FWD & AWD' : s.drivetrains[0];
   return `
   <section class="stat-strip">
-    <div class="stat-tile"><span class="stat-label">Starting MSRP</span><span class="stat-value">${fmtUSD(s.priceMin)}</span></div>
-    <div class="stat-tile"><span class="stat-label">Top trim MSRP</span><span class="stat-value">${fmtUSD(s.priceMax)}</span></div>
+    <div class="stat-tile"><span class="stat-label">Starting typical listing</span><span class="stat-value">${fmtUSD(s.priceMin)}</span></div>
+    <div class="stat-tile"><span class="stat-label">Top typical listing</span><span class="stat-value">${fmtUSD(s.priceMax)}</span></div>
     <div class="stat-tile"><span class="stat-label">Best combined MPG</span><span class="stat-value">${s.mpgMax ?? '—'}</span></div>
     <div class="stat-tile"><span class="stat-label">Grades</span><span class="stat-value">${s.gradeCount}</span></div>
     <div class="stat-tile"><span class="stat-label">Drivetrain</span><span class="stat-value">${dt}</span></div>
@@ -415,16 +423,18 @@ function statStrip(vehicle) {
 /* ---------- Trim table ---------- */
 
 function trimTable(vehicle) {
+  const pricing = DATA.pricing;
   return `
   <section class="panel">
     <h2>Trim overview</h2>
+    <p class="scope"><strong>${pricing.label} — ${pricing.asOf}.</strong> ${pricing.basis} ${pricing.excludes}</p>
     <div class="table-scroll">
       <table class="trim-table" id="trimTable">
         <thead>
           <tr>
             <th data-key="name">Trim</th>
             <th data-key="drivetrain">Drivetrain</th>
-            <th data-key="msrp" class="num">MSRP</th>
+            <th data-key="msrp" class="num">Typical listing</th>
             <th data-key="mpgCity" class="num">MPG city</th>
             <th data-key="mpgHwy" class="num">MPG hwy</th>
             <th data-key="mpgCombined" class="num">MPG comb.</th>
@@ -442,7 +452,7 @@ function trimRows(trims) {
     <tr>
       <td class="trim-name">${t.name}</td>
       <td>${t.drivetrain}</td>
-      <td class="num">${fmtUSD(t.msrp)}</td>
+      <td class="num">${fmtUSD(displayedPrice(t))}</td>
       <td class="num">${t.mpgCity ?? '—'}</td>
       <td class="num">${t.mpgHwy ?? '—'}</td>
       <td class="num">${t.mpgCombined ?? '—'}</td>
@@ -589,9 +599,16 @@ function notesSection(vehicle) {
 }
 
 function sourcesSection(vehicle) {
+  const pricing = DATA.pricing;
+  const pricingSources = vehicle.pricingSources || [];
   return `
   <section class="panel panel--footer">
     <h2>Sources</h2>
+    ${pricingSources.length ? `
+      <h3>Current price checks (${pricing.asOf})</h3>
+      <ul class="source-list">${pricingSources.map(s => `<li><a href="${s.url}" target="_blank" rel="noopener">${s.label}</a></li>`).join('')}</ul>
+    ` : ''}
+    <h3>Vehicle specifications</h3>
     <ul class="source-list">${vehicle.sources.map(s => `<li><a href="${s.url}" target="_blank" rel="noopener">${s.label}</a></li>`).join('')}</ul>
     <p class="researched">Researched ${vehicle.researched}. <a href="${vehicle.sourceFile}" target="_blank">View source notes (.md)</a></p>
   </section>`;
@@ -642,7 +659,7 @@ function makeBarChart(canvasId, series, fmt) {
   const datasets = [];
   if (series.hasFwd) datasets.push(barDataset('FWD', series.fwd, seriesFwd));
   if (series.hasAwd) datasets.push(barDataset('AWD', series.awd, seriesAwd));
-  if (!datasets.length) datasets.push(barDataset('MSRP', series.fwd, seriesFwd));
+  if (!datasets.length) datasets.push(barDataset('Typical listing', series.fwd, seriesFwd));
 
   const font = { family: 'Inter, system-ui, sans-serif', size: 12 };
 
@@ -692,7 +709,7 @@ function makeBarChart(canvasId, series, fmt) {
 }
 
 function buildCharts(vehicle) {
-  const priceSeries = gradeDrivetrainSeries(vehicle, t => t.msrp);
+  const priceSeries = gradeDrivetrainSeries(vehicle, displayedPrice);
   const mpgSeries = gradeDrivetrainSeries(vehicle, avgMpg);
 
   chartInstances.price = makeBarChart('chartPrice', priceSeries, {
