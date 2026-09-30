@@ -9,6 +9,7 @@
     "basis": "A national check of current franchised-dealer inventory. Each benchmark uses current advertised prices for the exact trim when available; otherwise it is adjusted from the closest listed configuration for the same model and equipment level.",
     "excludes": "Sales tax, title, registration, financing charges, conditional rebates, and any fees or add-ons not included in the advertised dealer price."
   },
+  "lastUpdated": "2026-09-29T22:30:43-05:00",
   "vehicles": [
     {
       "id": "camry-2026",

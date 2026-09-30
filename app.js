@@ -767,6 +767,25 @@ function setupHeaderControls() {
   });
 }
 
+function updateLastUpdated() {
+  const el = document.getElementById('lastUpdated');
+  if (!el || !DATA?.lastUpdated) return;
+  const stamp = new Date(DATA.lastUpdated);
+  if (Number.isNaN(stamp.getTime())) return;
+  const formatted = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Chicago',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+    timeZoneName: 'short',
+  }).format(stamp);
+  el.textContent = `Last updated: ${formatted}`;
+  el.dateTime = DATA.lastUpdated;
+}
+
 /* ---------- Init ---------- */
 
 async function init() {
@@ -778,6 +797,7 @@ async function init() {
     app.innerHTML = `<p class="error">Could not load vehicle data. If you're viewing this file directly from disk, run a local server instead (e.g. <code>python -m http.server</code>) rather than opening index.html directly.</p>`;
     return;
   }
+  updateLastUpdated();
   router();
 }
 
