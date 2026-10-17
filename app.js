@@ -795,7 +795,7 @@ async function init() {
   try {
     const res = await fetch(DATA_URL);
     DATA = await res.json();
-    try { USED = await (await fetch('data/used.json')).json(); } catch { USED = null; }
+    try { USED = await (await fetch('data/used.json', { cache: 'no-cache' })).json(); } catch { USED = null; }
   } catch (e) {
     app.innerHTML = `<p class="error">Could not load vehicle data. If you're viewing this file directly from disk, run a local server instead (e.g. <code>python -m http.server</code>) rather than opening index.html directly.</p>`;
     return;
