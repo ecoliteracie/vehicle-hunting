@@ -425,3 +425,27 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .stat-strip { grid-template-columns: repeat(2, 1fr); }
   .brand span { display: none; }
 }
+
+/* Used cars page */
+.site-nav { display: flex; gap: var(--space-5); }
+.used-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: var(--space-4); }
+.used-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: var(--space-3); }
+.used-card__head { display: flex; justify-content: space-between; gap: var(--space-3); align-items: flex-start; }
+.used-card h3 { font-size: 1rem; margin: 0; }
+.used-card__meta, .used-card__note { color: var(--text-muted); font-size: 0.8125rem; margin: 2px 0 0; }
+.used-card__badges { display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: flex-end; }
+.badge--kbb { color: var(--status-good); border-color: color-mix(in srgb, var(--status-good) 40%, var(--border)); background: var(--status-good-wash); gap: 4px; }
+.kbb-icon { flex: none; }
+.used-card__price { display: flex; align-items: baseline; gap: var(--space-3); }
+.used-card__price strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.used-card__label { font-size: 0.75rem; color: var(--text-muted); }
+.used-card__input { width: 9rem; font: inherit; font-weight: 700; padding: 6px 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface-2); color: var(--text-primary); }
+.used-card__kbb { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: 0; }
+.used-card__kbb dt { font-size: 0.75rem; color: var(--text-muted); }
+.used-card__kbb dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 0.875rem; }
+.verdict { margin: 0; font-size: 0.8125rem; font-weight: 700; padding: 6px 10px; border-radius: var(--radius-sm); }
+.verdict span { font-weight: 500; }
+.verdict--good { color: var(--status-good); background: var(--status-good-wash); }
+.verdict--fair { color: var(--status-warning); background: var(--status-warning-wash); }
+.verdict--high { color: var(--accent); background: var(--accent-wash); }
+.verdict--none { color: var(--text-muted); background: var(--surface-2); font-weight: 500; }

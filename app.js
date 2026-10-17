@@ -69,6 +69,8 @@ function router() {
   const parts = hash.split('/').filter(Boolean);
   if (parts[0] === 'model' && parts[1]) {
     renderModelPage(parts[1], parts[2] ? Number(parts[2]) : null);
+  } else if (parts[0] === 'used') {
+    renderUsedPage();
   } else if (parts[0] === 'all-trims') {
     renderAllTrimsPage();
   } else {
@@ -793,6 +795,7 @@ async function init() {
   try {
     const res = await fetch(DATA_URL);
     DATA = await res.json();
+    try { USED = await (await fetch('data/used.json')).json(); } catch { USED = null; }
   } catch (e) {
     app.innerHTML = `<p class="error">Could not load vehicle data. If you're viewing this file directly from disk, run a local server instead (e.g. <code>python -m http.server</code>) rather than opening index.html directly.</p>`;
     return;
@@ -803,3 +806,103 @@ async function init() {
 
 window.addEventListener('hashchange', router);
 document.addEventListener('DOMContentLoaded', init);
+
+/* ---------- Used cars (dealer listings + KBB checks) ---------- */
+
+let USED = null;
+let usedFilter = 'All';
+const KBB_ICON = '<svg class="kbb-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v5c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>';
+
+function getEnteredPrice(stock) {
+  try { const v = Number(localStorage.getItem(`usedPrice:${stock}`)); return v > 0 ? v : null; } catch { return null; }
+}
+function setEnteredPrice(stock, v) {
+  try { v ? localStorage.setItem(`usedPrice:${stock}`, v) : localStorage.removeItem(`usedPrice:${stock}`); } catch { /* storage unavailable */ }
+}
+
+function usedVerdict(car, price) {
+  const k = car.kbb;
+  if (!k || !price || k.privateLow == null) return null;
+  const diff = price - (k.privateLow + k.privateHigh) / 2;
+  const abs = fmtUSD(Math.abs(Math.round(diff)));
+  if (price < k.privateLow) return { cls: 'good', label: 'Below KBB private-party range', detail: `${abs} under the midpoint` };
+  if (price <= k.privateHigh) return { cls: 'fair', label: 'Within KBB private-party range', detail: diff === 0 ? 'at the midpoint' : `${abs} ${diff < 0 ? 'under' : 'over'} the midpoint` };
+  return { cls: 'high', label: 'Above KBB private-party range', detail: `${abs} over the midpoint` };
+}
+
+function kbbRange(lo, hi) {
+  if (lo == null) return '—';
+  return lo === hi ? fmtUSD(lo) : `${fmtUSD(lo)} – ${fmtUSD(hi)}`;
+}
+
+function usedCard(car) {
+  const price = car.askingPrice ?? getEnteredPrice(car.stock);
+  const v = usedVerdict(car, price);
+  const k = car.kbb;
+  const status = car.status === 'in_transit' ? '<span class="badge">In transit</span>' : '';
+  return `
+    <article class="used-card" data-stock="${car.stock}">
+      <header class="used-card__head">
+        <div>
+          <h3>${car.year} ${car.model} ${car.trim}</h3>
+          <p class="used-card__meta">${car.mileage.toLocaleString('en-US')} mi · Stock ${car.stock}${car.powertrain ? ' · ' + car.powertrain : ''}</p>
+        </div>
+        <div class="used-card__badges">${status}${k ? `<span class="badge badge--kbb" title="Checked on Kelley Blue Book ${k.checked}">${KBB_ICON} KBB</span>` : ''}</div>
+      </header>
+      <div class="used-card__price">
+        ${car.askingPrice != null
+          ? `<span class="used-card__label">Asking</span><strong>${fmtUSD(car.askingPrice)}</strong>`
+          : `<label class="used-card__label" for="p-${car.stock}">Asking price</label>
+             <input class="used-card__input" id="p-${car.stock}" data-stock="${car.stock}" type="number" inputmode="numeric" min="0" step="1" placeholder="Enter at the lot" value="${price ?? ''}">`}
+      </div>
+      ${k ? `
+        <dl class="used-card__kbb">
+          <div><dt>KBB trade-in</dt><dd>${kbbRange(k.tradeLow, k.tradeHigh)}</dd></div>
+          <div><dt>KBB private party</dt><dd>${kbbRange(k.privateLow, k.privateHigh)}</dd></div>
+        </dl>
+        ${v ? `<p class="verdict verdict--${v.cls}">${v.label} <span>· ${v.detail}</span></p>` : '<p class="verdict verdict--none">Enter the asking price to compare</p>'}
+        ${car.note ? `<p class="used-card__note">${car.note} — confirm the trim.</p>` : ''}`
+      : '<p class="verdict verdict--none">No KBB check yet</p>'}
+    </article>`;
+}
+
+function wireUsedInputs() {
+  app.querySelectorAll('.used-card__input').forEach(inp => {
+    if (inp.dataset.wired) return;
+    inp.dataset.wired = '1';
+    inp.addEventListener('change', () => {
+      setEnteredPrice(inp.dataset.stock, Number(inp.value));
+      const car = USED.cars.find(c => c.stock === inp.dataset.stock);
+      inp.closest('.used-card').outerHTML = usedCard(car);
+      wireUsedInputs();
+    });
+  });
+}
+
+function renderUsedPage() {
+  if (!USED) {
+    app.innerHTML = '<p class="error">Used-car data is not available.</p>';
+    return;
+  }
+  const models = ['All', ...Array.from(new Set(USED.cars.map(c => c.model))), 'KBB checked'];
+  const visible = USED.cars.filter(c => usedFilter === 'All' || (usedFilter === 'KBB checked' ? c.kbb : c.model === usedFilter));
+  app.innerHTML = `
+    <section class="model-page">
+      <p class="eyebrow"><a href="#/">Car</a> / Used</p>
+      <div class="model-page__head">
+        <div>
+          <h1>Used deals — ${USED.dealer}</h1>
+          <p class="scope">${USED.cars.length} cars seen on ${USED.asOf}; ${USED.cars.filter(c => c.kbb).length} checked against Kelley Blue Book by hand. ${USED.note} Cars without an asking price yet have an entry box — type the lot price to see where it falls against KBB (saved on this device only).</p>
+        </div>
+      </div>
+      <div class="chip-row" id="usedFilter">
+        ${models.map(m => `<button type="button" class="chip${m === usedFilter ? ' is-active' : ''}" data-filter="${m}">${m}</button>`).join('')}
+      </div>
+      <div class="used-grid">${visible.map(usedCard).join('')}</div>
+    </section>`;
+  document.getElementById('usedFilter').addEventListener('click', e => {
+    const b = e.target.closest('[data-filter]');
+    if (b) { usedFilter = b.dataset.filter; renderUsedPage(); }
+  });
+  wireUsedInputs();
+}
