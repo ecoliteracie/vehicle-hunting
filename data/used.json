@@ -21,7 +21,7 @@
                                  "privateHigh":  29830,
                                  "checked":  "2026-10-17"
                              },
-                     "note":  "Trim assumed"
+                     "note":  null
                  },
                  {
                      "stock":  "TU21716H",
@@ -41,7 +41,7 @@
                                  "privateHigh":  32790,
                                  "checked":  "2026-10-17"
                              },
-                     "note":  "Trim assumed"
+                     "note":  null
                  },
                  {
                      "stock":  "TU23721P",
