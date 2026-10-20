@@ -32,15 +32,11 @@ Also computes View 2, a used-market fair-value estimate (expected_used_price,
 market_discount_pct, market_confidence, price_label) from OTHER used listings
 of the same make+model+trim, leave-one-out (see compute_used_market_valuation).
 
-KNOWN GAP: at low used_comp_count (1-2), _estimate_one falls back to a plain
-median with no mileage adjustment and no check that the comparable's mileage/
-year is even close to the target's. This can produce a confident-sounding
-price_label (e.g. "Strong Value") built from a single wildly mismatched comp
-(see README.md "Known reliability gap" for a worked example: a 2020 CR-V with
-107k miles compared against a 2025 CR-V with 27k miles). market_confidence is
-set correctly to "Low" in that case, but price_label does not itself reflect
-that low confidence, so don't read price_label without checking
-market_confidence next to it.
+SAFETY RULE: View 2 requires verified generation, drivetrain, powertrain,
+location, and seller type. Listings missing any required field, or having
+fewer than three eligible comparables, receive Manual review rather than a
+deal-quality label. This is deliberately conservative while the local dataset
+is being enriched.
 """
 
 from pathlib import Path
@@ -51,6 +47,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 NEW_DIR = ROOT / "data" / "new"
 USED_DIR = ROOT / "data" / "used"
+USED_IDENTITY_PATH = USED_DIR / "_vehicle_identity.csv"
 TRIM_MAP_PATH = ROOT / "data" / "trim_equivalence.csv"
 SUMMARY_XLSX_PATH = ROOT / "valuation_summary.xlsx"
 
@@ -100,6 +97,8 @@ VIEW2_COLUMNS = [
     "market_discount_pct",
     "market_confidence",
     "price_label",
+    "market_review_reason",
+    "market_price_basis",
 ]
 
 # All indicator columns stripped-then-rewritten on each run.
@@ -125,6 +124,18 @@ MIN_MILEAGE_SPREAD = 8000
 # A High-confidence estimate is downgraded to Medium if the comparables
 # disagree by more than this fraction of the expected price.
 WIDE_SPREAD_FRACTION = 0.06
+
+# A used-market estimate is only defensible when the vehicle's identity and
+# market are known. Unknown values must not be treated as matching values.
+REQUIRED_USED_MARKET_FIELDS = [
+    "generation",
+    "drivetrain",
+    "powertrain",
+    "location",
+    "seller_type",
+]
+UNKNOWN_VALUES = {"", "unknown", "unspecified", "n/a", "nan", "none"}
+MAX_MODEL_YEAR_DISTANCE = 1
 
 
 def _load_csv_dir(directory: Path) -> pd.DataFrame:
@@ -157,6 +168,22 @@ def load_used_inventory() -> pd.DataFrame:
             df[col] = 0
         else:
             df[col] = df[col].fillna(0)
+    if USED_IDENTITY_PATH.exists():
+        overrides = pd.read_csv(USED_IDENTITY_PATH)
+        if overrides["vehicle_id"].duplicated().any():
+            raise ValueError("Duplicate vehicle_id values in _vehicle_identity.csv")
+        for field in [c for c in overrides.columns if c != "vehicle_id"]:
+            override_field = f"{field}_override"
+            df = df.merge(
+                overrides[["vehicle_id", field]].rename(columns={field: override_field}),
+                on="vehicle_id",
+                how="left",
+            )
+            if field in df.columns:
+                df[field] = df[override_field].combine_first(df[field])
+            else:
+                df[field] = df[override_field]
+            df = df.drop(columns=[override_field])
     return df
 
 
@@ -195,6 +222,19 @@ def _with_match_columns(df: pd.DataFrame) -> pd.DataFrame:
 def _normalize_match_value(value) -> str:
     """Normalize one model or trim value the same way as a dataframe column."""
     return "" if pd.isna(value) else str(value).strip().casefold()
+
+
+def _is_known(value) -> bool:
+    """Whether an identity or fee value is usable for a fair comparison."""
+    return _normalize_match_value(value) not in UNKNOWN_VALUES
+
+
+def _market_identity_missing(row) -> list[str]:
+    """Return required comparable fields that are absent or unverified."""
+    missing = [field for field in REQUIRED_USED_MARKET_FIELDS if not _is_known(row.get(field, ""))]
+    if pd.isna(row.get("year", np.nan)):
+        missing.append("year")
+    return missing
 
 
 def compute_new_benchmarks(new_df: pd.DataFrame) -> pd.DataFrame:
@@ -329,6 +369,8 @@ def _estimate_one(target, comps: pd.DataFrame) -> dict:
         "market_discount_pct": np.nan,
         "market_confidence": "Manual review",
         "price_label": "Manual review",
+        "market_review_reason": "No eligible used comparables",
+        "market_price_basis": "N/A",
     }
     if c == 0:
         return blank
@@ -349,9 +391,11 @@ def _estimate_one(target, comps: pd.DataFrame) -> dict:
         # Only trust the curve when price falls with mileage (slope < 0).
         if fit is not None and fit[0] < 0:
             slope, intercept = fit
-            raw_pred = intercept + slope * target_miles
-            # Never extrapolate beyond the mileage the comps actually cover.
-            expected = float(np.clip(raw_pred, prices.min(), prices.max()))
+            # Never extrapolate the *mileage input* beyond the observed
+            # comparable range. Do not cap the predicted dollar value: a price
+            # cap distorts a valid fitted relationship near either endpoint.
+            bounded_target_miles = float(np.clip(target_miles, miles.min(), miles.max()))
+            expected = float(intercept + slope * bounded_target_miles)
             fitted_at_comps = intercept + slope * miles
             mileage_adjusted = True
 
@@ -386,6 +430,14 @@ def _estimate_one(target, comps: pd.DataFrame) -> dict:
     if not mileage_adjusted and confidence == "High":
         confidence = "Medium"  # median-only should not read as top confidence
 
+    review_reason = ""
+    label = _used_market_label(market_discount_pct)
+    if confidence == "Low":
+        # A numeric estimate may be useful as context, but one or two
+        # comparables cannot support a deal-quality verdict.
+        label = "Manual review"
+        review_reason = "Fewer than three eligible used comparables"
+
     return {
         "used_comp_count": c,
         "expected_used_price": expected,
@@ -394,7 +446,8 @@ def _estimate_one(target, comps: pd.DataFrame) -> dict:
         "market_discount": market_discount,
         "market_discount_pct": market_discount_pct,
         "market_confidence": confidence,
-        "price_label": _used_market_label(market_discount_pct),
+        "price_label": label,
+        "market_review_reason": review_reason,
     }
 
 
@@ -405,14 +458,17 @@ def compute_used_market_valuation(used_df: pd.DataFrame) -> pd.DataFrame:
     get ``Manual review`` rather than an invented price.
     """
     df = used_df.copy()
-    df["_g_make"] = df.get("make", "").fillna("").astype(str).str.strip().str.casefold()
-    df["_g_model"] = df["model"].fillna("").astype(str).str.strip().str.casefold()
-    df["_g_trim"] = df["trim"].fillna("").astype(str).str.strip().str.casefold()
+    for field in ["make", "model", "trim"] + REQUIRED_USED_MARKET_FIELDS:
+        series = df[field] if field in df.columns else pd.Series("", index=df.index)
+        df[f"_g_{field}"] = series.fillna("").astype(str).str.strip().str.casefold()
 
     records = []
     for _, target in df.iterrows():
-        # Unknown trim can't form a clean comparable group.
-        if target["_g_trim"] in ("", "unspecified"):
+        missing = _market_identity_missing(target)
+        # Unknown identity fields must not silently form a broad group.
+        if target["_g_trim"] in UNKNOWN_VALUES:
+            missing.insert(0, "trim")
+        if missing:
             rec = {
                 "used_comp_count": 0,
                 "expected_used_price": np.nan,
@@ -422,19 +478,47 @@ def compute_used_market_valuation(used_df: pd.DataFrame) -> pd.DataFrame:
                 "market_discount_pct": np.nan,
                 "market_confidence": "Manual review",
                 "price_label": "Manual review",
+                "market_review_reason": "Missing required comparable data: " + ", ".join(missing),
+                "market_price_basis": "N/A",
             }
         else:
             group = df[
                 df["_g_make"].eq(target["_g_make"])
                 & df["_g_model"].eq(target["_g_model"])
                 & df["_g_trim"].eq(target["_g_trim"])
+                & df["_g_generation"].eq(target["_g_generation"])
+                & df["_g_drivetrain"].eq(target["_g_drivetrain"])
+                & df["_g_powertrain"].eq(target["_g_powertrain"])
+                & df["_g_location"].eq(target["_g_location"])
+                & df["_g_seller_type"].eq(target["_g_seller_type"])
             ]
             comps = group[
                 group["vehicle_id"].ne(target["vehicle_id"])  # leave-one-out
                 & group["price"].notna()
                 & group["mileage"].notna()
+                & group["year"].sub(target["year"]).abs().le(MAX_MODEL_YEAR_DISTANCE)
+                & group["status"].fillna("").astype(str).str.casefold().eq("available")
             ]
-            rec = _estimate_one(target, comps)
+            # Use out-the-door-before-tax only when it is known for both the
+            # target and every eligible comparable. Otherwise keep an
+            # apples-to-apples advertised-price screen and disclose that fees
+            # are not included in the market comparison.
+            if (
+                "out_the_door_price_before_tax" in comps.columns
+                and pd.notna(target.get("out_the_door_price_before_tax", np.nan))
+                and comps["out_the_door_price_before_tax"].notna().all()
+            ):
+                target_for_estimate = target.copy()
+                target_for_estimate["price"] = target["out_the_door_price_before_tax"]
+                comps_for_estimate = comps.copy()
+                comps_for_estimate["price"] = comps["out_the_door_price_before_tax"]
+                price_basis = "Out-the-door before tax"
+            else:
+                target_for_estimate = target
+                comps_for_estimate = comps
+                price_basis = "Advertised price (mandatory fees unknown)"
+            rec = _estimate_one(target_for_estimate, comps_for_estimate)
+            rec["market_price_basis"] = price_basis
         rec["vehicle_id"] = target["vehicle_id"]
         records.append(rec)
 

@@ -12,7 +12,7 @@ The turbocharged four-cylinder produces 200 hp at 6,000 rpm and 192 lb-ft from 1
 
 ## Standard performance equipment
 
-- Sport-tuned suspension, larger brakes, dual exhaust finishers, 18-inch matte-black alloy wheels, and 235/40 R18 summer tires.
+- Sport-tuned suspension, larger brakes, dual exhaust finishers, 18-inch matte-black alloy wheels, and 235/40 R18 all-season tires.
 - Normal, Sport, and Individual drive modes; integrated LED shift-light indicator.
 - Sport seats with red accents, aluminum shift knob and pedals, and leather-wrapped steering wheel.
 
@@ -34,7 +34,7 @@ Single-trim model — every row is standard on Si. **S** = standard; **?** = unc
 | Feature | Si |
 |---|:---:|
 | 18-in matte-black alloy wheels | S |
-| Summer performance tires (235/40 R18) | S |
+| All-season tires (235/40 R18) | S |
 | Helical limited-slip differential | S |
 | Sport seats with red accents | S |
 | Bose 12-speaker premium audio | S |
@@ -49,9 +49,9 @@ Single-trim model — every row is standard on Si. **S** = standard; **?** = unc
 
 ## Shopping context
 
-- Choose **Si** for the manual transmission, limited-slip differential, sport chassis, and summer tires—not for straight-line output alone.
+- Choose **Si** for the manual transmission, limited-slip differential, sport chassis, and all-season tires—not for straight-line output alone.
 - The Civic Sport Touring Hybrid has the same headline 200-hp figure and better economy, but its driving character, transmission, and torque delivery are very different.
-- The factory summer tires improve warm-weather grip but are inappropriate for freezing or snowy conditions; budget for a seasonal tire solution where needed.
+- The factory 235/40 R18 all-season tires are standard. Drivers in severe winter conditions may still prefer dedicated winter tires.
 - The more powerful Civic Type R is a separate hatchback model and is not part of this comparison.
 
 ## Official sources

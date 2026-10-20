@@ -1,0 +1,3 @@
+make,model,trim,year,price_type,amount,fee_and_tax_scope,source,date_recorded,notes
+Toyota,Camry,LE,2026,stated_new_vehicle_otd,32091,Unverified,User-provided,2026-10-10,"Stated as OTD/SRP; verify against the dealer buyer's order before using as an out-the-door benchmark."
+Toyota,Camry,LE,2025,assumed_new_vehicle_otd,32091,Unverified,User-provided assumption,2026-10-10,"User indicated the 2026 amount can provisionally be used for 2025; not a listing-specific quote."

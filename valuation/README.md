@@ -6,10 +6,11 @@ Determines whether a used-vehicle listing is priced fairly, from two angles:
   comparable *new* vehicle. Useful context, but every used car is cheaper than
   new, so this alone does not say whether the used price is good.
 - **View 2 — used-market fair value:** whether the listing is cheap or
-  expensive versus *other used cars* of the same model/trim, adjusted for
-  mileage. This is the deal-quality answer — "does the price make sense for the
-  miles on it?" — and is estimated leave-one-out so a car is never compared
-  against itself.
+  expensive versus eligible used comparables with the same generation, trim,
+  powertrain, drivetrain, market, and seller type, adjusted for mileage. This
+  is the deal-quality answer — "does the price make sense for the miles on
+  it?" — and is estimated leave-one-out so a car is never compared against
+  itself.
 
 See [PROJECT_PLAN.md](PROJECT_PLAN.md) for the full design and roadmap.
 
@@ -42,6 +43,7 @@ valuation/
       toyota_rav4.csv
       toyota_highlander.csv
       toyota_camry.csv
+      _price_references.csv   User-supplied price references; excluded from the benchmark pool
     used/                    Used-vehicle listings to be evaluated, one CSV per make+model
       toyota_corolla.csv
       toyota_camry.csv
@@ -58,6 +60,7 @@ valuation/
       honda_hr-v.csv
       honda_odyssey.csv
       honda_ridgeline.csv
+      _vehicle_identity.csv   Verified identity/market overrides, joined by vehicle_id
     trim_equivalence.csv     Optional manual mapping for trims with no exact match
   scripts/
     valuation.py                  Computes the benchmarks and discount metrics,
@@ -67,6 +70,18 @@ valuation/
 ```
 
 ## Data notes
+
+### Used-market data contract
+
+View 2 refuses to issue a deal-quality label until a listing has verified
+`generation`, `drivetrain`, `powertrain`, `location`, and `seller_type`.
+Unknown is not a comparable value. This deliberately makes the current legacy
+records `Manual review` until their source data is enriched; a confident value
+from mismatched vehicles is worse than no value.
+
+Use `out_the_door_price_before_tax` whenever it is known. Otherwise, any
+comparison is explicitly an advertised-price screen because mandatory fees can
+change the buyer's real cost.
 
 - All "new" rows come from one dealership's "Today's Price," which already
   includes the $225 documentation fee and any displayed dealer adjustment.
@@ -214,6 +229,8 @@ target down and hide the deal.
 | `market_discount_pct` | `market_discount / expected_used_price * 100` |
 | `market_confidence` | `High` / `Medium` / `Low` / `Manual review` (see below) |
 | `price_label` | `Strong Value` (≥8%), `Good Value` (4–8%), `Fair Value` (−4–4%), `Overpriced` (<−4%), or `Manual review` |
+| `market_review_reason` | why a used-market verdict was withheld, such as incomplete vehicle identity or too few eligible comparables |
+| `market_price_basis` | `Out-the-door before tax` only when known for the target and every comparable; otherwise `Advertised price (mandatory fees unknown)` |
 
 The used-market thresholds are **tighter** than View 1's (8% vs. 15% for
 `Strong Value`) because used-car spreads within one model are far narrower than
@@ -229,44 +246,24 @@ the new-vs-used gap.
   otherwise it falls back to the median.
 - **A few comparables but no usable spread:** use the leave-one-out **median**
   price, with no mileage adjustment (never top `High` confidence).
-- **1–2 comparables:** `Low` confidence.
+- **1–2 comparables:** retain a numeric reference only; the public label is
+  `Manual review` because the sample cannot support a deal call.
 - **0 comparables, or an `Unspecified` trim:** `Manual review` — no price is
   invented.
 
 **Confidence** reflects the quality of the comparison, not just row count:
-`High` needs ≥5 comparables, a real mileage fit, and a narrow spread (≤6% of
-the expected price); a wide spread downgrades it to `Medium`. At the current
-data size only Corolla and Camry reach `High`; most models sit at `Low` or
-`Manual review`, which is the honest result until more used comparables are
-collected.
+`High` needs ≥5 eligible comparables, a real mileage fit, and a narrow spread
+(≤6% of the expected price); a wide spread downgrades it to `Medium`. Until
+the legacy records have verified comparable identity fields, View 2 will
+correctly return `Manual review` rather than manufacture high confidence.
 
-#### Known reliability gap: `Low`-confidence labels with a mismatched comp
+#### Safety rule: incomplete or sparse comparisons
 
-**`price_label` can read as a confident verdict even when it is not — always
-check `market_confidence` alongside it, don't read `price_label` alone.**
-
-Worked example from this dataset, `data/used/honda_cr-v.csv`, row `HZ-006`: a
-**2020 CR-V EX-L, 107,228 miles, $20,501**, labeled `Strong Value` (35.1%
-"discount"). Its only comparable is `AVIS-010`, a **2025 CR-V EX-L, 27,291
-miles, $31,579** — one comp, 80,000 miles and 5 model years apart. With only 1
-comparable, the mileage-curve fit never engages (it needs ≥4), so the estimate
-falls back to the plain median of the one other price: the model effectively
-assumed a 107k-mile 2020 car should sell for the same as a 27k-mile 2025 car.
-The resulting "35.1% discount" is mostly the 2020-vs-2025 price gap, not a real
-used-market bargain.
-
-`market_confidence = Low` is correctly flagging this — that part of the system
-is working as designed. The gap is that `price_label` still emits a specific,
-confident-sounding word (`Strong Value`) instead of something that visually
-signals "not enough comparable data to say." At 1–2 comparables the estimator
-also does not check whether the comparable's mileage/year is even close to the
-target's before using it, so a wildly mismatched single comp is treated the
-same as a well-matched one.
-
-**Rule of thumb:** trust `price_label` at `High` confidence, treat it as a
-loose hint at `Medium`, and at `Low` confidence (especially 1–2 comparables)
-verify manually — check the comparable's own year and mileage before believing
-the label at all.
+The utility now withholds `price_label` when required comparable identity data
+is missing or fewer than three eligible used listings remain after filtering.
+`market_review_reason` tells the buyer exactly why. This prevents an older,
+high-mileage vehicle from receiving a persuasive label because it was compared
+with one newer, low-mileage vehicle sharing only a trim name.
 
 ### Reliability and limitations
 

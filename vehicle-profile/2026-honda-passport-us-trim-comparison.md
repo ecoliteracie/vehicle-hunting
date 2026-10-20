@@ -1,6 +1,8 @@
 # 2026 Honda Passport (U.S.) - Trim & Feature Comparison
 
 > **Scope:** 2026 U.S. Passport. Honda has previewed a 2027 landing page, but its published figures conflict with Honda's current U.S. specification database; this profile therefore uses the complete, internally consistent 2026 model-year data. **S** = standard; **-** = not offered; **?** = unconfirmed — checked but not documented in any source available; never read as "not offered." MSRP excludes destination, taxes, registration, accessories, and dealer markup.
+>
+> **Pricing snapshot:** The MSRPs below reflect the September 23, 2026 research snapshot. Honda's February 2025 launch release listed the same configurations at $200 less, so confirm current MSRP with Honda or a dealer before purchase.
 
 ## All seven configurations
 
@@ -62,5 +64,6 @@ Every Passport has a 285-hp, 262-lb-ft 3.5-liter V6, 10-speed automatic, second-
 - [Honda 2026 Passport specifications and trim comparison](https://automobiles.honda.com/passport/specs-features-trim-comparison)
 - [Honda Info Center: 2026 Passport features by trim](https://www.hondainfocenter.com/2026/Passport/Feature-Guide/Features-by-Trim/)
 - [Honda Info Center: 2026 Passport EPA ratings](https://www.hondainfocenter.com/2026/Passport/Feature-Guide/EPA-Fuel-Economy-Ratings/)
+- [Honda Newsroom: 2026 Passport pricing and EPA ratings](https://hondanews.com/en-US/honda-automobiles/releases/release-83cb72bdaa62d917f22ff481d70af5ed-2026-honda-passport-pricing-and-epa-ratings)
 
 *Researched September 23, 2026.*

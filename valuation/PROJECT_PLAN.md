@@ -51,6 +51,11 @@ neither is fully true:
 Expect most models to sit at `Low` / `Manual review` until more used
 comparables are collected. That is the correct behavior, not a failure.
 
+**Implementation rule:** the estimator must enforce this gate. It may not
+silently use `Unknown` or `Unspecified` as a matching drivetrain, powertrain,
+generation, location, or seller type, and it may not emit a Strong/Good/Fair/
+Overpriced deal label from one or two eligible comparables.
+
 ## Recommended valuation design
 
 Use two separate valuation views instead of forcing one score to answer every
